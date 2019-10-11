@@ -1,0 +1,100 @@
+<template>
+<div>
+    <div class="n">
+        <ul>
+            <li :class="{checked:ischecked=='1'}" @click="check(1)" >
+                <router-link to='/' class="link">
+                <i class="iconfont">&#xe66f;</i><span>点餐</span>
+                </router-link>
+                </li>
+            <li :class="{checked:ischecked=='2'}" @click="check(2)">
+                <router-link to='/index/discover' class="link">
+                <i class="iconfont">&#xe62b;</i><span>发现</span>
+                </router-link>
+            </li>
+            <li :class="{checked:ischecked=='3'}" @click="check(3)">
+                 <router-link to='/index/member' class="link">
+                <i class="iconfont">&#xe663;</i><span>我的</span>
+                 </router-link>
+                </li>
+        </ul>
+    </div>
+    </div>
+</template>
+<script>
+export default {
+    data(){
+        return{
+            ischecked:'1'
+        }
+    },
+    methods:{
+        check(index){
+            this.ischecked=index;
+        }
+    }
+}
+</script>
+<style lang="scss" scoped>
+@font-face {
+  font-family: 'iconfont';  /* project id 1451681 */
+  src: url('//at.alicdn.com/t/font_1451681_edntjb7kslh.eot');
+  src: url('//at.alicdn.com/t/font_1451681_edntjb7kslh.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 8vw;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+    
+.n{
+    height: 15vw;
+    width: 100%;
+    background-color: #292929;
+    position: fixed;
+    bottom: 0;  
+    z-index: 1;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+         li{
+            height: 15vw;
+            width: 15vw;
+            background-color: #292929;
+            color: #999;
+            border-radius: 5%;
+            .link{
+                height: 100%;
+                width: 100%;
+                text-decoration: none;
+                list-style: none; 
+                display:flex;
+            flex-direction: column;
+            align-items: center;
+               color: #999;}
+            span{
+                font-size: 3.5vw;
+            }
+        }
+        .checked{
+    background-color: #333;
+    .link{
+          color: #FFC836;
+    }
+  
+}
+    }
+   
+}
+
+</style>

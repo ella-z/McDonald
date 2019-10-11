@@ -1,23 +1,28 @@
 <template>
     <div>
         <div class="orange">
-           <img src="./img/M记图标.png" />
+           <img src="../views/img/M记图标.png" />
         </div>
         <div class="content">
-            <div class="way">
+            <div class="way"> 
+                <router-link  to="/menu" class="link">
                 <div class="wayList" id="wayOne">
                     麦乐送外卖
                     <br />
                     <span>30分钟必达</span>
-                    <img src="./img/外卖.png"/>
+                    <img src="../views/img/外卖.png"/>
                 </div>
+                    </router-link>
+                      <router-link  to="/menu" class="link">
                 <div class="wayList">
                     到点取餐
                     <br />
                     <span>快速取餐免排队</span>
-                    <img src="./img/堂食.png" />
+                    <img src="../views/img/堂食.png" />
                 </div>
+                 </router-link>
             </div>
+ 
             <div class="List">
                 <ul 
                     :key="index"
@@ -26,49 +31,49 @@
                 </ul>
             </div>
         </div>
-        <div class="nav">
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-                <el-menu-item index="1">点餐</el-menu-item>
-                <el-menu-item index="2">登录</el-menu-item>
-            </el-menu>
-        </div>
     </div>
 </template>
 
 <script>
 export default {
+    components:{
+   
+    },
     data()
     {
         return{
             list:[
                 {
-                    src:require('./img/list1.png')
+                    src:require('../views/img/list1.png')
                 },
                 {
-                     src:require('./img/list2.png')
+                     src:require('../views/img/list2.png')
                 },
                  {
-                     src:require('./img/list3.png')
+                     src:require('../views/img/list3.png')
                 },
                  {
-                     src:require('./img/list4.png')
+                     src:require('../views/img/list4.png')
                 },
                  {
-                     src:require('./img/list5.png')
+                     src:require('../views/img/list5.png')
                 },
                  {
-                     src:require('./img/list6.png')
+                     src:require('../views/img/list6.png')
                 },
                  {
-                     src:require('./img/list7.png')
+                     src:require('../views/img/list7.png')
                 }
             ]
         }
+    },
+    methods:{
+
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .orange{
     position: absolute;
     background-color: #1B1B33;
@@ -89,6 +94,10 @@ export default {
      flex-direction: row;
      justify-content: center;
      padding: 35% 0 10%;
+     .link{ 
+           text-decoration: none;
+           list-style: none;
+            color:inherit;
      .wayList{
          width: 35vw;
          height: 45vw;
@@ -108,8 +117,8 @@ export default {
          }
      }
     #wayOne{
-         margin-right: 10%;
-     }
+         margin-right: 10vw;
+     }}
  }
  .List{
      ul{
@@ -129,25 +138,5 @@ export default {
      }
  }
 }
-.nav{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 12vw;
-    .el-menu-demo{
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: #000;
-        .el-menu-item{
-            font-size: 3.5vw;
-            height: 100%;
-            width: 20vw;
-            text-align: center;
-            background-color: #333333;
-            color: #FEC60F;
-        }
-        
-    }
-}
+
 </style>
