@@ -11,7 +11,12 @@ export default {
   name: 'app',
   components: {
    index
-  }
+  },
+  created(){ 
+      if(this.$router.path !== '/index'){
+          this.$router.replace('/index')
+      }
+}
 }
 </script>
 

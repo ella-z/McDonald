@@ -22,22 +22,17 @@
                 </div>
                  </router-link>
             </div>
- 
-            <div class="List">
-                <ul 
-                    :key="index"
-                    v-for="(item,index) in list" >
-                    <li><img :src="item.src"/></li>
-                </ul>
-            </div>
+            <List :list='list'></List>
         </div>
     </div>
 </template>
 
 <script>
+import List from '../components/list'
+
 export default {
     components:{
-   
+        List
     },
     data()
     {
@@ -84,7 +79,7 @@ export default {
         background-color: #fff;
         width: 15vw;
         height: 15vw;
-        margin: 5% 0 0 41%;
+        margin: 8% 0 0 41%;
         border-radius: 50%;
     }
 }
@@ -93,7 +88,7 @@ export default {
      display: flex;
      flex-direction: row;
      justify-content: center;
-     padding: 35% 0 10%;
+     padding: 35% 0 5%;
      .link{ 
            text-decoration: none;
            list-style: none;
@@ -119,23 +114,6 @@ export default {
     #wayOne{
          margin-right: 10vw;
      }}
- }
- .List{
-     ul{
-         padding: 0 0 0 3%;
-         margin: 0;
-          li{
-                list-style: none;
-                margin-bottom: -10%;
-                img{
-                    width: 94vw;
-                    height: 38vw;
-                    border-radius: 8px;
-                    box-shadow: 0px 3px 3px #A6A5A1;
-                }
-            }
-            margin-bottom: 16vw;
-     }
  }
 }
 
