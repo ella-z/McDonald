@@ -9,7 +9,7 @@ import discover from '../components/discover'
 import member from '../components/member'
 
 Vue.use(Router);
-
+ 
 const router =  [
     {
         path: '*',      //没有配置的路径
@@ -44,6 +44,7 @@ const router =  [
      
 ]
 export default new Router({
-    routes: router,
     mode:"history",
+    routes: router,
+   
 })

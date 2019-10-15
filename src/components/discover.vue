@@ -81,18 +81,28 @@ export default {
     }
 }
 </script>
-<style lang="scss" >
+<style lang="scss">
 .nav{
  height: 10vw;
  border-bottom:0.5px solid grey;
 }
 .Dcontent{
-    display: flex;
-    justify-content: space-around;
-       .el-tabs__item{
+    .el-tabs{
+        width: 100%;
+    }
+    .el-tabs__nav{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .el-tabs__nav-wrap::after
+    {
+        background-color: #fff;
+    }
+    .el-tabs__item{
            color: #7F7F7F;
-           padding-left:20px !important;
-           padding-right:20px !important;
+           padding-left:5vw !important;
+           padding-right:5vw !important;
            background-color: #fff;
        } 
        .el-tabs__item.is-active{

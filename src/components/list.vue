@@ -4,7 +4,8 @@
             <ul>
                 <li
                  :key="index"
-                v-for="(item,index) in list" >
+                v-for="(item,index) in list" 
+                @click="tomenu()">
                 <img :src="item.src"/></li>
             </ul>
             </div>
@@ -13,7 +14,12 @@
 <script>
 export default {
     name:'List',
-    props:["list"]
+    props:["list"],
+    methods:{
+        tomenu(){
+            this.$router.push('/menu')
+        }
+    }
 }
 </script>
 <style lang="scss">
