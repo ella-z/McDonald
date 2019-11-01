@@ -5,21 +5,28 @@
         </div>
         <div class="content">
             <div class="way"> 
-                <router-link  to="/menu" class="link">
-                <div class="wayList" id="wayOne">
-                    麦乐送外卖
-                    <br />
-                    <span>30分钟必达</span>
-                    <img src="../views/img/外卖.png"/>
+                <cube-popup type="my-popup" position="center" :mask-closable="true"  ref="PopupOrder" >
+                    <div class="Popup">
+                        <span>选择送达时间</span>
+                        <div class="orderButton">现在就送</div>
+                        <div class="orderButton" @click="showTimePicker">预约订单</div>
+                    </div>
+                    </cube-popup>
+                <div class="link" @click="show()">
+                    <div class="wayList" id="wayOne">
+                        <span>麦乐送外卖</span>
+                        <br />
+                        <span class="small">30分钟必达</span>
+                        <img src="../views/img/外卖.png"/>
+                    </div>
                 </div>
-                    </router-link>
-                      <router-link  to="/menu" class="link">
-                <div class="wayList">
-                    到点取餐
-                    <br />
-                    <span>快速取餐免排队</span>
-                    <img src="../views/img/堂食.png" />
-                </div>
+                 <router-link  to="/menu" class="link">
+                    <div class="wayList">
+                        <span>到点取餐</span>
+                        <br />
+                        <span class="small">快速取餐免排队</span>
+                        <img src="../views/img/堂食.png" />
+                    </div>
                  </router-link>
             </div>
             <List :list='list'></List>
@@ -32,7 +39,8 @@ import List from '../components/list'
 
 export default {
     components:{
-        List
+        List,
+ 
     },
     data()
     {
@@ -63,12 +71,28 @@ export default {
         }
     },
     methods:{
-
+        show(){
+             const component = this.$refs.PopupOrder
+            component.show()
+        },
+        showTimePicker(){
+              this.$createTimePicker({
+                showNow: true,
+                minuteStep: 10,
+                delay: 60,
+                day: {
+                        len: 8,
+                        filter: ['今天', '明天'],
+                        format: 'M月d日'
+                    }
+            }).show()
+            
+        }
     }
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .orange{
     position: absolute;
     background-color: #1B1B33;
@@ -83,12 +107,38 @@ export default {
         border-radius: 50%;
     }
 }
+</style>
+<style lang="scss" scoped>
 .content{
  .way{
      display: flex;
      flex-direction: row;
      justify-content: center;
      padding: 35% 0 5%;
+     .Popup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5%;
+        height: 55vw;
+        width: 80vw;
+        background-color: #fff;
+        span{
+            font-size: 5vw;
+            margin-bottom: 0%;
+        }
+        .orderButton{
+            font-size: 4vw;
+            margin-top: 10%;
+            border-radius: 1vw;
+            width: 40vw;
+            height: 10vw;
+            text-align: center;
+            line-height: 10vw;
+            background-color: #FFC836;
+         }
+     }
      .link{ 
            text-decoration: none;
            list-style: none;
@@ -99,16 +149,16 @@ export default {
          box-shadow: 2px 2px 5px #A6A5A1;
          border-radius: 5%;
          background-color: #fff;
-         padding:4%  0 0 4%;
-         font-size: 4.5vw;
-         span{
-             font-size: 1.5vw;
+         padding:5vw 0 0 4.5vw;
+         font-size: 5vw;
+         .small{
+             font-size: 3vw;
              color: #444;
          }
          img{
             width: 29vw;
             height: 28vw;
-            margin: 14% 0 0 12%;
+            margin: 20% 0 0 12%;
          }
      }
     #wayOne{
@@ -116,5 +166,4 @@ export default {
      }}
  }
 }
-
 </style>
