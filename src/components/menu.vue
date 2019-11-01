@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="wrapper" ref="wrapper"> 
-            <!-- <div class="head">
+        <div class="head">
                 <div class="icon" @click="back()">
                     <i class="iconfont">&#xe61b;</i>
                 </div>
-            </div>-->
+        </div>
+        <div class="wrapper" ref="wrapper"> 
             <div class="MenuTabs">
                 <div class="Tab" ref="left">
                     <ul class="lcontent">
@@ -324,6 +324,7 @@ export default {
     overflow: hidden;
     display:flex;
     flex-direction: row;
+    margin-top:0%;
     .MenuTabs{
         display: flex;
         flex-direction: row;
