@@ -32,12 +32,11 @@ export default {
                 margin-bottom: 3vw;
                 img{
                     width: 94vw;
-                    height: 38vw;
+                    height: 35vw;
                     border-radius: 8px;
                     box-shadow: 0px 3px 3px #A6A5A1;
                 }
             }
-            margin-bottom: 16vw;
      }
  }
 </style>

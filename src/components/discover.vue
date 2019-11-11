@@ -1,115 +1,141 @@
 <template>
-    <div>
-        <div class="nav"></div>
-        <div class="Dcontent">
-            <el-tabs v-model="activeName">
-                <el-tab-pane label="正餐新品" name="first">
-                    <List :list='list1'></List>
-                </el-tab-pane>
-                <el-tab-pane label="早餐新品" name="second">
-                    <List :list='breakfastList'></List>
-                </el-tab-pane>
-                <el-tab-pane label="麦乐送" name="third">
-                     <List :list='takeoutList'></List>
-                </el-tab-pane>
-                <el-tab-pane label="会员活动" name="fourth">
-                     <List :list='memberList'></List>
-                </el-tab-pane>
-            </el-tabs>
+    <div class="discover">
+        <div class="header">
+            超值好礼
         </div>
+        <div class="Card">
+            <div class="want MR">
+                <img src='../views/img/discover/我要超值.png'/>
+                <span>我要超值</span>
+                物超所值，就点这
+            </div>
+            <div class="want">
+                <img src='../views/img/discover/我要送礼.png'/>
+                <span>我要送礼</span>
+                纠结送啥，就点这
+            </div>
+        </div>
+        <div class="recommend">
+            <div class="selection">精选推荐</div>
+            <miniCard :miniCard="minicard[0]"></miniCard>
+            <miniCard :miniCard="minicard[1]"></miniCard>
+            <mealCard :mealCard="mealCard[0]"></mealCard>
+            <miniCard :miniCard="minicard[2]"></miniCard>
+            <mealCard :mealCard="mealCard[1]"></mealCard>
+        </div>
+        <cart></cart>
     </div>
 </template>
 <script>
-import List from '../components/list'
+import miniCard from './miniCard'
+import mealCard from './mealCard'
+import cart from './cart'
+
 export default {
-    components:{List},
-    data()
-    {
-        return{
-             activeName: 'first',
-             list1:[
+    components:{
+        miniCard,
+        mealCard,
+        cart
+    },
+   data(){
+       return{
+            minicard:[
                 {
-                    src:require('../views/img/list1.png')
+                    name:"早餐频次卡-10份板烧鸡腿麦满分组合",
+                    src:require('../views/img/discover/板烧鸡腿堡组合套餐.png')
                 },
                 {
-                     src:require('../views/img/list2.png')
+                    name:"早餐频次卡-脆薯饼满分早餐券",
+                    src:require('../views/img/discover/薯饼10次券.png')
                 },
-                 {
-                     src:require('../views/img/list3.png')
+                {
+                    name:"20份小杯鲜煮咖啡",
+                    src:require('../views/img/discover/咖啡达人卡.png')
+                }
+            ],
+            mealCard:[
+                  {
+                    src1:require('../views/img/discover/88元超值购.png'),
+                    src2:require('../views/img/discover/88辣翅达人卡.png'),
+                    src3:require('../views/img/discover/88麦旋风乐享卡.png'),
+                    name1:"88辣翅达人卡",
+                    price1:"￥88.00",
+                    discountPrice1:"￥94.50",
+                    name2:"88麦旋风乐享卡",
+                     price2:"￥88.00",
+                    discountPrice2:"￥125.00",
                 },
-                 {
-                     src:require('../views/img/list4.png')
-                },
-             ],
-             breakfastList:[
-                 {
-                      src:require('../views/img/breakfast/breakfast1.png')
-                 },
-                  {
-                      src:require('../views/img/breakfast/breakfast2.png')
-                 },
-                  {
-                      src:require('../views/img/breakfast/breakfast3.png')
-                 },
-                  {
-                      src:require('../views/img/breakfast/breakfast4.png')
-                 },
-             ],
-             takeoutList:[
-                 {
-                      src:require('../views/img/takeout/takeout1.png')
-                 },
                 {
-                      src:require('../views/img/takeout/takeout2.png')
-                 },
-                {
-                      src:require('../views/img/takeout/takeout3.png')
-                 },
-                {
-                      src:require('../views/img/takeout/takeout4.png')
-                 },
-             ],
-             memberList:[
-                 {
-                      src:require('../views/img/member/member1.png')
-                 },
-                  {
-                      src:require('../views/img/member/member2.png')
-                 },
-             ]
-        };
-    }
+                    src1:require('../views/img/discover/麦乐送畅点卡.png'),
+                    src2:require('../views/img/discover/辣翅畅点卡.png'),
+                    src3:require('../views/img/discover/牛气冲天卡.png'),
+                    name1:"6.6元麦辣鸡翅5次券",
+                    price1:"￥33.00",
+                    discountPrice1:"￥57.50",
+                    name2:"36元双吉薯条3次券",
+                     price2:"￥108.00",
+                    discountPrice2:"￥141.00",
+                }
+            ]
+       }
+   },
 }
 </script>
-<style lang="scss">
-.nav{
- height: 10vw;
- border-bottom:0.5px solid grey;
+<style lang="scss" scoped>
+.MR{
+    margin-right: 2vw;
 }
-.Dcontent{
-    .el-tabs{
+.discover{
+      background-color: #f8f8f8;
+    .header{
+        position: fixed;
+        top:0;
+        z-index: 5;
+        height: 14vw;
         width: 100%;
-    }
-    .el-tabs__nav{
-        display: flex;
-        justify-content: space-around;
-
-    }
-    .el-tabs__nav-wrap::after
-    {
         background-color: #fff;
+        line-height: 14vw;
+        text-align: center;
+        font-size: 2.2vh;
     }
-    .el-tabs__item{
-           color: #7F7F7F;
-           padding-left:5vw !important;
-           padding-right:5vw !important;
-           background-color: #fff;
-       } 
-       .el-tabs__item.is-active{
-           color:#000
-       }
-       .el-tabs__active-bar{
-           background-color: #000;
-       }
+    .Card{
+        margin-top: 7vh;
+        height: 17vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .want{
+            background-color: #fff;
+            width: 43vw;
+            height: 12vh;
+            border-radius: 5px;
+            border: 1px solid rgb(212, 212, 212);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1vh;
+            font-weight: 200;
+            img{
+                width: 5vh;
+                height: 5vh;
+                margin-bottom: 1vh;
+            }
+            span{
+                margin:0.5vh 0;
+                font-size: 1.8vh;
+            }
+        }
+    }
+    .recommend{
+        padding:0 5%;
+        margin-bottom: 15vw;
+        .selection{
+            font-size: 2vh;
+            font-weight: 700;
+            margin:1.5vh 0;
+        }
+    }
 }
 </style>

@@ -8,7 +8,7 @@
                 <cube-popup type="my-popup" position="center" :mask-closable="true"  ref="PopupOrder" >
                     <div class="Popup">
                         <span>选择送达时间</span>
-                        <div class="orderButton">现在就送</div>
+                        <div class="orderButton" @click="tomenu">现在就送</div>
                         <div class="orderButton" @click="showTimePicker">预约订单</div>
                     </div>
                     </cube-popup>
@@ -17,7 +17,7 @@
                         <span>麦乐送外卖</span>
                         <br />
                         <span class="small">30分钟必达</span>
-                        <img src="../views/img/外卖.png"/>
+                        <img src="../views/img/外卖.png" class="takeOut"/>
                     </div>
                 </div>
                  <router-link  to="/menu" class="link">
@@ -25,7 +25,7 @@
                         <span>到点取餐</span>
                         <br />
                         <span class="small">快速取餐免排队</span>
-                        <img src="../views/img/堂食.png" />
+                        <img src="../views/img/堂食.png" class="eatIn"/>
                     </div>
                  </router-link>
             </div>
@@ -86,7 +86,9 @@ export default {
                         format: 'M月d日'
                     }
             }).show()
-            
+        },
+        tomenu(){
+            this.$router.push('/menu');
         }
     }
 }
@@ -144,25 +146,30 @@ export default {
            list-style: none;
             color:inherit;
      .wayList{
-         width: 35vw;
+         width: 38vw;
          height: 45vw;
          box-shadow: 2px 2px 5px #A6A5A1;
-         border-radius: 5%;
+         border-radius: 2%;
          background-color: #fff;
          padding:5vw 0 0 4.5vw;
-         font-size: 5vw;
+         font-size: 4vw;
          .small{
              font-size: 3vw;
              color: #444;
          }
-         img{
-            width: 29vw;
+         .takeOut{
+            width: 32vw;
             height: 28vw;
-            margin: 20% 0 0 12%;
+            margin: 24% 0 0 12%;
+         }
+         .eatIn{
+            width: 33vw;
+            height: 25vw;
+            margin: 32% 0 0 5%;
          }
      }
     #wayOne{
-         margin-right: 10vw;
+         margin-right: 6vw;
      }}
  }
 }

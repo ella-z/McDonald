@@ -7,6 +7,7 @@ import order from '../components/order'
 import menu from '../components/menu'
 import discover from '../components/discover'
 import member from '../components/member'
+import detail from '../components/detail'
 
 Vue.use(Router);
  
@@ -40,6 +41,11 @@ const router =  [
         path:'/menu',
         name:'menu',
         component:menu
+      },
+      {
+        path:'/detail',
+        name:'detail',
+        component:detail
       }
      
 ]

@@ -1,29 +1,36 @@
 <template>
     <div>
         <div class="head">
-                <div class="icon" @click="back()">
-                    <i class="iconfont">&#xe61b;</i>
-                </div>
+            <div class="icon" @click="back()">
+                <i class="iconfont">&#xe61b;</i>
+            </div>
         </div>
-        <div class="wrapper" ref="wrapper"> 
+        <slideBanner></slideBanner>
+        <div class="wrapper" > 
             <div class="MenuTabs">
-                <div class="Tab" ref="left">
-                    <ul class="lcontent">
-                        <li :key='index' 
-                            v-for="(item,index) in TabList"
-                            ref="lItem"
-                            @click="_inchange(index)"
-                            :class="{is_active:index==actli}">
-                            <img :src="item.src" v-show="open==index+1" :class="{drink:item.label==='饮品'}"/>
-                            <span  v-html="item.label"> {{item.label}}</span>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="Tab" ref="left">
+                        <ul class="lcontent">
+                            <div class="search">
+                                <i class="iconfont">&#xe62e;</i>
+                                搜索
+                            </div>
+                            <li :key='index' 
+                                v-for="(item,index) in TabList"
+                                ref="lItem"
+                                @click="_inchange(index)"
+                                :class="{is_active:index==actli}">
+                                <img :src="item.src" v-show="open==index+1" :class="{drink:item.label==='饮品'}"/>
+                                <span  v-html="item.label"> {{item.label}}</span>
+                            </li>
+                        </ul>
+                    </div>
                 <div class="Card" ref="righ"> 
                     <div>
                         <div ref="good" :key="index" v-for="(item,index) in TabList">
                             <ul class="rcontent" >
-                                    <li v-for="food in item.foods" :key="food.name">{{food.name}}</li>
+                                <li v-for="food in item.foods" :key="food.name" :class="{big:index<2}">
+                                     <img :src="food.src"/>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -34,8 +41,10 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import slideBanner from '../components/slideBanner'
 
 export default {
+    components:{slideBanner},
     data(){
         return{
             actli: 0,
@@ -61,167 +70,214 @@ export default {
                  },
             ],
             TabList:[
-                {
-                   name:"雪人奇缘系列",
-                   src:require('../views/img/MenuTabsIcon/雪人奇缘.png'),
-                   label:"雪人<br />奇缘<br />全系列",
-                    foods:[
                     {
-                        name:"a1"
+                        name:"安格斯黑金系列",
+                    src:require('../views/img/MenuTabsIcon/安格斯.png'),
+                        label:"安格斯<br />黑金<br />系列",
+                        foods:[
+                            {
+                                name:"安格斯厚牛菠萝堡套餐",
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png')
+                            },
+                            {
+                                name:"双层安格斯厚牛菠萝堡套餐",
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png')
+                            },
+                            {
+                                name:"安格斯厚牛培根堡套餐",
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png')
+                            },
+                            {
+                                name:"安格斯厚牛芝士堡套餐",
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png')
+                            },
+                            {
+                                name:"双层安格斯厚牛培根堡套餐",
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png')
+                            },
+                            {
+                                name:"双层安格斯厚牛芝士堡套餐",
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png')
+                            }
+                        ]
                     },
-                     {
-                        name:"b1"
-                    },
-                     {
-                        name:"c1"
-                    }
-                    ]
-                   
-                },
-                {
-                    name:"安格斯黑金系列",
-                   src:require('../views/img/MenuTabsIcon/安格斯.png'),
-                    label:"安格斯<br />黑金<br />系列",
-                    foods:[
                     {
-                        name:"a2"
+                        name:"超值三件套",
+                        src:require('../views/img/MenuTabsIcon/超值三件套.png'),
+                        label:"超值<br />三件套",
+                        foods:[
+                            {
+                                name:"麦辣鸡腿汉堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png')
+                            },
+                            {
+                                name:"板烧鸡腿堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/板烧鸡腿堡套餐.png')
+                            },
+                            {
+                                name:"巨无霸套餐",
+                                src:require('../views/img/menuCard/超值三件套/巨无霸套餐.png')
+                            },
+                            {
+                                name:"不素之霸双层牛堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png')
+                            },
+                            {
+                                name:"双层深海鳕鱼堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png')
+                            },
+                            {
+                                name:"川辣双鸡堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/川辣双鸡堡套餐.png')
+                            },
+                            {
+                                name:"双层吉士汉堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/双层吉士汉堡套餐.png')
+                            },
+                            {
+                                name:"麦香鸡套餐",
+                                src:require('../views/img/menuCard/超值三件套/麦香鸡套餐.png')
+                            },
+                            {
+                                name:"麦香鱼套餐",
+                                src:require('../views/img/menuCard/超值三件套/麦香鱼套餐.png')
+                            },
+                            {
+                                name:"麦乐鸡套餐",
+                                src:require('../views/img/menuCard/超值三件套/麦乐鸡套餐.png')
+                            },
+                            {
+                                name:"培根蔬萃双层牛堡套餐",
+                                src:require('../views/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png')
+                            },
+                            {
+                                name:"吉士汉堡包套餐",
+                                src:require('../views/img/menuCard/超值三件套/吉士汉堡包套餐.png')
+                            },
+                            {
+                                name:"麦辣鸡翅",
+                                src:require('../views/img/menuCard/超值三件套/麦辣鸡翅.png')
+                            },
+                        ]
                     },
-                     {
-                        name:"b2"
-                    },
-                     {
-                        name:"c2"
-                    }
-                    ]
-                },
-                 {
-                     name:"超值三件套",
-                      src:require('../views/img/MenuTabsIcon/超值三件套.png'),
-                    label:"超值<br />三件套",
-                    foods:[
                     {
-                        name:"a3"
+                        name:"随心配1+1=12",
+                        src:require('../views/img/MenuTabsIcon/随心配.png'),
+                        label:"随心配<br />1+1=12",
+                        foods:[
+                            {
+                                name:"随心配",
+                                src:require('../views/img/menuCard/随心配/随心配.png')
+                            }
+                        ]
                     },
-                     {
-                        name:"b3"
-                    },
-                     {
-                        name:"c3"
-                    }
-                    ]
-                },
-                 {
-                     name:"随心配1+1=12",
-                    src:require('../views/img/MenuTabsIcon/随心配.png'),
-                    label:"随心配<br />1+1=12",
-                    foods:[
                     {
-                        name:"a4"
+                        name:"金拱门桶",
+                        src:require('../views/img/MenuTabsIcon/全家桶.png'),
+                        label:"金拱门<br />桶",
+                        foods:[
+                            {
+                                name:"金拱门桶A",
+                                src:require('../views/img/menuCard/金拱门桶/金拱门桶A.png')
+                            },
+                             {
+                                name:"金拱门桶B",
+                                src:require('../views/img/menuCard/金拱门桶/金拱门桶B.png')
+                            },
+                             {
+                                name:"家有金桶(汉堡版)",
+                                src:require('../views/img/menuCard/金拱门桶/家有金桶(汉堡版).png')
+                            },
+                             {
+                                name:"家有金桶(脆鸡版)",
+                                src:require('../views/img/menuCard/金拱门桶/家有金桶(脆鸡版).png')
+                            },
+                             {
+                                name:"小食缤纷盒",
+                                src:require('../views/img/menuCard/金拱门桶/小食缤纷盒.png')
+                            },
+                        ]
                     },
-                     {
-                        name:"b4"
-                    },
-                     {
-                        name:"c4"
-                    }
-                    ]
-                },
-                 {
-                     name:"金拱门桶",
-                     src:require('../views/img/MenuTabsIcon/全家桶.png'),
-                    label:"金拱门<br />桶",
-                    foods:[
                     {
-                        name:"a5"
+                        name:"500大卡套餐",
+                        src:require('../views/img/MenuTabsIcon/500大卡套餐.png'),
+                        label:"500<br />大卡<br />套餐",
+                        foods:[
+                        {
+                            name:"a6"
+                        },
+                        {
+                            name:"b6"
+                        },
+                        {
+                            name:"c6"
+                        }
+                        ]
                     },
-                     {
-                        name:"b5"
-                    },
-                     {
-                        name:"c5"
-                    }
-                    ]
-                },
-                 {
-                     name:"500大卡套餐",
-                      src:require('../views/img/MenuTabsIcon/500大卡套餐.png'),
-                    label:"500<br />大卡<br />套餐",
-                    foods:[
                     {
-                        name:"a6"
+                        name:"开心乐园餐",
+                        src:require('../views/img/MenuTabsIcon/开心乐园.png'),
+                        label:"开心<br />乐园餐",
+                        foods:[
+                        {
+                            name:"a7"
+                        },
+                        {
+                            name:"b7"
+                        },
+                        {
+                            name:"c7"
+                        }
+                        ]
                     },
-                     {
-                        name:"b6"
-                    },
-                     {
-                        name:"c6"
-                    }
-                    ]
-                },
-                 {
-                     name:"开心乐园餐",
-                      src:require('../views/img/MenuTabsIcon/开心乐园.png'),
-                    label:"开心<br />乐园餐",
-                    foods:[
                     {
-                        name:"a7"
+                        name:"小食甜点玩具",
+                        src:require('../views/img/MenuTabsIcon/小吃.png'),
+                        label:"小食<br />甜点<br />玩具",
+                        foods:[
+                        {
+                            name:"a8"
+                        },
+                        {
+                            name:"b8"
+                        },
+                        {
+                            name:"c8"
+                        }
+                        ]
                     },
-                     {
-                        name:"b7"
-                    },
-                     {
-                        name:"c7"
-                    }
-                    ]
-                },
-                 {
-                     name:"小食甜点玩具",
-                      src:require('../views/img/MenuTabsIcon/小吃.png'),
-                    label:"小食<br />甜点<br />玩具",
-                    foods:[
                     {
-                        name:"a8"
+                        name:"主食",
+                        src:require('../views/img/MenuTabsIcon/主食.png'),
+                        label:"主食",
+                        foods:[
+                        {
+                            name:"a9"
+                        },
+                        {
+                            name:"b9"
+                        },
+                        {
+                            name:"c9"
+                        }
+                        ]
                     },
-                     {
-                        name:"b8"
-                    },
-                     {
-                        name:"c8"
-                    }
-                    ]
-                },
-                 {
-                     name:"主食",
-                      src:require('../views/img/MenuTabsIcon/主食.png'),
-                    label:"主食",
-                    foods:[
                     {
-                        name:"a9"
+                        name:"饮品",
+                        src:require('../views/img/MenuTabsIcon/饮品.png'),
+                        label:"饮品",
+                        foods:[
+                        {
+                            name:"a10"
+                        },
+                        {
+                            name:"b10"
+                        },
+                        {
+                            name:"c10"
+                        }
+                        ]
                     },
-                     {
-                        name:"b9"
-                    },
-                     {
-                        name:"c9"
-                    }
-                    ]
-                },
-                {
-                    name:"饮品",
-                     src:require('../views/img/MenuTabsIcon/饮品.png'),
-                    label:"饮品",
-                    foods:[
-                    {
-                        name:"a10"
-                    },
-                     {
-                        name:"b10"
-                    },
-                     {
-                        name:"c10"
-                    }
-                    ]
-                },
             ]
         }
     },
@@ -237,12 +293,12 @@ export default {
         }
     },
     mounted () {
-        setTimeout(() => {
+    setTimeout(() => {
     /* eslint-disable no-new */
      this.Lscroll = new Bscroll(this.$refs.left, {
                 click:true
             });
-        this.Rscroll = new Bscroll(this.$refs.righ, {
+     this.Rscroll = new Bscroll(this.$refs.righ, {
                 // 获取 scroll 事件，用来监听。
                 click:true,
                 probeType: 3
@@ -278,8 +334,12 @@ export default {
            this.open=index;
         },
       _initSrcoll(){
-        
-        this.Rscroll.on('scroll', (res) => {
+             this.Rscroll = new Bscroll(this.$refs.righ, {
+                // 获取 scroll 事件，用来监听。
+                click:true,
+                probeType: 3
+            });
+            this.Rscroll.on('scroll', (res) => {
             this.scrollY = Math.abs(res.y)
       })
       },
@@ -318,13 +378,13 @@ export default {
 
 .wrapper{
     position: absolute;
-    top:0;
+    top:60vw;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     display:flex;
     flex-direction: row;
-    margin-top:0%;
+    background-color: #F8F8F8;
     .MenuTabs{
         display: flex;
         flex-direction: row;
@@ -349,11 +409,19 @@ export default {
                     }
                 }
                 .search{
-                    i{
-                        font-size: 5vw;
+                   margin: 0;
+                   display: flex;
+                   flex-direction: column;
+                   width: 20vw;
+                   height: 20vw;
+                   align-items: center;
+                   justify-content: center;
+                   background-color: #fff;
+                   i{
+                        margin-bottom: 2vw;
+                        font-size: 4vw;
                         color: #000;
-                        }
-                    
+                   }
                 }
                 .is_active{
                     border-left:1vw solid #FFC836;
@@ -376,18 +444,34 @@ export default {
             width: 80vw;
             .rcontent{
                 li{
-                    border-radius: 2vw;
+                    border-radius: 1vw;
                     margin:0 0 5% 6%;
                     background-color: pink;
-                    height: 40vw;
+                    height: 45vw;
                     width: 70vw;
+                    img{
+                        border-radius: 1vw;
+                        height: 45vw;
+                        width: 70vw;
+                    }
+                }
+                .big{
+                    height: 62vw;
+                    img{
+                        height: 62vw;
+                    }
                 }
             }
         }
     }
 }
 
-
+.x{
+    width: 100%;
+    height: 48vw;
+    background-color: pink;
+    margin-top: 14vw;
+}
 .head{
     height: 10vw;
     width: 100%;

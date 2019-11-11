@@ -40,7 +40,7 @@ export default {
         }
      }
      .cardRight{
-         width: 32vw;
+         width: 29vw;
          background: url('../views/img/cardbackground.png')
      }
      
