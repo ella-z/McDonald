@@ -1,6 +1,6 @@
 <template>
     <div class="mealCard" id="mealCard">
-                <div class="detail">查看详情 ></div>
+                <div class="detail" @click="topackages">查看详情 ></div>
                 <div class="cardTop">
                     <img :src="mealCard.src1"/>
                 </div>
@@ -28,9 +28,14 @@ export default {
     data()
     {
         return{
-           
+            
         }
     },
+    methods:{
+        topackages(){
+            this.$router.push('/packages');
+        }
+    }
 }
 </script>
 

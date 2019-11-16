@@ -8,6 +8,7 @@ import menu from '../components/menu'
 import discover from '../components/discover'
 import member from '../components/member'
 import detail from '../components/detail'
+import packages from '../components/packages'
 
 Vue.use(Router);
  
@@ -22,13 +23,13 @@ const router =  [
         children:[
             {
                 path:'/',
-                name: 'order',
+                namqe: 'order',
                 component: order
             },
             {
                 path:'/index/discover',
                 name: 'discover',
-                component: discover
+                component: discover,
             },
             {
                 path:'/index/member',
@@ -46,7 +47,13 @@ const router =  [
         path:'/detail',
         name:'detail',
         component:detail
-      }
+      },
+      {
+        path:'/packages',
+        name:'packages',
+        component:packages
+      },
+
      
 ]
 export default new Router({

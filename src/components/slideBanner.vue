@@ -1,6 +1,6 @@
 <template>
     <div class="slide-banner">
-        <div>
+        <div class="slide-group">
             <div>1</div>
             <div>2</div>
             <div>3</div>

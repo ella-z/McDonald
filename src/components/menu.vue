@@ -1,11 +1,17 @@
 <template>
-    <div>
+    <div class="container">
         <div class="head">
             <div class="icon" @click="back()">
                 <i class="iconfont">&#xe61b;</i>
             </div>
         </div>
-        <slideBanner></slideBanner>
+        <cube-slide ref="slide" :data="items" @change="changePage" class="slide">
+            <cube-slide-item v-for="(item, index) in items" :key="index" @click.native="clickHandler(item, index)">
+                <a>
+                    <img :src="item.image">
+                </a>
+            </cube-slide-item>
+        </cube-slide>
         <div class="wrapper" > 
             <div class="MenuTabs">
                     <div class="Tab" ref="left">
@@ -28,8 +34,10 @@
                     <div>
                         <div ref="good" :key="index" v-for="(item,index) in TabList">
                             <ul class="rcontent" >
-                                <li v-for="food in item.foods" :key="food.name" :class="{big:index<2}">
-                                     <img :src="food.src"/>
+                                <li v-for="food in item.foods" :key="food.name" :class="{big:index<2}" :style="{background: 'url(' + food.src + ') no-repeat center ',backgroundSize:'100% 100%'}">                        
+                                     <span class="icombo" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></span>
+                                     <span class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></span>
+                                     <span class="single" v-show="index>2"><i class="iconfont">&#xe626;</i></span>
                                 </li>
                             </ul>
                         </div>
@@ -72,32 +80,32 @@ export default {
             TabList:[
                     {
                         name:"安格斯黑金系列",
-                    src:require('../views/img/MenuTabsIcon/安格斯.png'),
+                        src:require('../views/img/MenuTabsIcon/安格斯.png'),
                         label:"安格斯<br />黑金<br />系列",
                         foods:[
                             {
                                 name:"安格斯厚牛菠萝堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛菠萝堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png'),
                             },
                             {
                                 name:"安格斯厚牛培根堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png'),
                             },
                             {
                                 name:"安格斯厚牛芝士堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛培根堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛芝士堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png')
+                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png'),
                             }
                         ]
                     },
@@ -278,6 +286,27 @@ export default {
                         }
                         ]
                     },
+            ],
+             items: [
+                {
+
+                    image: require('../views/img/list1.png')
+                },
+                {
+                    image: require('../views/img/list2.png')
+                },
+                {
+                    image: require('../views/img/list3.png')
+                },
+                {
+                    image: require('../views/img/list4.png')
+                },
+                {
+                    image: require('../views/img/list5.png')
+                },
+                {
+                    image: require('../views/img/list6.png')
+                }
             ]
         }
     },
@@ -352,19 +381,24 @@ export default {
             this.flag = true
           }, 100)
         },
+        changePage(current) {
+            //console.log('当前轮播图序号为:' + current)
+        },
+        clickHandler(item, index) {
+            //console.log(item, index)
+        }
     },
-   
-}
+   }
 </script>
 <style lang="scss" scoped>
 @font-face {
   font-family: 'iconfont';  /* project id 1451681 */
-  src: url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.eot');
-  src: url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1451681_a1rz7adghrl.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.eot');
+  src: url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -375,7 +409,9 @@ export default {
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.container{
+    background-color: #F8F8F8;
+}
 .wrapper{
     position: absolute;
     top:60vw;
@@ -385,6 +421,7 @@ export default {
     display:flex;
     flex-direction: row;
     background-color: #F8F8F8;
+    padding-top: 3vw;
     .MenuTabs{
         display: flex;
         flex-direction: row;
@@ -446,20 +483,34 @@ export default {
                 li{
                     border-radius: 1vw;
                     margin:0 0 5% 6%;
-                    background-color: pink;
+                    box-shadow:1px 1px 5px 0px #9D9D9D;
                     height: 45vw;
-                    width: 70vw;
-                    img{
-                        border-radius: 1vw;
-                        height: 45vw;
-                        width: 70vw;
+                    width: 73vw;
+                    span{
+                        display: flex;
+                        z-index:5;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                    i{
+                        color:#000;
+                        font-size: 6vw;
+                    }
+                    .icombo{
+                        padding: 41vw 0 0 5vw;
+                    }
+                    .optional{
+                         padding: 35vw 0 0 5vw;
+                    }
+                    .single{
+                         padding: 35vw 0 0 5vw;
+                         i{
+                             font-size: 5vw;
+                         }
                     }
                 }
                 .big{
-                    height: 62vw;
-                    img{
-                        height: 62vw;
-                    }
+                    height: 55vw;
                 }
             }
         }
@@ -469,21 +520,26 @@ export default {
 .x{
     width: 100%;
     height: 48vw;
-    background-color: pink;
     margin-top: 14vw;
 }
 .head{
-    height: 10vw;
+    height: 12vw;
     width: 100%;
-    padding: 2%;
     background-color: #ffffff;
     position: fixed;
     top:0;
     z-index: 999999;
-    .icon{
-        width: 0vw;
-       padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.slide{
+    margin-top:12vw;
+    height: 48vw;
+    img{
+        width: 100%;
+        height: 100%;
     }
 }
-
 </style>

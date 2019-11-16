@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .listview{
      ul{
-         padding: 0 0 0 3%;
+         padding: 0;
          margin: 0;
           li{
                 list-style: none;

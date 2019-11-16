@@ -29,7 +29,7 @@
                     </div>
                  </router-link>
             </div>
-            <List :list='list'></List>
+            <List :list='list' class="list"></List>
         </div>
     </div>
 </template>
@@ -172,5 +172,8 @@ export default {
          margin-right: 6vw;
      }}
  }
+}
+.list{
+    padding: 0 0 15% 3%;
 }
 </style>

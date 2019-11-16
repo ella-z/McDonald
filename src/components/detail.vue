@@ -87,9 +87,6 @@ export default {
             ], 
         }
     }, 
-    created(){
-                console.log(this.$route.query.src);
-            },
     methods:{
         back(){
              this.$router.go(-1);
