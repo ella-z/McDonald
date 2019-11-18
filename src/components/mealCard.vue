@@ -48,7 +48,6 @@ export default {
             border-radius:1vw; 
             width: 100%;
             height:103vw;
-             background-color: pink;
             .detail{
                 position: absolute;
                 z-index: 2;

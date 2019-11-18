@@ -4,12 +4,12 @@
             超值好礼
         </div>
         <div class="Card">
-            <div class="want MR">
+            <div class="want MR" @click="overflow">
                 <img src='../views/img/discover/我要超值.png'/>
                 <span>我要超值</span>
                 物超所值，就点这
             </div>
-            <div class="want">
+            <div class="want" @click="gift">
                 <img src='../views/img/discover/我要送礼.png'/>
                 <span>我要送礼</span>
                 纠结送啥，就点这
@@ -17,10 +17,10 @@
         </div>
         <div class="recommend">
             <div class="selection">精选推荐</div>
-            <miniCard :miniCard="minicard[0]"></miniCard>
-            <miniCard :miniCard="minicard[1]"></miniCard>
+            <miniCard :miniCard="miniCard[0]"></miniCard>
+            <miniCard :miniCard="miniCard[1]"></miniCard>
             <mealCard :mealCard="mealCard[0]"></mealCard>
-            <miniCard :miniCard="minicard[2]"></miniCard>
+            <miniCard :miniCard="miniCard[2]"></miniCard>
             <mealCard :mealCard="mealCard[1]"></mealCard>
         </div>
         <cart></cart>
@@ -39,7 +39,7 @@ export default {
     },
    data(){
        return{
-            minicard:[
+            miniCard:[
                 {
                     name:"早餐频次卡-10份板烧鸡腿麦满分组合",
                     src:require('../views/img/discover/板烧鸡腿堡组合套餐.png')
@@ -79,6 +79,14 @@ export default {
             ]
        }
    },
+   methods:{
+       overflow(){
+           this.$router.push({path:'/want',query:{mealCard:this.mealCard,title:"我要超值"}});
+       },
+       gift(){
+            this.$router.push({path:'/want',query:{miniCard:this.miniCard,title:"我要送礼"}});
+       }
+   }
 }
 </script>
 <style lang="scss" scoped>

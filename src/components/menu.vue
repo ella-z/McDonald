@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <div class="head">
-            <div class="icon" @click="back()">
-                <i class="iconfont">&#xe61b;</i>
-            </div>
+                <i class="iconfont icon" @click="back()">&#xe61b;</i>
+                <span>{{distribution}}</span>  
+                <span></span>
         </div>
         <cube-slide ref="slide" :data="items" @change="changePage" class="slide">
             <cube-slide-item v-for="(item, index) in items" :key="index" @click.native="clickHandler(item, index)">
@@ -34,7 +34,10 @@
                     <div>
                         <div ref="good" :key="index" v-for="(item,index) in TabList">
                             <ul class="rcontent" >
-                                <li v-for="food in item.foods" :key="food.name" :class="{big:index<2}" :style="{background: 'url(' + food.src + ') no-repeat center ',backgroundSize:'100% 100%'}">                        
+                                <li v-for="food in item.foods" 
+                                :key="food.name" :class="{big:index<2}" 
+                                :style="{background: 'url(' + food.src + ') no-repeat center ',backgroundSize:'100% 100%'}"
+                                >                        
                                      <span class="icombo" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></span>
                                      <span class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></span>
                                      <span class="single" v-show="index>2"><i class="iconfont">&#xe626;</i></span>
@@ -55,6 +58,7 @@ export default {
     components:{slideBanner},
     data(){
         return{
+            distribution:this.$route.query.distribution,
             actli: 0,
             arr: [0],
             activeName:'1',
@@ -532,6 +536,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 
 }
 .slide{

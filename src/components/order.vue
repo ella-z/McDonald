@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="orange">
-           <img src="../views/img/M记图标.png" />
+        <div class="orange" :class="{night:isnight===true,data:isdata===true}">
+            <span>{{time}}</span>
         </div>
         <div class="content">
             <div class="way"> 
@@ -20,14 +20,14 @@
                         <img src="../views/img/外卖.png" class="takeOut"/>
                     </div>
                 </div>
-                 <router-link  to="/menu" class="link">
+                 <div class="link" @click="toshop">
                     <div class="wayList">
                         <span>到点取餐</span>
                         <br />
                         <span class="small">快速取餐免排队</span>
                         <img src="../views/img/堂食.png" class="eatIn"/>
                     </div>
-                 </router-link>
+                 </div>
             </div>
             <List :list='list' class="list"></List>
         </div>
@@ -40,11 +40,14 @@ import List from '../components/list'
 export default {
     components:{
         List,
- 
     },
     data()
     {
         return{
+            gettime:'',
+            isnight:false,
+            isdata:false,
+            time:'',
             list:[
                 {
                     src:require('../views/img/list1.png')
@@ -70,6 +73,9 @@ export default {
             ]
         }
     },
+    created(){
+        this.currentTime();
+    },
     methods:{
         show(){
              const component = this.$refs.PopupOrder
@@ -88,7 +94,34 @@ export default {
             }).show()
         },
         tomenu(){
-            this.$router.push('/menu');
+            this.$router.push({path:'/menu',query:{distribution:"麦乐送"}});
+        },
+        toshop(){
+            this.$router.push({path:'/menu',query:{distribution:"到店取餐"}});
+        },
+        getTime(){
+            var _this=this;
+            let hh = new Date().getHours();
+            let mf = new Date().getMinutes()<10 ? '0'+new Date().getMinutes() : new Date().getMinutes();
+            let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();
+            _this.gettime = hh+':'+mf+':'+ss;
+            if(hh>18&&hh<6)
+            {
+                this.isnight=true;
+                this.time="晚上好";
+            }else if(hh>=6&&hh<=18)
+            {
+                this.isdata=true;
+                if(hh>=6&&hh<12)
+                {
+                    this.time="早上好";
+                }else{
+                    this.time="下午好";
+                }
+            }
+        },
+        currentTime(){
+            setInterval(this.getTime,300);
         }
     }
 }
@@ -97,18 +130,24 @@ export default {
 <style lang="scss">
 .orange{
     position: absolute;
-    background-color: #1B1B33;
     width: 100%;
-    height: 40vw;
+    height: 45vw;
     z-index: -1;
-    img{
-        background-color: #fff;
-        width: 15vw;
-        height: 15vw;
-        margin: 8% 0 0 41%;
-        border-radius: 50%;
+    background-size: 100% 100%;
+    background-color: #fff;
+    span{
+        display: block;
+        margin:32vw 0 0 44vw;
+        font-size: 4vw;
     }
 }
+.data{
+        background-image: url("../views/img/data.png");
+}
+.night{
+        background-image: url("../views/img/night.png");
+        color:#fff;
+    }
 </style>
 <style lang="scss" scoped>
 .content{
@@ -116,7 +155,7 @@ export default {
      display: flex;
      flex-direction: row;
      justify-content: center;
-     padding: 35% 0 5%;
+     padding: 40% 0 5%;
      .Popup{
         display: flex;
         flex-direction: column;

@@ -132,7 +132,6 @@ export default {
         width: 100vw;
         height: 70vw;
         margin-top: 12vw;
-        background-color: pink;
         img{
             width: 100vw;
             height: 70vw;

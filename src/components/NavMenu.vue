@@ -16,7 +16,7 @@
                  <router-link to='/index/member' class="link">
                 <i class="iconfont">&#xe663;</i><span>我的</span>
                  </router-link>
-                </li>
+            </li>
         </ul>
     </div>
     </div>
@@ -59,7 +59,7 @@ export default {
     background-color: #292929;
     position: fixed;
     bottom: 0;  
-    z-index: 999;
+    z-index: 99;
     ul{
         padding: 0;
         margin: 0;

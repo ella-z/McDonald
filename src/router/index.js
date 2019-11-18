@@ -9,6 +9,7 @@ import discover from '../components/discover'
 import member from '../components/member'
 import detail from '../components/detail'
 import packages from '../components/packages'
+import want from '../components/want'
 
 Vue.use(Router);
  
@@ -53,7 +54,11 @@ const router =  [
         name:'packages',
         component:packages
       },
-
+      {
+        path:'/want',
+        name:'want',
+        component:want
+      }
      
 ]
 export default new Router({
