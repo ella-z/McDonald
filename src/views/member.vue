@@ -29,7 +29,7 @@
             <input type="text" name="account" placeholder="点击输入账号">
             <input type="password" name="password" placeholder="点击输入密码">
             <input type="submit" value="登录" class="button">
-            
+            <input type="button" value="注册" class="button">
         </div>
         <div class="footer"></div>
     </div>
@@ -112,7 +112,7 @@ export default {
             outline:0;
         }
         .button{
-            margin: 15vw;
+            margin:15vw 15vw 0;
             background-color: #FFC836;
             width: 50vw;
             height: 10vw;

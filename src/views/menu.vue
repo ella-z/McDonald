@@ -8,7 +8,7 @@
         <cube-slide ref="slide" :data="items" @change="changePage" class="slide">
             <cube-slide-item v-for="(item, index) in items" :key="index" @click.native="clickHandler(item, index)">
                 <a>
-                    <img :src="item.image">
+                    <img :src="item.src">
                 </a>
             </cube-slide-item>
         </cube-slide>
@@ -16,10 +16,10 @@
             <div class="MenuTabs">
                     <div class="Tab" ref="left">
                         <ul class="lcontent">
-                            <div class="search">
+                            <li class="search">
                                 <i class="iconfont">&#xe62e;</i>
                                 搜索
-                            </div>
+                            </li>
                             <li :key='index' 
                                 v-for="(item,index) in TabList"
                                 ref="lItem"
@@ -292,27 +292,7 @@ export default {
                         ]
                     },
             ],
-             items: [
-                {
-
-                    image: require('../assets/img/list1.png')
-                },
-                {
-                    image: require('../assets/img/list2.png')
-                },
-                {
-                    image: require('../assets/img/list3.png')
-                },
-                {
-                    image: require('../assets/img/list4.png')
-                },
-                {
-                    image: require('../assets/img/list5.png')
-                },
-                {
-                    image: require('../assets/img/list6.png')
-                }
-            ]
+             items: []
         }
     },
    created () {
@@ -327,6 +307,10 @@ export default {
         }
     },
     mounted () {
+        var that =this;
+        this.axios.post('http://localhost:80/mcdonald/poster.php').then(function(response){
+        that.items=response.data;
+    })
     setTimeout(() => {
     /* eslint-disable no-new */
      this.Lscroll = new Bscroll(this.$refs.left, {

@@ -55,7 +55,7 @@ export default {
     created(){
         this.currentTime();
     },
-    mounted(){
+    mounted(){ 
         var that = this;
         this.axios.get('http://localhost:80/mcdonald/poster.php').then(function(response){
              that.list=response.data;

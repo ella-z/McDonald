@@ -27,9 +27,9 @@
     </div>
 </template>
 <script>
-import miniCard from './miniCard'
-import mealCard from './mealCard'
-import cart from './cart'
+import miniCard from '../components/miniCard'
+import mealCard from '../components/mealCard'
+import cart from '../components/cart'
 
 export default {
     components:{

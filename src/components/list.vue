@@ -6,7 +6,7 @@
                     :key="index"
                     v-for="(item,index) in xlist" 
                     @click="tomenu()"
-                    :style="{background: 'url(' +require(test) + ') no-repeat center ',backgroundSize:'100%'}">
+                    :style="{background: 'url('+item.src+') no-repeat center ',backgroundSize:'100%'}">
                 </li>
             </ul>
             </div>
@@ -19,14 +19,11 @@ export default {
     data(){
         return{
             xlist:'',
-            test:'../assets/img/list3.png'
         }
     },
     watch:{
         list(val){
          this.xlist=val;
-         console.log(val);
-         
         }
     },
     methods:{
