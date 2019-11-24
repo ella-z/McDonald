@@ -1,2 +1,4 @@
-[1111/113922.381:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ²Ù×÷³É¹¦Íê³É¡£ (0x0)
-[1118/100911.347:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ²Ù×÷³É¹¦Íê³É¡£ (0x0)
+[1111/113922.381:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½É¡ï¿½ (0x0)
+[1118/100911.347:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½É¡ï¿½ (0x0)
+[1118/153311.315:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½É¡ï¿½ (0x0)
+[1123/220255.021:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½É¡ï¿½ (0x0)

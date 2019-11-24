@@ -4,7 +4,7 @@
         <div class="nav"></div>
         <div class="card">
             <div class="cardLeft">
-                <img src="../views/img/m.png" />
+                <img src="../assets/img/m.png" />
                 <span @click="toLogin">立即注册/登录></span>
                 <span class="intro">
                     成为麦当劳会员，<br />
@@ -29,6 +29,7 @@
             <input type="text" name="account" placeholder="点击输入账号">
             <input type="password" name="password" placeholder="点击输入密码">
             <input type="submit" value="登录" class="button">
+            
         </div>
         <div class="footer"></div>
     </div>
@@ -53,31 +54,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@font-face {
-  font-family: 'iconfont';  /* project id 1451681 */
-  src: url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.eot');
-  src: url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1451681_8jwtu8dpi7e.svg#iconfont') format('svg');
-}
 .iconfont{
-    font-family:"iconfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
     font-size: 3.8vw;
-    color: #000;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
 }
-
 
 .h{
     height: 100vh!important;
 }
 .login{
-    background-image:url("../views/img/memberbg.png"); 
+    background-image:url("../assets/img/memberbg.png"); 
     background-size: 100%  100%;
     height: 0vh;
     width: 100%;
@@ -106,7 +91,7 @@ export default {
         .ico{
             width: 15vw;
             height: 15vw;
-            background-image: url("../views/img/m标.png");
+            background-image: url("../assets/img/m标.png");
             background-size: 100%;
             margin:5vw 0;
         }
@@ -175,7 +160,7 @@ export default {
         }
         .cardRight{
             width: 50vw;
-            background-image: url('../views/img/cardbackground.png');
+            background-image: url('../assets/img/cardbackground.png');
             background-size: 100% 100%;
             border-radius: 2.5vw;
         }

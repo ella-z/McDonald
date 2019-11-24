@@ -10,6 +10,7 @@ import member from '../components/member'
 import detail from '../components/detail'
 import packages from '../components/packages'
 import want from '../components/want'
+import MenuCard from '../components/MenuCard'
 
 Vue.use(Router);
  
@@ -58,6 +59,11 @@ const router =  [
         path:'/want',
         name:'want',
         component:want
+      },
+      {
+        path:'/MenuCard',
+        name:'MenuCard',
+        component:MenuCard
       }
      
 ]

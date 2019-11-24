@@ -36,23 +36,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@font-face {
-  font-family: 'iconfont';  /* project id 1451681 */
-  src: url('//at.alicdn.com/t/font_1451681_edntjb7kslh.eot');
-  src: url('//at.alicdn.com/t/font_1451681_edntjb7kslh.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1451681_edntjb7kslh.svg#iconfont') format('svg');
-}
-.iconfont{
-    font-family:"iconfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    font-size: 6vw;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;}
-    
 .n{
     height: 13vw;
     width: 100%;
@@ -92,6 +75,9 @@ export default {
         .checked{
             background-color: #333;
             .link{
+                i{
+                     color: #FFC836;
+                }
                 color: #FFC836;
             }
         }

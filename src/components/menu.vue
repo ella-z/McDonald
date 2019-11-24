@@ -36,7 +36,8 @@
                             <ul class="rcontent" >
                                 <li v-for="food in item.foods" 
                                 :key="food.name" :class="{big:index<2}" 
-                                :style="{background: 'url(' + food.src + ') no-repeat center ',backgroundSize:'100% 100%'}"
+                                :style="{background: 'url(' + food.src + ') no-repeat center ',backgroundSize:'100%'}"
+                                @click="toMenuCard"
                                 >                        
                                      <span class="icombo" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></span>
                                      <span class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></span>
@@ -69,150 +70,150 @@ export default {
               carouselList:[
                 {
                       
-                      src:require('../views/img/takeout/takeout1.png')
+                      src:require('../assets/img/takeout/takeout1.png')
                  },
                 {
-                      src:require('../views/img/takeout/takeout2.png')
+                      src:require('../assets/img/takeout/takeout2.png')
                  },
                 {
-                      src:require('../views/img/takeout/takeout3.png')
+                      src:require('../assets/img/takeout/takeout3.png')
                  },
                 {
-                      src:require('../views/img/takeout/takeout4.png')
+                      src:require('../assets/img/takeout/takeout4.png')
                  },
             ],
             TabList:[
                     {
                         name:"安格斯黑金系列",
-                        src:require('../views/img/MenuTabsIcon/安格斯.png'),
+                        src:require('../assets/img/MenuTabsIcon/安格斯.png'),
                         label:"安格斯<br />黑金<br />系列",
                         foods:[
                             {
                                 name:"安格斯厚牛菠萝堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛菠萝堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png'),
                             },
                             {
                                 name:"安格斯厚牛培根堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png'),
                             },
                             {
                                 name:"安格斯厚牛芝士堡套餐",
-                                src:require('../views/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛培根堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png'),
                             },
                             {
                                 name:"双层安格斯厚牛芝士堡套餐",
-                                src:require('../views/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png'),
+                                src:require('../assets/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png'),
                             }
                         ]
                     },
                     {
                         name:"超值三件套",
-                        src:require('../views/img/MenuTabsIcon/超值三件套.png'),
+                        src:require('../assets/img/MenuTabsIcon/超值三件套.png'),
                         label:"超值<br />三件套",
                         foods:[
                             {
                                 name:"麦辣鸡腿汉堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png')
                             },
                             {
                                 name:"板烧鸡腿堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/板烧鸡腿堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/板烧鸡腿堡套餐.png')
                             },
                             {
                                 name:"巨无霸套餐",
-                                src:require('../views/img/menuCard/超值三件套/巨无霸套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/巨无霸套餐.png')
                             },
                             {
                                 name:"不素之霸双层牛堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png')
                             },
                             {
                                 name:"双层深海鳕鱼堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png')
                             },
                             {
                                 name:"川辣双鸡堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/川辣双鸡堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/川辣双鸡堡套餐.png')
                             },
                             {
                                 name:"双层吉士汉堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/双层吉士汉堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/双层吉士汉堡套餐.png')
                             },
                             {
                                 name:"麦香鸡套餐",
-                                src:require('../views/img/menuCard/超值三件套/麦香鸡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/麦香鸡套餐.png')
                             },
                             {
                                 name:"麦香鱼套餐",
-                                src:require('../views/img/menuCard/超值三件套/麦香鱼套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/麦香鱼套餐.png')
                             },
                             {
                                 name:"麦乐鸡套餐",
-                                src:require('../views/img/menuCard/超值三件套/麦乐鸡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/麦乐鸡套餐.png')
                             },
                             {
                                 name:"培根蔬萃双层牛堡套餐",
-                                src:require('../views/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png')
                             },
                             {
                                 name:"吉士汉堡包套餐",
-                                src:require('../views/img/menuCard/超值三件套/吉士汉堡包套餐.png')
+                                src:require('../assets/img/menuCard/超值三件套/吉士汉堡包套餐.png')
                             },
                             {
                                 name:"麦辣鸡翅",
-                                src:require('../views/img/menuCard/超值三件套/麦辣鸡翅.png')
+                                src:require('../assets/img/menuCard/超值三件套/麦辣鸡翅.png')
                             },
                         ]
                     },
                     {
                         name:"随心配1+1=12",
-                        src:require('../views/img/MenuTabsIcon/随心配.png'),
+                        src:require('../assets/img/MenuTabsIcon/随心配.png'),
                         label:"随心配<br />1+1=12",
                         foods:[
                             {
                                 name:"随心配",
-                                src:require('../views/img/menuCard/随心配/随心配.png')
+                                src:require('../assets/img/menuCard/随心配/随心配.png')
                             }
                         ]
                     },
                     {
                         name:"金拱门桶",
-                        src:require('../views/img/MenuTabsIcon/全家桶.png'),
+                        src:require('../assets/img/MenuTabsIcon/全家桶.png'),
                         label:"金拱门<br />桶",
                         foods:[
                             {
                                 name:"金拱门桶A",
-                                src:require('../views/img/menuCard/金拱门桶/金拱门桶A.png')
+                                src:require('../assets/img/menuCard/金拱门桶/金拱门桶A.png')
                             },
                              {
                                 name:"金拱门桶B",
-                                src:require('../views/img/menuCard/金拱门桶/金拱门桶B.png')
+                                src:require('../assets/img/menuCard/金拱门桶/金拱门桶B.png')
                             },
                              {
                                 name:"家有金桶(汉堡版)",
-                                src:require('../views/img/menuCard/金拱门桶/家有金桶(汉堡版).png')
+                                src:require('../assets/img/menuCard/金拱门桶/家有金桶(汉堡版).png')
                             },
                              {
                                 name:"家有金桶(脆鸡版)",
-                                src:require('../views/img/menuCard/金拱门桶/家有金桶(脆鸡版).png')
+                                src:require('../assets/img/menuCard/金拱门桶/家有金桶(脆鸡版).png')
                             },
                              {
                                 name:"小食缤纷盒",
-                                src:require('../views/img/menuCard/金拱门桶/小食缤纷盒.png')
+                                src:require('../assets/img/menuCard/金拱门桶/小食缤纷盒.png')
                             },
                         ]
                     },
                     {
                         name:"500大卡套餐",
-                        src:require('../views/img/MenuTabsIcon/500大卡套餐.png'),
+                        src:require('../assets/img/MenuTabsIcon/500大卡套餐.png'),
                         label:"500<br />大卡<br />套餐",
                         foods:[
                         {
@@ -228,7 +229,7 @@ export default {
                     },
                     {
                         name:"开心乐园餐",
-                        src:require('../views/img/MenuTabsIcon/开心乐园.png'),
+                        src:require('../assets/img/MenuTabsIcon/开心乐园.png'),
                         label:"开心<br />乐园餐",
                         foods:[
                         {
@@ -244,7 +245,7 @@ export default {
                     },
                     {
                         name:"小食甜点玩具",
-                        src:require('../views/img/MenuTabsIcon/小吃.png'),
+                        src:require('../assets/img/MenuTabsIcon/小吃.png'),
                         label:"小食<br />甜点<br />玩具",
                         foods:[
                         {
@@ -260,7 +261,7 @@ export default {
                     },
                     {
                         name:"主食",
-                        src:require('../views/img/MenuTabsIcon/主食.png'),
+                        src:require('../assets/img/MenuTabsIcon/主食.png'),
                         label:"主食",
                         foods:[
                         {
@@ -276,7 +277,7 @@ export default {
                     },
                     {
                         name:"饮品",
-                        src:require('../views/img/MenuTabsIcon/饮品.png'),
+                        src:require('../assets/img/MenuTabsIcon/饮品.png'),
                         label:"饮品",
                         foods:[
                         {
@@ -294,22 +295,22 @@ export default {
              items: [
                 {
 
-                    image: require('../views/img/list1.png')
+                    image: require('../assets/img/list1.png')
                 },
                 {
-                    image: require('../views/img/list2.png')
+                    image: require('../assets/img/list2.png')
                 },
                 {
-                    image: require('../views/img/list3.png')
+                    image: require('../assets/img/list3.png')
                 },
                 {
-                    image: require('../views/img/list4.png')
+                    image: require('../assets/img/list4.png')
                 },
                 {
-                    image: require('../views/img/list5.png')
+                    image: require('../assets/img/list5.png')
                 },
                 {
-                    image: require('../views/img/list6.png')
+                    image: require('../assets/img/list6.png')
                 }
             ]
         }
@@ -390,29 +391,14 @@ export default {
         },
         clickHandler(item, index) {
             //console.log(item, index)
+        },
+        toMenuCard(){
+            this.$router.push({path:'/MenuCard'});
         }
     },
    }
 </script>
 <style lang="scss" scoped>
-@font-face {
-  font-family: 'iconfont';  /* project id 1451681 */
-  src: url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.eot');
-  src: url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1451681_1k0l8x6stjp.svg#iconfont') format('svg');
-}
-.iconfont{
-    font-family:"iconfont" !important;
-    font-size:16px;font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    font-size: 6vw;
-    color: #9D9D9D;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-}
 .container{
     background-color: #F8F8F8;
 }

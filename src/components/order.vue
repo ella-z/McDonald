@@ -8,7 +8,7 @@
                 <cube-popup type="my-popup" position="center" :mask-closable="true"  ref="PopupOrder" >
                     <div class="Popup">
                         <span>选择送达时间</span>
-                        <div class="orderButton" @click="tomenu">现在就送</div>
+                        <div class="orderButton" @click="totake">现在就送</div>
                         <div class="orderButton" @click="showTimePicker">预约订单</div>
                     </div>
                     </cube-popup>
@@ -17,7 +17,7 @@
                         <span>麦乐送外卖</span>
                         <br />
                         <span class="small">30分钟必达</span>
-                        <img src="../views/img/外卖.png" class="takeOut"/>
+                        <img src="../assets/img/外卖.png" class="takeOut"/>
                     </div>
                 </div>
                  <div class="link" @click="toshop">
@@ -25,7 +25,7 @@
                         <span>到点取餐</span>
                         <br />
                         <span class="small">快速取餐免排队</span>
-                        <img src="../views/img/堂食.png" class="eatIn"/>
+                        <img src="../assets/img/堂食.png" class="eatIn"/>
                     </div>
                  </div>
             </div>
@@ -36,6 +36,7 @@
 
 <script>
 import List from '../components/list'
+import { sync } from 'glob';
 
 export default {
     components:{
@@ -48,33 +49,17 @@ export default {
             isnight:false,
             isdata:false,
             time:'',
-            list:[
-                {
-                    src:require('../views/img/list1.png')
-                },
-                {
-                     src:require('../views/img/list2.png')
-                },
-                 {
-                     src:require('../views/img/list3.png')
-                },
-                 {
-                     src:require('../views/img/list4.png')
-                },
-                 {
-                     src:require('../views/img/list5.png')
-                },
-                 {
-                     src:require('../views/img/list6.png')
-                },
-                 {
-                     src:require('../views/img/list7.png')
-                }
-            ]
+            list:''
         }
     },
     created(){
         this.currentTime();
+    },
+    mounted(){
+        var that = this;
+        this.axios.get('http://localhost:80/mcdonald/poster.php').then(function(response){
+             that.list=response.data;
+        })
     },
     methods:{
         show(){
@@ -93,7 +78,7 @@ export default {
                     }
             }).show()
         },
-        tomenu(){
+        totake(){
             this.$router.push({path:'/menu',query:{distribution:"麦乐送"}});
         },
         toshop(){
@@ -105,7 +90,7 @@ export default {
             let mf = new Date().getMinutes()<10 ? '0'+new Date().getMinutes() : new Date().getMinutes();
             let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();
             _this.gettime = hh+':'+mf+':'+ss;
-            if(hh>18&&hh<6)
+            if(hh>18||hh<6)
             {
                 this.isnight=true;
                 this.time="晚上好";
@@ -142,10 +127,10 @@ export default {
     }
 }
 .data{
-        background-image: url("../views/img/data.png");
+        background-image: url("../assets/img/data.png");
 }
 .night{
-        background-image: url("../views/img/night.png");
+        background-image: url("../assets/img/night.png");
         color:#fff;
     }
 </style>

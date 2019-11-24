@@ -4,13 +4,12 @@
     <NavMenu></NavMenu>
 </div>
 </template>
-
 <script>
-import NavMenu from '../components/NavMenu'
+import NavMenu from '../components/NavMenu';
 export default {
   components: {
    NavMenu
-  }
+  },
 }
 </script>
 

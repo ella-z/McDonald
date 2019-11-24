@@ -1,6 +1,6 @@
 <template>
     <div class="cart" :style="{'left':left+'px','top':top+'px'}" ref="cart">
-            <img src="../views/img/discover/袋子.png" />
+            <img src="../assets/img/discover/袋子.png" />
     </div>
 </template>
 
