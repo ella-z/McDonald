@@ -25,10 +25,16 @@
         <div class="content">
             <div class="ico"></div>
             <span>新会员注册获得新人大礼包</span>
-            <cube-switch v-model="value" class="switch">是否为管理员</cube-switch>
-            <input type="text" name="account" placeholder="点击输入账号">
-            <input type="password" name="password" placeholder="点击输入密码">
-            <input type="submit" value="登录" class="button">
+            <cube-switch v-model="isAdministrator" class="switch">是否为管理员</cube-switch>
+            <div class="warning">
+                <span  v-show="isexist">该账号不存在</span>
+            </div>
+            <input type="text" name="account" @blur="isaccount()" placeholder="点击输入账号" v-model='account'>
+            <input type="password" name="password" placeholder="点击输入密码" v-model='password'>
+            <div class="warning">
+                <span  v-show="isright">密码错误</span>
+            </div>
+            <input type="submit" value="登录" class="button" @click="login">
             <input type="button" value="注册" class="button">
         </div>
         <div class="footer"></div>
@@ -36,11 +42,17 @@
 </div>
 </template>
 <script>
+import qs from 'qs'
+
 export default {
     data(){
         return{
           open:false,
-          value:false
+          isAdministrator:false,
+          account:'',
+          password:'',
+          isexist:false,
+          isright:false
         }
     },
     methods:{
@@ -49,6 +61,42 @@ export default {
         },
         toClose(){
             this.open=false;
+        },
+        isaccount(){
+            var that=this;
+            let url;
+            this.axios.post('http://localhost:80/mcdonald/account.php',{'isAdministrator':that.isAdministrator.toString()},{
+                  headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+            }
+            ).then(function(response){
+                for(let i=0;i<response.data.length;i++){
+                     if(response.data[i].account===that.account){
+                            that.isexist=false; 
+                            break;
+                        }else{
+                            that.isexist=true;
+                        }
+                }
+            })
+        },
+        login(){
+            var that=this;
+            this.axios.post('http://localhost:80/mcdonald/password.php',{
+                "account":that.account,"password":that.password,'isAdministrator':that.isAdministrator.toString()},{
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+            }).then(function(response){
+                            if(response.data==true){
+                                console.log('true');
+                                 that.isright=false;
+                            }else{
+                                that.isright=true;
+                            }
+                        }
+                    )
         }
     }
 }
@@ -112,11 +160,30 @@ export default {
             outline:0;
         }
         .button{
-            margin:15vw 15vw 0;
+            margin:10vw 15vw 0;
             background-color: #FFC836;
             width: 50vw;
             height: 10vw;
             border-bottom: 0;
+        }
+        .warning{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 6vw;
+            width: 100%;
+            margin-top: 2vw;
+            span{
+                margin: 0;
+                text-align: center;
+                line-height: 6vw;
+                background-color: red;
+                color:#f8f8f8;
+                border-radius: 1vw; 
+                width: 35vw;
+                height: 6vw;
+            }
         }
     }
     .footer{

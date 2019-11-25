@@ -12,6 +12,7 @@
     "better-scroll": "^2.0.0-beta.2",
     "core-js": "^2.6.5",
     "cube-ui": "~1.12.15",
+    "qs": "^6.9.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.5",
     "vue-baidu-map": "^0.21.22",
