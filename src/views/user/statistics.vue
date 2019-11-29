@@ -24,19 +24,24 @@
                 <van-button type="info" @click="toggleAll">反选</van-button>
             </van-dropdown-item>
         </van-dropdown-menu>
+        <chart></chart>
     </div>
 </template>
 
 <script>
+import chart from '../../components/chart'
 
 export default {
-
+    components:{
+        chart
+    },
   data(){
       return{
-            value: '安格斯黑金系列',
+            value: '全部',
             switch1: false,
             switch2: false,
             option: [
+                { text: '全部', value: '全部' },
                 { text: '安格斯黑金系列', value: '安格斯黑金系列' },
                 { text: '超值三件套', value: '超值三件套' },
                 { text: '随心配', value: '随心配' },
@@ -48,19 +53,11 @@ export default {
                 { text: '饮品', value: '饮品' },
 
             ],
-            result:[
-                {
-
-                },
-                {
-
-                },
-                {
-
-                }
-            ]
+           
+            result:[]
       }
   },
+
   methods:{
       onConfirm() {
       this.$refs.item.toggle();
@@ -86,7 +83,8 @@ export default {
     .statistics{
         width: 100vw;
         height: 100vh;
-        background-color: skyblue;
+        background-color: #f8f8f8;
         margin-top: 13vw;
+
     }
 </style>

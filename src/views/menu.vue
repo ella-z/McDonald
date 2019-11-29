@@ -289,7 +289,7 @@ export default {
                         ]
                     },
             ],
-             items: []
+            items: []
         }
     },
    created () {
@@ -307,6 +307,9 @@ export default {
         var that =this;
         this.axios.post('http://localhost:80/mcdonald/poster.php').then(function(response){
         that.items=response.data;
+    })
+        this.axios.post('http://localhost:80/mcdonald/menu.php').then(function(response){
+                console.log(response);
     })
     setTimeout(() => {
     /* eslint-disable no-new */
