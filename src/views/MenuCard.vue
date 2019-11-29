@@ -1,10 +1,6 @@
 <template>
     <div class="MenuCard">
-        <div class="head">
-            <i class="iconfont icon" @click="back()">&#xe61b;</i>
-            <span>双层安格斯厚牛菠萝堡套餐</span>  
-            <span></span>
-        </div>
+        <headerNav :title="title"></headerNav>
         <div class="poster" ></div>
         <div class="intro">
             <span>双层安格斯厚牛菠萝堡套餐</span>
@@ -20,10 +16,13 @@
     </div>
 </template>
 <script>
+import headerNav from '../components/headerNav'
+
 export default {
+    components:{headerNav},
     data(){
         return{
-            
+            title:"双层安格斯厚牛菠萝堡套餐"
         }
     },
     methods:{

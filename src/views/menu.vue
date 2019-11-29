@@ -1,10 +1,6 @@
 <template>
     <div class="container">
-        <div class="head">
-                <i class="iconfont icon" @click="back()">&#xe61b;</i>
-                <span>{{distribution}}</span>  
-                <span></span>
-        </div>
+        <headerNav :title="distribution"></headerNav>
         <cube-slide ref="slide" :data="items" @change="changePage" class="slide">
             <cube-slide-item v-for="(item, index) in items" :key="index" @click.native="clickHandler(item, index)">
                 <a>
@@ -29,7 +25,7 @@
                                 <span  v-html="item.label"> {{item.label}}</span>
                             </li>
                         </ul>
-                    </div>
+                </div>
                 <div class="Card" ref="righ"> 
                     <div>
                         <div ref="good" :key="index" v-for="(item,index) in TabList">
@@ -54,9 +50,10 @@
 <script>
 import Bscroll from 'better-scroll'
 import slideBanner from '../components/slideBanner'
+import headerNav from '../components/headerNav'
 
 export default {
-    components:{slideBanner},
+    components:{slideBanner,headerNav},
     data(){
         return{
             distribution:this.$route.query.distribution,
@@ -67,7 +64,7 @@ export default {
             open:1,
             scrollY:0,
             current:"1",
-              carouselList:[
+            carouselList:[
                 {
                       
                       src:require('../assets/img/takeout/takeout1.png')
@@ -377,7 +374,7 @@ export default {
             //console.log(item, index)
         },
         toMenuCard(){
-            this.$router.push({path:'/MenuCard'});
+            this.$router.push('/MenuCard');
         }
     },
    }
@@ -495,19 +492,6 @@ export default {
     width: 100%;
     height: 48vw;
     margin-top: 14vw;
-}
-.head{
-    height: 12vw;
-    width: 100%;
-    background-color: #ffffff;
-    position: fixed;
-    top:0;
-    z-index: 999999;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
 }
 .slide{
     margin-top:12vw;

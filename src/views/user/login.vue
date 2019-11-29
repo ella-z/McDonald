@@ -1,22 +1,4 @@
 <template>
-<div>
-    <div class="member">
-        <div class="nav"></div>
-        <div class="card">
-            <div class="cardLeft">
-                <img src="../assets/img/m.png" />
-                <span @click="toLogin">立即注册/登录></span>
-                <span class="intro">
-                    成为麦当劳会员，<br />
-                    更多优惠，更快取餐
-                </span>
-            </div>
-            <div class="cardRight"></div>
-        </div>
-        <div class="content">
-            <span>注册/登录后可获得大批优惠券！</span>
-        </div>
-    </div>    
     <div class="login" :class="{h:open===true}">
         <div class="title">
             <i @click="toClose" class="iconfont icon">&#xe608;</i>
@@ -32,35 +14,29 @@
             <input type="text" name="account" @blur="isaccount()" placeholder="点击输入账号" v-model='account'>
             <input type="password" name="password" placeholder="点击输入密码" v-model='password'>
             <div class="warning">
-                <span  v-show="isright">密码错误</span>
+                <span  v-show="isfault">密码错误</span>
             </div>
             <input type="submit" value="登录" class="button" @click="login">
             <input type="button" value="注册" class="button">
-        </div>
-        <div class="footer"></div>
     </div>
-</div>
+    </div>
 </template>
-<script>
-import qs from 'qs'
 
+<script>
 export default {
+    props:['open'],
     data(){
         return{
-          open:false,
           isAdministrator:false,
           account:'',
           password:'',
           isexist:false,
-          isright:false
+          isfault:false
         }
     },
     methods:{
-        toLogin(){
-            this.open=true;
-        },
         toClose(){
-            this.open=false;
+            this.$emit('toClose',false);
         },
         isaccount(){
             var that=this;
@@ -90,10 +66,16 @@ export default {
             }
             }).then(function(response){
                             if(response.data==true){
-                                console.log('true');
-                                 that.isright=false;
+                                 that.$emit('toClose',false);
+                                 that.isfault=false;
+                                 if(that.isAdministrator==true)
+                                 {
+                                     that.$router.push('/index/user/administrator');
+                                 }else{
+                                      that.$router.push('/index/user/client');
+                                 }
                             }else{
-                                that.isright=true;
+                                that.isfault=true;
                             }
                         }
                     )
@@ -101,6 +83,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss" scoped>
 .iconfont{
     font-size: 3.8vw;
@@ -110,7 +93,7 @@ export default {
     height: 100vh!important;
 }
 .login{
-    background-image:url("../assets/img/memberbg.png"); 
+    background-image:url("http://localhost:80/mcdonald/assets/img/memberbg.png"); 
     background-size: 100%  100%;
     height: 0vh;
     width: 100%;
@@ -139,7 +122,7 @@ export default {
         .ico{
             width: 15vw;
             height: 15vw;
-            background-image: url("../assets/img/m标.png");
+            background-image: url("http://localhost:80/mcdonald/assets/img/m标.png");
             background-size: 100%;
             margin:5vw 0;
         }
@@ -174,6 +157,8 @@ export default {
             height: 6vw;
             width: 100%;
             margin-top: 2vw;
+            transition: 1s;
+            -webkit-transition: 1s;
             span{
                 margin: 0;
                 text-align: center;
@@ -190,57 +175,4 @@ export default {
         flex: 5;
     }
     }
-.member{
-    width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
-    background-color: #f8f8f8;
-    .nav{
-    height: 12vw;
-    background-color: #fff;
-    }
-    .card{
-        margin: 2% 12% 8%; 
-        width: 75vw;
-        height: 42vw;
-        border-radius: 2.5vw;
-        box-shadow: 4px 4px 5px rgb(177, 177, 177);
-        background-color: #fff;
-        display: flex;
-        flex-direction: row;
-        .cardLeft{
-            width: 40vw;
-            margin-left: 5vw;
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 7vw;
-                height: 6vw;
-                margin: 5vw 0 7vw 0;
-            }
-            .intro{
-                margin-top: 1vw;
-                color: rgb(124, 124, 124);
-                line-height: 3vw;
-                font-size: 2.2vw;
-            }
-        }
-        .cardRight{
-            width: 50vw;
-            background-image: url('../assets/img/cardbackground.png');
-            background-size: 100% 100%;
-            border-radius: 2.5vw;
-        }
-        
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        span{
-            margin-top:5vw;
-            font-size: 3.5vw;
-        }
-    }
-}
 </style>

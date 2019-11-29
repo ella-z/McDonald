@@ -28,7 +28,7 @@ export default {
     },
     methods:{
         tomenu(){
-            this.$router.push('/menu')
+            this.$router.push({path:'/menu',query:{distribution:'到点取餐'}});
         }
     }
 }

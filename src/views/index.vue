@@ -1,17 +1,17 @@
 <template>
 <div>
    <router-view></router-view>
-    <NavMenu></NavMenu>
+    <tabbar></tabbar>
 </div>
 </template>
 <script>
-import NavMenu from '../components/NavMenu';
+import tabbar from '../components/tabbar';
 export default {
   components: {
-   NavMenu
+   tabbar
   },
 }
-</script>
+</script> 
 
 <style lang="scss">
 

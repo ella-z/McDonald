@@ -5,8 +5,10 @@ import store from "./store";
 import './cube-ui';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import Vant from 'vant';
+import 'vant/lib/index.css';
 
-
+Vue.use(Vant);
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false;
 
@@ -16,4 +18,3 @@ new Vue({
   render: h => h(App)
   
 }).$mount("#app");
-

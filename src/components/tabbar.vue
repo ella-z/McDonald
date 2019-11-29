@@ -1,6 +1,5 @@
 <template>
-<div>
-    <div class="n">
+    <div class="tabbar">
         <ul>
             <li :class="{checked:ischecked=='1'}" @click="check(1)" >
                 <router-link to='/' class="link">
@@ -13,12 +12,11 @@
                 </router-link>
             </li>
             <li :class="{checked:ischecked=='3'}" @click="check(3)">
-                 <router-link to='/index/member' class="link">
+                 <router-link to='/index/user' class="link">
                 <i class="iconfont">&#xe663;</i><span>我的</span>
                  </router-link>
             </li>
         </ul>
-    </div>
     </div>
 </template>
 <script>
@@ -36,7 +34,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.n{
+.tabbar{
     height: 13vw;
     width: 100%;
     background-color: #292929;
