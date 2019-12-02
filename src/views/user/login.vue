@@ -11,7 +11,7 @@
             <div class="warning">
                 <span  v-show="isexist">该账号不存在</span>
             </div>
-            <input type="text" name="account" @blur="isaccount()" placeholder="点击输入账号" v-model='account'>
+            <input type="text" name="account" @blur="isaccount()" placeholder="点击输入账号" v-model='account' autocomplete="off">
             <input type="password" name="password" placeholder="点击输入密码" v-model='password'>
             <div class="warning">
                 <span  v-show="isfault">密码错误</span>

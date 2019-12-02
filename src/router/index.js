@@ -17,6 +17,7 @@ import client from '../views/user/client'
 import allOrder from '../views/user/allOrder'
 import statistics from '../views/user/statistics'
 import administratorIndex from '../views/user/administratorIndex'
+import orderDetail from '../components/orderDetail'
 
 Vue.use(Router);
 
@@ -68,6 +69,11 @@ const router =  [
                       path:'/index/user/administrator/allOrder',
                       name:'allOrder',
                       component:allOrder
+                    },
+                    {
+                      path:'/index/user/administrator/allOrder/orderDetail',
+                      name:'orderDetail',
+                      component:orderDetail
                     },
                     {
                       path:'/index/user/administrator/statistics',

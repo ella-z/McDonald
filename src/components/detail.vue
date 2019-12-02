@@ -100,7 +100,7 @@ export default {
     font-size: 5.5vw;
 }
  .state{
-            width: 100%;
+            width: 95%;
             padding-left: 5vw;
             font-size: 3.5vw;
             line-height: 14vw;
@@ -130,7 +130,7 @@ export default {
         }
     }
     .picture{
-        width: 100vw;
+        width: 100%;
         height: 55vw;
         background-color: #fff;
         margin-top:14vw;
@@ -170,7 +170,7 @@ export default {
         background-color: #fff;
         margin-bottom: 4vw; 
         img{
-            width: 100vw;
+            width: 100%;
             height: 80vw;
         }
     }
