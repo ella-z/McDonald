@@ -44,40 +44,10 @@ export default {
             title:"双层安格斯厚牛菠萝堡套餐",
             value:1,
             snackItems:[
-                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2017/09/201709121712579051.png"
-                },
-                                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2017/09/201709121712579051.png"
-                },
-                                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2015/10/201510282052093110.png"
-                },
-                                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2016/10/201610141806169974.png"
-                },
+      
             ],
             drinkItems:[
-                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2019/10/201910101704455569.png"
-                },
-                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2015/11/201511061811257892.png"
-                },
-                                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2015/11/201511061811032770.png"
-                },
-                                {
-                    name:"",
-                    img:"http://officialwebsitestorage.blob.core.chinacloudapi.cn/public/upload/attachment/2015/11/201511061817247401.png"
-                },
+               
 
             ]
         }
@@ -96,7 +66,7 @@ export default {
         height: 58vw;
         margin-top: 12vw;
         background-size: 100%;
-        background-image: url('../assets/img/menuCard/安格斯/安格斯厚牛培根堡套餐(poster).png');
+        background-image: url('http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛培根堡套餐.png');
     }
     .introduction{
         height: 25vw;
@@ -126,7 +96,7 @@ export default {
             margin:8vw auto;
             width: 30vw;
             height: 30vw;
-            background: url('http://localhost:80/mcdonald/assets/img/hamburger/双层安格斯厚牛芝士堡1.png') no-repeat center; 
+            background: url('http://localhost:80/mcdonald/assets/img/hamburger/双层安格斯厚牛芝士堡.png') no-repeat center; 
             background-size: 100%;
         }
         .foodName{

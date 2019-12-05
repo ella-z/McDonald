@@ -54,11 +54,14 @@ export default {
     },
     created(){
         this.currentTime();
+         this.$store.dispatch('getdata');
     },
     mounted(){ 
         var that = this;
         this.axios.get('http://localhost:80/mcdonald/poster.php').then(function(response){
              that.list=response.data;
+        },function(err){
+            console.log('请求失败');
         })
     },
     methods:{
