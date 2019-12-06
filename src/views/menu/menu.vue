@@ -30,10 +30,10 @@
                     <div>
                         <div ref="good" :key="index" v-for="(item,index) in TabList">
                             <ul class="rcontent" >
-                                <li v-for="food in item.submenu" 
-                                :key="food.name" :class="{big:index<2}" 
+                                <li v-for="(food,submenuIndex) in item.submenu" 
+                                :key="submenuIndex" :class="{big:index<2}" 
                                 :style="{background: 'url(' + food.url + ') no-repeat center ',backgroundSize:'100%'}"
-                                @click="toMenuCard"
+                                @click="(index<2)?toMenuCard(index,submenuIndex):''"
                                 >    
                                      <span class="icombo" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></span>
                                      <span class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></span>
@@ -49,8 +49,8 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
-import slideBanner from '../components/slideBanner'
-import headerNav from '../components/headerNav'
+import slideBanner from '../../components/slideBanner'
+import headerNav from '../../components/headerNav'
 
 export default {
     components:{slideBanner,headerNav},
@@ -64,22 +64,7 @@ export default {
             open:1,
             scrollY:0,
             current:"1",
-            carouselList:[
-                {
-                      
-                      src:require('../assets/img/takeout/takeout1.png')
-                 },
-                {
-                      src:require('../assets/img/takeout/takeout2.png')
-                 },
-                {
-                      src:require('../assets/img/takeout/takeout3.png')
-                 },
-                {
-                      src:require('../assets/img/takeout/takeout4.png')
-                 },
-            ],
-            TabList:this.$store.state.data[0],
+            TabList:this.$store.state.data,
             items: []
         }
     },
@@ -88,8 +73,6 @@ export default {
         setTimeout(() => {
             this._initSrcoll()
         }, 20);
-       
-        console.log(this.$store.state.data[0]);
     },
     computed:{
          goods () {
@@ -102,7 +85,6 @@ export default {
         this.axios.post('http://localhost:80/mcdonald/poster.php').then(function(response){
         that.items=response.data;
     })
-     console.log(this.$refs.good);
         setTimeout(() => {
     /* eslint-disable no-new */
      this.Lscroll = new Bscroll(this.$refs.left, {
@@ -175,8 +157,8 @@ export default {
         clickHandler(item, index) {
             //console.log(item, index)
         },
-        toMenuCard(){
-            this.$router.push('/MenuCard');
+        toMenuCard(index,submenuIndex){
+            this.$router.push({path:'/MenuCard',query:{indexID:index,submenuIndex:submenuIndex}});
         }
     },
    }

@@ -6,89 +6,89 @@
         "snackItems":[
             { 
                "name":"薯条",
-                "pri":"http://localhost:80/mcdonald/assets/img/snake/薯条.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/薯条.png"
             },
             { 
                 "name":"黄金脆薯格",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/黄金脆薯格.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/金黄脆薯格.png"
              },
              { 
                 "name":"美味鲜蔬杯",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/美味鲜蔬杯.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/鲜蔬杯.png"
              },
              { 
                 "name":"玉米杯",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/玉米杯.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/玉米杯.png"
              }
         ],
         "drinkItems":[
             {
                 "name":"椰子水饮",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/椰子水饮.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/椰子水饮.png"
             },
             {
                 "name":"可口可乐",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/可口可乐.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/可口可乐.png"
             },
             {
                 "name":"黑珍珠奶茶（暖）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/黑珍珠奶茶(暖).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/黑珍珠奶茶暖.png"
             },
             {
                 "name":"原味珍珠奶茶（暖）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶(暖).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶暖.png"
             },
             {
                 "name":"冰红茶味饮料",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/冰红茶味饮料.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/冰红茶味饮料.png"
             },
             {
                 "name":"果粒橙",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/果粒橙.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/果粒橙.png"
             },
             {
                 "name":"那么大鲜柠特饮（可乐味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(可乐味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮可乐味.png"
             },
             {
                 "name":"那么大鲜柠特饮（雪碧味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(雪碧味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮雪碧味.png"
             },
             {
                 "name":"那么大鲜柠特饮（红茶味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(红茶味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮红茶味.png"
             },
             {
                 "name":"雪碧",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/雪碧.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/雪碧.png"
             },
             {
                 "name":"零度可口可乐",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/零度可口可乐.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/零度可口可乐.png"
             },
             {
                 "name":"阳光麦旋橙",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/阳光麦旋橙.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/阳光麦旋橙.png"
             },
             {
                 "name":"原味珍珠奶茶（冷）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶(冷).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶冷.png"
             },
             {
                 "name":"鲜煮咖啡",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/鲜煮咖啡.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/鲜煮咖啡.png"
             },
             {
                 "name":"锡兰红茶",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/锡兰红茶.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/锡兰红茶.png"
             },
             {
                 "name":"热朱古力",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/热朱古力.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/热朱古力.png"
             },
             {
                 "name":"纯牛奶（盒装）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/纯牛奶(盒装).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/纯牛奶盒装.png"
             }
         ],
         "submenu":[
@@ -96,37 +96,61 @@
                 "name":"安格斯厚牛菠萝堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png",
                 "price":40,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛菠萝堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛菠萝堡套餐.png",
+                "stapleFoodName":"安格斯厚牛菠萝堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/安格斯厚牛菠萝堡.png",
+                "englishName":"Thick Angus Beef Burger with pineapple",
+                "introduce":"12mm厚切菠萝搭配16mm厚制牛肉饼，口味丰富而又清新不油腻，酸甜果味与双重肉感的味觉三重奏。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"双层安格斯厚牛菠萝堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png",
                 "price":50,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛菠萝堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛菠萝堡套餐.png",
+                "stapleFoodName":"双层安格斯厚牛菠萝堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/安格斯厚牛菠萝堡.png",
+                "englishName":"Thick Angus Double Beef Burger with pineapple",
+                "introduce":"12mm厚切菠萝搭配16mm厚制牛肉饼，口味丰富而又清新不油腻，酸甜果味与双重肉感的味觉三重奏。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"安格斯厚牛培根堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png",
                 "price":38,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛培根堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛培根堡套餐.png",
+                "stapleFoodName":"安格斯厚牛培根堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/安格斯厚牛培根堡.png",
+                "englishName":"Thick Angus Beef Burger with Bacon M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配培根、高达芝士片和新鲜罗马生菜，包裹在黑白芝麻布里欧包中，成就肉香浓郁的安格斯厚牛培根堡。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"安格斯厚牛芝士堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png",
                 "price":35,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛芝士堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛芝士堡套餐.png",
+                "stapleFoodName":"安格斯厚牛芝士堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/安格斯厚牛芝士堡.png",
+                "englishName":"Thick Angus Beef Burger with Cheese Sauce M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配神秘芝士风味酱、高达芝士片、新鲜番茄片，包裹在黑白芝麻布里欧包中，成就经典搭配的安格斯厚牛芝士堡。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"双层安格斯厚牛培根堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png",
                 "price":48,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛培根堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛培根堡套餐.png",
+                "stapleFoodName":"双层安格斯厚牛培根堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层安格斯厚牛培根堡.png",
+                "englishName":"Thick Angus Double Beef Burger with Bacon M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配培根、高达芝士片和新鲜罗马生菜，包裹在黑白芝麻布里欧包中，成就肉香浓郁的安格斯厚牛培根堡。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"双层安格斯厚牛芝士堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png",
                 "price":45,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛芝士堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛芝士堡套餐.png",
+                "stapleFoodName":"双层安格斯厚牛芝士堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层安格斯厚牛芝士堡.png",
+                "englishName":"Thick Angus Double Beef Burger with Cheese Sauce M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配神秘芝士风味酱、高达芝士片、新鲜番茄片，包裹在黑白芝麻布里欧包中，成就经典搭配的安格斯厚牛芝士堡。搭配椰子水水饮与薯条，3件套就能满足吃一顿。"
             }
         ]
     },
@@ -137,89 +161,89 @@
         "snackItems":[
             { 
                "name":"薯条",
-                "pri":"http://localhost:80/mcdonald/assets/img/snake/薯条.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/薯条.png"
             },
             { 
                 "name":"黄金脆薯格",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/黄金脆薯格.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/金黄脆薯格.png"
              },
              { 
                 "name":"美味鲜蔬杯",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/美味鲜蔬杯.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/鲜蔬杯.png"
              },
              { 
                 "name":"玉米杯",
-                 "pri":"http://localhost:80/mcdonald/assets/img/snake/玉米杯.png"
+                 "picture":"http://localhost:80/mcdonald/assets/img/snake/玉米杯.png"
              }
         ],
         "drinkItems":[
             {
                 "name":"椰子水饮",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/椰子水饮.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/椰子水饮.png"
             },
             {
                 "name":"可口可乐",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/可口可乐.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/可口可乐.png"
             },
             {
                 "name":"黑珍珠奶茶（暖）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/黑珍珠奶茶(暖).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/黑珍珠奶茶暖.png"
             },
             {
                 "name":"原味珍珠奶茶（暖）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶(暖).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶暖.png"
             },
             {
                 "name":"冰红茶味饮料",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/冰红茶味饮料.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/冰红茶味饮料.png"
             },
             {
                 "name":"果粒橙",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/果粒橙.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/果粒橙.png"
             },
             {
                 "name":"那么大鲜柠特饮（可乐味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(可乐味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮可乐味.png"
             },
             {
                 "name":"那么大鲜柠特饮（雪碧味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(雪碧味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮雪碧味.png"
             },
             {
                 "name":"那么大鲜柠特饮（红茶味）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮(红茶味).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/那么大鲜柠特饮红茶味.png"
             },
             {
                 "name":"雪碧",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/雪碧.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/雪碧.png"
             },
             {
                 "name":"零度可口可乐",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/零度可口可乐.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/零度可口可乐.png"
             },
             {
                 "name":"阳光麦旋橙",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/阳光麦旋橙.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/阳光麦旋橙.png"
             },
             {
                 "name":"原味珍珠奶茶（冷）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶(冷).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/原味珍珠奶茶冷.png"
             },
             {
                 "name":"鲜煮咖啡",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/鲜煮咖啡.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/鲜煮咖啡.png"
             },
             {
                 "name":"锡兰红茶",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/锡兰红茶.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/锡兰红茶.png"
             },
             {
                 "name":"热朱古力",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/热朱古力.png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/热朱古力.png"
             },
             {
                 "name":"纯牛奶（盒装）",
-                "pri":"http://localhost:80/mcdonald/assets/img/drink/纯牛奶(盒装).png"
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/纯牛奶盒装.png"
             }
         ],
         "submenu":[
@@ -227,79 +251,131 @@
                 "name":"麦辣鸡腿汉堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png",
                 "peice":26.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡腿汉堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡腿汉堡套餐.png",
+                "stapleFoodName":"麦辣鸡腿汉堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦辣鸡腿堡.png",
+                "englishName":"Spicy Chicken Filet Burger",
+                "introduce":"金黄脆辣的外皮，里面是鲜嫩幼滑的鸡腿肉，搭配清爽生菜和美味沙拉酱，多重滋味，一次打动您挑剔的味蕾。搭配“奶冻款”椰子水和薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"板烧鸡腿堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/板烧鸡腿堡套餐.png",
                 "peice":22,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/板烧鸡腿堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/板烧鸡腿堡套餐.png",
+                "stapleFoodName":"板烧鸡腿堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/板烧鸡腿堡.png",
+                "englishName":"Gilled Chicken Sandwich",
+                "introduce":"原味去骨鸡排嫩滑多汁，加洋葱及胡椒调味，与翠绿新鲜的生菜和香浓烧鸡酱搭配，口感丰富，煎制过程油添加，绝对让人食指大动！搭配“奶冻款”椰子水和薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"巨无霸套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/巨无霸套餐.png",
                 "peice":31,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/巨无霸套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/巨无霸套餐.png",
+                "stapleFoodName":"巨无霸",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/巨无霸.png",
+                "englishName":"Big Mac M.EVM",
+                "introduce":""
             },
             {
                 "name":"不素之霸双层牛堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png",
                 "peice":22,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/不素之霸双层牛堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/不素之霸双层牛堡套餐.png",
+                "stapleFoodName":"不素之霸双层牛堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/不素之霸双层牛堡.png",
+                "englishName":" German Sausage Double Beef Burger EVM",
+                "introduce":"特选两块百分百纯牛肉，在铁板上煎香，只以少许的盐和胡椒调味，再夹上两根烤肠，搭配黄色芥末风味酱，汇集德式十字面包中，肉感十足，大快朵颐，让您吃的过瘾。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"双层深海鳕鱼堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png",
                 "peice":22,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/双层深海鳕鱼堡套餐.png"
+                "poster":"http://localhobaijiexinengst:80/mcdonald/assets/img/poster/超值三件套/双层深海鳕鱼堡套餐.png",
+                "stapleFoodName":"双层深海鳕鱼堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层深海鳕鱼堡.png",
+                "englishName":"Double Fish Burger M.EVM",
+                "introduce":"双层深海鳕鱼堡，特选两块深海鳕鱼，肉质白洁细嫩，鱼肉清爽，富含丰富优质的蛋白质，搭配经典的车打芝士和浓郁白芝麻风味酱，再加上刚蒸好的松软面包，每一口都唇齿留香，是美味与营养并存的选择。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。温馨提醒：我们已采用严格工艺除去鱼刺，但在极少情形下，鳕鱼产品中仍可能含有鱼刺。请您试用时留意。"
             },
             {
                 "name":"川辣双鸡堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/川辣双鸡堡套餐.png",
                 "peice":22,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/川辣双鸡堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/川辣双鸡堡套餐.png",
+                "stapleFoodName":"川辣双鸡堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/川辣双鸡堡.png",
+                "englishName":"Sichuan Spicy Double Chicken Burger EVM",
+                "introduce":"辣爽不容错过，百年川辣奥秘，在于多层次感的辣香，只有热辣的配方，才能造就辣香层层递进的劲爽酱汁，配上两块香脆鸡排，成就集川辣之大成的川辣双鸡堡。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"双层吉士汉堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层吉士汉堡套餐.png",
                 "peice":26.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/双层吉士汉堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/双层吉士汉堡套餐.png",
+                "stapleFoodName":"双层吉士汉堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层吉士汉堡.png",
+                "englishName":"Double Cheeseburger",
+                "introduce":"百分百纯牛肉与双层香软芝士融为一体，加上松软面包以及美味酱料，两倍滋味诱惑，无人能挡！搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"麦香鸡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鸡套餐.png",
                 "peice":21.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鸡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鸡套餐.png",
+                "stapleFoodName":"麦香鸡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦香鸡汉堡.png",
+                "englishName":"McChicken",
+                "introduce":"清脆爽口的生菜，给你植物纤维；金黄酥脆的鸡肉则来自精心培育的优质嫩鸡。营养配酱，让你多一个好滋味的健康选择。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"麦香鱼套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鱼套餐.png",
                 "peice":21,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鱼套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鱼套餐.png",
+                "stapleFoodName":"麦香鱼",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦香鱼汉堡.png",
+                "englishName":"Filet-O-Fish",
+                "introduce":"由深海鳕鱼制成，外皮炸得金黄酥脆，内里又保留了鱼肉的鲜嫩多汁。美味鱼肉与滋味沙拉酱配搭。风味独特。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。温馨提醒：我们已采用严格工艺除去鱼刺，但在极少情形下，鳕鱼产品中仍可能含有鱼刺。请您试用时留意。"
             },
             {
                 "name":"麦乐鸡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦乐鸡套餐.png",
                 "peice":19.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦乐鸡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦乐鸡套餐.png",
+                "stapleFoodName":"麦乐鸡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/snake/麦乐鸡块.png",
+                "englishName":"Chicken McNuggets-5 pcs",
+                "introduce":"严格挑优质鸡肉,秘制酱料,精密控制火侯,锁住肉汁和香味,令外面金黄酥脆,内在鲜多汁。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"培根蔬萃双层牛堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png",
                 "peice":31,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/培根蔬萃双层牛堡套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/培根蔬萃双层牛堡套餐.png",
+                "stapleFoodName":"培根蔬萃双层牛堡",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/培根蔬萃双层牛堡.png",
+                "englishName":"Bacon Lettuce Tomato Double Beef Burger",
+                "introduce":"一层爽脆生菜，一片鲜番茄，两片培根，两片牛肉，一层特别酱料！一口咬下去，超满足啦！搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"吉士汉堡包套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/吉士汉堡包套餐.png",
                 "peice":19,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/吉士汉堡包套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/吉士汉堡包套餐.png",
+                "stapleFoodName":"吉士汉堡包",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/吉士汉堡.png",
+                "englishName":"Cheeseburger",
+                "introduce":"百分百牛肉与香软芝士融为一体配合爽脆酸黄瓜洋葱粒与美味番茄酱丰富口感一咬即可涌现。搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             },
             {
                 "name":"麦辣鸡翅",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡翅.png",
                 "peice":30.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡翅套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡翅套餐.png",
+                "stapleFoodName":"麦辣鸡翅",
+                "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/snake/麦辣鸡翅.png",
+                "englishName":"Spicy McWings-4 pcs",
+                "introduce":"搭配冰爽带气可口可乐与薯条，3件套就能满足吃一顿。"
             }
         ]
     },
@@ -312,7 +388,53 @@
                 "name":"随心配1+1=￥12",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/随心配/随心配.png",
                 "price":12,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/随心配/随心配.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/随心配/随心配.png",
+                "englishName":"B-A-Customized",
+                "introduce":"麦当劳 随心配1+1=12元麦当劳最经典的众多美味，红区选1个，白区选1个，随心搭配，超值组合统统只要12元！"
+            }
+        ],
+        "redProduct":[
+            {
+                "name":"那么大鸡排",
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/那么大鸡排.png"
+            },
+            {
+                "name":"麦乐鸡5块",
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/麦乐鸡块.png"
+            },
+            {
+                "name":"薯条",
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/薯条.png"
+            },
+            {
+                "name":"麦香鸡",
+                "picture":"http://localhost:80/mcdonald/assets/img/hamburger/麦香鸡汉堡.png"
+            },
+            {
+                "name":"双层吉士汉堡",
+                "picture":"http://localhost:80/mcdonald/assets/img/hamburger/双层吉士汉堡.png"
+            }
+        ],
+        "whiteProduct":[
+            {
+                "name":"可口可乐",
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/可口可乐.png"
+            },
+            {
+                "name":"雪碧",
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/雪碧.png"
+            },
+            {
+                "name":"香芋派",
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/香芋派.png"
+            },
+            {
+                "name":"菠萝派",
+                "picture":"http://localhost:80/mcdonald/assets/img/snake/菠萝派.png"
+            },
+            {
+                "name":"锡兰红茶",
+                "picture":"http://localhost:80/mcdonald/assets/img/drink/锡兰红茶.png"
             }
         ]
     },
@@ -325,31 +447,41 @@
                 "name":"金拱门桶A",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/金拱门桶A.png",
                 "price":51,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶A.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶A.png",
+                "englishName":"Golden Arch Bucket A(7pcs Crispy wings)",
+                "introduce":"招牌美味的高标准精选小食，脆香鸡翅和金黄脆薯格，每一口都是黄金酥脆的招牌美味，令人食指大动，欲罢不能。每个欢享时刻，尽享金拱门桶，为你的快乐添点“金”！包含：椒盐金脆鸡翅(7块)+金黄脆薯格"
             },
             {
                 "name":"金拱门桶B",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/金拱门桶B.png",
                 "price":51,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶B.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶B.png",
+                "englishName":"Golden Arch Bucket B(4pcs Crispy wings+3pcs McWings)",
+                "introduce":"招牌美味的高标准精选小食，脆香鸡翅和金黄脆薯格，每一口都是黄金酥脆的招牌美味，令人食指大动，欲罢不能。每个欢享时刻，尽享金拱门桶，为你的快乐添点“金”！包含：椒盐金脆鸡翅(4块)+麦辣鸡翅(3块)+金黄脆薯格"
             },
             {
                 "name":"家有金桶(汉堡版)",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶(汉堡版).png",
                 "price":80,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(汉堡版).png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(汉堡版).png",
+                "englishName":"FAMILY BUCKET(BURGER)",
+                "introduce":"经典百搭的汉堡搭配多款美味小食，更有甜品香芋派，一桶包含所有你想要的美味。家有金桶，新装上阵，一起分享吧。包含：麦辣鸡腿堡(1块)+板烧鸡腿堡(1份)+麦辣鸡翅(2块)+香骨鸡腿(1个)+椒盐金脆鸡翅(2份)+那么大鸡排(1份)+香芋派(1个)+中可乐(3杯)"
             },
             {
                 "name":"家有金桶(脆鸡版)",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶(脆鸡版).png",
                 "price":80,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(脆鸡版).png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(脆鸡版).png",
+                "englishName":"FAMILY BUCKET(CHICKEN)",
+                "introduce":"口感丰富的那么大鸡排，配上肉多汁够鲜美的香骨鸡腿，更有经典麦辣鸡翅。家有金桶，新装上阵，一起分享吧。包含：那么大鸡排(1份)+香骨鸡腿(3个)+麦辣鸡翅(6块)+中可乐(3杯)"
             },
             {
                 "name":"小食缤纷盒",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/小食缤纷盒.png",
                 "price":29.5,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/小食缤纷盒.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/小食缤纷盒.png",
+                "englishName":"SNACK SHARING BOX WITH BIG CHICKEN CUTLET",
+                "introduce":"一盒集结多款小食，麦辣鸡翅，那么大鸡排，麦乐鸡统统拿下给你。包含：那么大鸡排(1份)+麦乐鸡(4块)+麦辣鸡翅(2块)"
             }
         ]
     },
@@ -362,19 +494,25 @@
                 "name":"想吃鲜的套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/想吃鲜的套餐.png",
                 "price":21,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/想吃鲜的套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/想吃鲜的套餐.png",
+                "englishName":"Freshies",
+                "introduce":"【想吃鲜的】，鲜蔬、鲜鱼、鲜咖啡，一套带你领略海陆鲜美滋味，给你的生活添一点新鲜！包含：麦香鱼1份+大杯玉米杯1份+美味鲜蔬杯1份+小杯鲜煮咖啡1份*该套餐参考总热量低于500大卡（不含调料包）。温馨提醒：我们已采用严格工艺去除鱼刺，但在极少数情形下，鳕鱼产品中仍可能含有鱼刺。请您使用时留意。"
             },
             {
                 "name":"来点小食套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/来点小食套餐.png",
                 "price":21,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/来点小食套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/来点小食套餐.png",               
+                "englishName":"Snackers",
+                "introduce":"轻松午后，当然要【来点小食】，爽脆鲜蔬杯、香酥薯条麦乐鸡，三款经典小食，一次全满足！包含：麦乐鸡5块+小薯条1份+美味鲜蔬杯1份+锡兰红茶1份*该套餐参考总热量低于500大卡（不含调料包）"
             },
             {
                 "name":"只爱甜套餐",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/只爱甜套餐.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/只爱甜的套餐.png",
                 "price":21,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/只爱甜套餐.png"
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/只爱甜的套餐.png",             
+                "englishName":"Sweet Tooth",
+                "introduce":"鲜甜苹果片、美味香芋派，【只爱甜的】让你甜上加甜，舌尖甘味，尽在麦当劳！包含：香芋派1份+苹果片1份+美汁源阳光橙1份*该套餐参考总热量低于500大卡（不含调料包）"
             }
         ]
     },
@@ -384,139 +522,188 @@
         "label":"小食<br />甜点<br />玩具",
         "submenu":[
             {
-                "name":"椰子可可派",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/椰子可可派.png",
-                "price":21
-            },
-            {
-                "name":"脆皮巧克力味花生",
+                "name":"脆皮巧克力味花生麦旋风",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/脆皮巧克力味花生.png",
-                "price":13.5
+                "price":13.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/脆皮巧克力味花生麦旋风.png",
+                "englishName":"Chocolate McFlurry w.Crushed Peanut",
+                "introduce":"浓郁醇厚香草冰淇淋，淋上进口巧克力风味酱，撒上香脆花生碎，凝固成人见人爱的花生巧克力味脆皮，好吃又好玩！"
             },
             {
                 "name":"限量雪人奇缘毛绒玩具挂饰",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/限量雪人奇缘毛绒玩具挂饰.png",
-                "price":21
+                "price":21,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/限量雪人奇缘毛绒玩具挂饰.png",
+                "englishName":"Abominable SLP",
+                "introduce":""
             },
             {
                 "name":"十公主童顽故宫游戏棋子",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/十公主童顽故宫游戏棋子.png",
-                "price":16
+                "price":16,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/十公主童顽故宫游戏棋子.png",
+                "englishName":"Gugong Monopoly Icon",
+                "introduce":""
             },
             {
                 "name":"套装十公主童顽故宫游戏棋",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/套装十公主童顽故宫游戏棋.png",
-                "price":99
+                "price":99,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/套装十公主童顽故宫游戏棋.png",
+                "englishName":"Gugong Monopoly Set",
+                "introduce":"玩具套装包含：棋子4个（公主、阿哥、狮子、骆驼）、收纳桶、棋盘、任务卡、游戏规则卡、游戏道具"
             },
             {
                 "name":"椒盐金脆鸡翅-2块",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/椒盐金脆鸡翅.png",
-                "price":11.5
+                "price":11.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/椒盐金脆鸡翅.png",
+                "englishName":"Crispy Wings -2 pcs",
+                "introduce":"美味嫩滑的鸡翅炸得金黄热辣，刺激滋味爆棚！"
             },
             {
                 "name":"麦辣鸡翅",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/麦辣鸡翅.png",
-                "price":10.5
+                "price":10.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/麦辣鸡翅.png",
+                "englishName":"Spicy McWings",
+                "introduce":"美味嫩滑的鸡翅炸得金黄热辣，刺激滋味爆棚！"
             },
             {
                 "name":"那么大鸡排",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/那么大鸡排.png",
-                "price":12
+                "price":12,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/那么大鸡排.png",
+                "englishName":"BIG CHICKEN CUTLET 1PC",
+                "introduce":"那么大鸡排的腌料中融入了多种辣椒，除了辣椒的劲辣，还有大蒜和洋葱的辛辣，以及黑胡椒的热辣，口感丰富，拿在手上，一口咬下，大大的满足。"
             },
             {
                 "name":"麦乐鸡5块",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/麦乐鸡.png",
-                "price":10
+                "price":10,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/麦乐鸡.png",
+                "englishName":"Chicken McNuggets",
+                "introduce":"严格挑选优质鸡肉，秘制蘸料，精密控制火候，锁住肉汁和香味，令外面金黄酥脆，内在鲜嫩多汁。"
             },
             {
                 "name":"香骨鸡腿",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/香骨鸡腿.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/香骨鸡腿.png",
+                "englishName":"Drumstick",
+                "introduce":"香酥表皮以嫩滑多汁的大块鸡腿肉，带来无比满足！"
             },
             {
                 "name":"黄金脆薯格",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/黄金脆薯格.png",
-                "price":13
+                "price":13,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/黄金脆薯格.png",
+                "englishName":"Crisscut Fries",
+                "introduce":"黄金切割，网状结构，放大酥脆表面，薯脆十足。"
             },
             {
                 "name":"薯条",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/薯条.png",
-                "price":8
+                "price":8,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/薯条.png",
+                "englishName":"French Fries",
+                "introduce":"精选优质土豆，表面微脆，内里绵软，美味无人能挡！"
             },
             {
                 "name":"金拱门桶A",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金拱门桶A.png",
-                "price":13
+                "price":13,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金拱门桶A.png",
+                "englishName":"Golden Arch Bucket A(7pcs Crispy wings)",
+                "introduce":"招牌美味的高标准精选小食，脆香鸡翅和金黄脆薯格，每一口都是黄金酥脆的招牌美味，令人食指大动，欲罢不能。每个欢享时刻，尽享金拱门桶，为你的快乐添点“金”！包含：椒盐金脆鸡翅(7块)+金黄脆薯格"
             },
             {
                 "name":"金拱门桶B",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金拱门桶B.png",
-                "price":51
-            },
-            {
-                "name":"家有金桶(汉堡版)",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/家有金桶(汉堡版).png",
-                "price":51
-            },
-            {
-                "name":"家有金桶(脆鸡版)",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/家有金桶(脆鸡版).png",
-                "price":80
-            },
-            {
-                "name":"小食缤纷盒",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/小食缤纷盒.png",
-                "price":80
+                "price":51,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金拱门桶B.png",
+                "englishName":"Golden Arch Bucket B(4pcs Crispy wings+3pcs McWings)",
+                "introduce":"招牌美味的高标准精选小食，脆香鸡翅和金黄脆薯格，每一口都是黄金酥脆的招牌美味，令人食指大动，欲罢不能。每个欢享时刻，尽享金拱门桶，为你的快乐添点“金”！包含：椒盐金脆鸡翅(4块)+麦辣鸡翅(3块)+金黄脆薯格"
             },
             {
                 "name":"苹果片一袋",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/苹果片.png",
-                "price":6
+                "price":6,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/苹果片一袋.png",
+                "englishName":"APPLE SLIDE",
+                "introduce":"新鲜苹果切成片，清脆爽口，为孩子提供更多健康营养。"
             },
             {
                 "name":"玉米杯",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/玉米杯.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/玉米杯.png",
+                "englishName":"CORN CUP",
+                "introduce":"大杯甜玉米，饱满多汁，粒粒金黄，粒粒香！甜！爽！"
             },
             {
                 "name":"美味鲜蔬杯",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/美味鲜蔬杯.png",
-                "price":7
+                "price":7,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/美味鲜蔬杯.png",
+                "englishName":"Veggie cup",
+                "introduce":"爽脆的鲜蔬杯，带给你健康的选择"
             },
             {
                 "name":"香芋派",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/香芋派.png",
-                "price":7
+                "price":7,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/香芋派.png",
+                "englishName":"TARO PIE",
+                "introduce":"软软的夹心，脆脆的外壳，咬一口，简直幸福到爆啦！"
             },
             {
                 "name":"菠萝派",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/菠萝派.png",
-                "price":7
+                "price":7,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/菠萝派.png",
+                "englishName":"PINEAPPLE PIE",
+                "introduce":"软软的夹心，脆脆的外壳，咬一口，简直幸福到爆啦！"
             },
             {
                 "name":"圆筒冰淇淋",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/圆筒冰淇淋.png",
-                "price":4
+                "price":4,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/圆筒冰淇淋.png",
+                "englishName":"Vanilla Cone",
+                "introduce":"以独特配方的奶浆调制而成，专业设备将奶浆冷却至最佳品尝温度，用恰到好处的速度进行搅拌，制作出醇香细腻的冰淇淋。搭配香脆圆筒，将清甜与松脆一口咬下！"
             },
             {
                 "name":"朱古力新地",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/朱古力新地.png",
-                "price":9.5
+                "price":9.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/朱古力新地.png",
+                "englishName":"Chocolate Sundae",
+                "introduce":"以独特配方的奶浆调制而成，专业设备将奶浆冷却至最佳品尝温度，用恰到好处的速度进行搅拌，制作出醇香细腻的冰淇淋。搭配香醇丝滑的朱古力酱，让你一口沉醉再醇厚的绵滑浓香之中。"
             },
             {
                 "name":"草莓新地",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/草莓新地.png",
-                "price":9.5
+                "price":9.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/草莓新地.png",
+                "englishName":"Stawberry Sundae",
+                "introduce":"以独特配方的奶浆调制而成，专业设备将奶浆冷却至最佳品尝温度，用恰到好处的速度进行搅拌，制作出醇香细腻的冰淇淋。搭配鲜嫩可口的草莓酱，邂逅粉色的甜蜜回忆。"
             },
             {
                 "name":"奥利奥麦旋风",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/奥利奥麦旋风.png",
-                "price":12.5
+                "price":12.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/奥利奥麦旋风.png",
+                "englishName":"Oreo McFlurry",
+                "introduce":"当冰淇淋的香滑与奥利奥饼干的香醇融为一体，奇妙黑白搭配，创造无限新奇滋味。"
             },
             {
                 "name":"草莓麦旋风",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/草莓麦旋风.png",
-                "price":12.5
+                "price":12.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/草莓麦旋风.png",
+                "englishName":"Stawberry McFlurry",
+                "introduce":"当冰淇淋的香滑与奥利奥饼干的香醇融为一体，奇妙黑白搭配，创造无限新奇滋味。加上甜蜜的草莓酱，混合不一样的清新口味。"
             }
         ]
     },
@@ -526,89 +713,148 @@
         "label":"主食",
         "submenu":[
             {
-                "name":"麦辣鸡腿汉堡",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦辣鸡腿汉堡.png",
-                "price":17
+                "name":"麦辣鸡腿堡",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦辣鸡腿堡.png",
+                "price":17,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦辣鸡腿堡.png",
+                "englishName":"Spicy Chicken Filet Burger",
+                "introduce":"金黄脆辣的外皮，里面是鲜嫩幼滑的鸡腿肉，搭配清爽生菜和美味沙拉酱，多重滋味，一次打动您挑剔的味蕾。"
+            },
+            {
+                "name":"板烧鸡腿堡",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/板烧鸡腿堡.png",
+                "price":19,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/板烧鸡腿堡.png",
+                "englishName":"Gilled Chicken Sandwich",
+                "introduce":"原味去骨鸡排嫩滑多汁，加洋葱及胡椒调味，与翠绿新鲜的生菜和香浓烧鸡酱搭配，口感丰富，煎制过程油添加，绝对让人食指大动！"
             },
             {
                 "name":"巨无霸",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/巨无霸.png",
-                "price":21.5
+                "price":21.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/巨无霸.png",
+                "englishName":"Big Mac M.EVM",
+                "introduce":""
             },
             {
                 "name":"安格斯厚牛菠萝堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛菠萝堡.png",
-                "price":32
+                "price":32,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛菠萝堡.png",
+                "englishName":"Thick Angus Beef Burger with pineapple",
+                "introduce":"12mm厚切菠萝搭配16mm厚制牛肉饼，口味丰富而又清新不油腻，酸甜果味与双重肉感的味觉三重奏。"
             },
             {
                 "name":"双层安格斯厚牛菠萝堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛菠萝堡.png",
-                "price":42
+                "price":42,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛菠萝堡.png",
+                "englishName":"Thick Angus Double Beef Burger with pineapple",
+                "introduce":"12mm厚切菠萝搭配16mm厚制牛肉饼，口味丰富而又清新不油腻，酸甜果味与双重肉感的味觉三重奏。"
             },
             {
                 "name":"安格斯厚牛培根堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛培根堡.png",
-                "price":30
+                "price":30,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛培根堡.png",
+                "englishName":"Thick Angus Beef Burger with Bacon M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配培根、高达芝士片和新鲜罗马生菜，包裹在黑白芝麻布里欧包中，成就肉香浓郁的安格斯厚牛培根堡。"
             },
             {
                 "name":"安格斯厚牛芝士堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛芝士堡.png",
-                "price":27
+                "price":27,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛芝士堡.png",
+                "englishName":"Thick Angus Beef Burger with Cheese Sauce M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配神秘芝士风味酱、高达芝士片、新鲜番茄片，包裹在黑白芝麻布里欧包中，成就经典搭配的安格斯厚牛芝士堡。"
             },
             {
                 "name":"双层安格斯厚牛培根堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛培根堡.png",
-                "price":40
+                "price":40,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛培根堡.png",
+                "englishName":"Thick Angus Double Beef Burger with Bacon M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配培根、高达芝士片和新鲜罗马生菜，包裹在黑白芝麻布里欧包中，成就肉香浓郁的安格斯厚牛培根堡。"
             },
             {
                 "name":"双层安格斯厚牛芝士堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛芝士堡.png",
-                "price":37
+                "price":37,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛芝士堡.png",
+                "englishName":"Thick Angus Double Beef Burger with Cheese Sauce M.EVM",
+                "introduce":"精选100%进口安格斯牛肉，鲜嫩多汁更满足！搭配神秘芝士风味酱、高达芝士片、新鲜番茄片，包裹在黑白芝麻布里欧包中，成就经典搭配的安格斯厚牛芝士堡。"
             },
             {
                 "name":"不素之霸双层牛堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/不素之霸双层牛堡.png",
-                "price":20
+                "price":20,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/不素之霸双层牛堡.png",
+                "englishName":" German Sausage Double Beef Burger EVM",
+                "introduce":"特选两块百分百纯牛肉，在铁板上煎香，只以少许的盐和胡椒调味，再夹上两根烤肠，搭配黄色芥末风味酱，汇集德式十字面包中，肉感十足，大快朵颐，让您吃的过瘾。"
             },
             {
                 "name":"双层深海鳕鱼堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层深海鳕鱼堡.png",
-                "price":20
+                "price":20,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层深海鳕鱼堡.png",
+                "englishName":"Double Fish Burger M.EVM",
+                "introduce":"双层深海鳕鱼堡，特选两块深海鳕鱼，肉质白洁细嫩，鱼肉清爽，富含丰富优质的蛋白质，搭配经典的车打芝士和浓郁白芝麻风味酱，再加上刚蒸好的松软面包，每一口都唇齿留香，是美味与营养并存的选择。"
             },
             {
                 "name":"川辣双鸡堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/川辣双鸡堡.png",
-                "price":20
+                "price":20,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/川辣双鸡堡.png",
+                "englishName":"Sichuan Spicy Double Chicken Burger EVM",
+                "introduce":"辣爽不容错过，百年川辣奥秘，在于多层次感的辣香，只有热辣的配方，才能造就辣香层层递进的劲爽酱汁，配上两块香脆鸡排，成就集川辣之大成的川辣双鸡堡。"
             },
             {
                 "name":"双层吉士汉堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层吉士汉堡.png",
-                "price":17
+                "price":17,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层吉士汉堡.png",
+                "englishName":"Double Cheeseburger",
+                "introduce":"百分百纯牛肉与双层香软芝士融为一体，加上松软面包以及美味酱料，两倍滋味诱惑，无人能挡"
             },
             {
                 "name":"麦香鸡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦香鸡.png",
-                "price":12
+                "price":12,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦香鸡.png",
+                "englishName":"McChicken",
+                "introduce":"清脆爽口的生菜，给你植物纤维；金黄酥脆的鸡肉则来自精心培育的优质嫩鸡。营养配酱，让你多一个好滋味的健康选择。"
             },
             {
                 "name":"麦香鱼",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦香鱼.png",
-                "price":17
+                "price":17,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦香鱼.png",
+                "englishName":"Filet-O-Fish",
+                "introduce":"由深海鳕鱼制成，外皮炸得金黄酥脆，内里又保留了鱼肉的鲜嫩多汁。美味鱼肉与滋味沙拉酱配搭。风味独特。温馨提醒：我们已采用严格工艺除去鱼刺，但在极少情形下，鳕鱼产品中仍可能含有鱼刺。请您试用时留意。"
             },
             {
                 "name":"培根蔬萃双层牛堡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/培根蔬萃双层牛堡.png",
-                "price":21.5
+                "price":21.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/培根蔬萃双层牛堡.png",
+                "englishName":"Bacon Lettuce Tomato Double Beef Burger",
+                "introduce":"一层爽脆生菜，一片鲜番茄，两片培根，两片牛肉，一层特别酱料！一口咬下去，超满足啦！"
             },
             {
                 "name":"吉士汉堡包",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/吉士汉堡包.png",
-                "price":9.5
+                "price":9.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/吉士汉堡包.png",
+                "englishName":"Cheeseburger",
+                "introduce":"百分百牛肉与香软芝士融为一体配合爽脆酸黄瓜洋葱粒与美味番茄酱丰富口感一咬即可涌现。"
             },
             {
                 "name":"汉堡包",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/汉堡包.png",
-                "price":9
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/汉堡包.png",
+                "englishName":"Hamburger",
+                "introduce":"百分百纯牛肉只以少许盐与胡椒调味配搭爽脆酸瓜养成粒与美味番茄酱经典滋味让你无法抵挡！"
             }
         ]
     },
@@ -619,98 +865,155 @@
         "submenu":[
             {
                 "name":"(暖)黑糖珍珠奶茶",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶(热).png",
-                "price":9
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶热.png",
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/黑糖珍珠奶茶暖.png",
+                "englishName":"Bubble Mike Tea-Black sugar Flavor",
+                "introduce":"优质茶香与浓郁奶香满溢的奶茶中加入黑糖与Q弹美味的珍珠，黑糖珍珠奶茶再冬天温暖你的味蕾。"
             },
             {
                 "name":"(冷)黑糖珍珠奶茶",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶(冷).png",
-                "price":9
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶冷.png",
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/黑糖珍珠奶茶冷.png",
+                "englishName":"Bubble Mike Tea-Black sugar Flavor(cold)",
+                "introduce":"优质茶香与浓郁奶香满溢的奶茶中加入黑糖与Q弹美味的珍珠，黑糖珍珠奶茶再冬天温暖你的味蕾。"
             },
             {
                 "name":"(暖)原味珍珠奶茶",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶(热).png",
-                "price":9
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶热.png",
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/原味珍珠奶茶暖.png",
+                "englishName":"Bubble Mike Tea",
+                "introduce":"第一口就陷入细滑与Q弹口感的爱恋之中，美好的味道，如期而望。"
             },
             {
                 "name":"(冷)原味珍珠奶茶",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶(冷).png",
-                "price":9
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶冷.png",
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/原味珍珠奶茶冷.png",
+                "englishName":"Bubble Mike Tea(cold)",
+                "introduce":"第一口就陷入细滑与Q弹口感的爱恋之中，美好的味道，如期而望。"
             },
             {
                 "name":"ZICO椰子水饮",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/椰子水饮.png",
-                "price":11.5
+                "price":11.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/ZICO椰子水饮.png",
+                "englishName":"Coconut Water",
+                "introduce":"清爽可口 醇正椰子风味 好喝到喊“耶”!"
             },
             {
                 "name":"冰醇咖啡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/冰醇咖啡.png",
-                "price":11.5
+                "price":11.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰醇咖啡.png",
+                "englishName":"Iced Coffee",
+                "introduce":""
             },
             {
                 "name":"那么大鲜柠特饮-可乐味",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮-可乐味.png",
-                "price":13.5
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮可乐味.png",
+                "price":13.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮可乐味.png",
+                "englishName":"JUMBO DRINK WITH FRESH LEMON(COKE)",
+                "introduce":"三重酸能量让你fresh起来！可乐、雪碧、柠檬红茶3款人气饮料，遇上新鲜柠檬片，陪你酸爽到底！"
             },
             {
                 "name":"那么大鲜柠特饮-柠檬红茶味",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮-柠檬红茶味.png",
-                "price":13.5
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮柠檬红茶味.png",
+                "price":13.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮柠檬红茶味.png",
+                "englishName":"JUMBO DRINK WITH FRESH LEMON(FUZE TEA)",
+                "introduce":"三重酸能量让你fresh起来！可乐、雪碧、柠檬红茶3款人气饮料，遇上新鲜柠檬片，陪你酸爽到底！"
             },
             {
                 "name":"那么大鲜柠特饮-雪碧味",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮-雪碧味.png",
-                "price":13.5
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮雪碧味.png",
+                "price":13.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮雪碧味.png",
+                "englishName":"JUMBO DRINK WITH FRESH LEMON(SPRITE)",
+                "introduce":"三重酸能量让你fresh起来！可乐、雪碧、柠檬红茶3款人气饮料，遇上新鲜柠檬片，陪你酸爽到底！"
             },
             {
                 "name":"可口可乐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/可口可乐.png",
-                "price":7.5
+                "price":7.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/可口可乐.png",
+                "englishName":"Coca-Cola",
+                "introduce":"多款畅饮选择。"
             },
             {
                 "name":"零度可口可乐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/零度可口可乐.png",
-                "price":7.5
+                "price":7.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/零度可口可乐.png",
+                "englishName":"Coca-Cola Zero",
+                "introduce":"多款畅饮选择。"
             },
             {
                 "name":"雪碧",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/雪碧.png",
-                "price":7.5
+                "price":7.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/雪碧.png",
+                "englishName":"SPRITE",
+                "introduce":"多款畅饮选择。"
             },
             {
                 "name":"柠檬红茶味饮料",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/柠檬红茶味饮料.png",
-                "price":9.5
+                "price":9.5,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰红茶味饮料.png",
+                "englishName":"FUZE TEA",
+                "introduce":"甜蜜口感，清新又滋润，令你一饮再饮。"
             },
             {
                 "name":"阳光橙麦旋酷",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/阳光橙麦旋酷.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/阳光橙麦旋酷.png",
+                "englishName":"MCCOOL(ORANGE)",
+                "introduce":"优质新地加上橙汁，天天给你新鲜动力！"
             },
             {
                 "name":"鲜煮咖啡",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/鲜煮咖啡.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/鲜煮咖啡.png",
+                "englishName":"McCafe Brewed Coffee",
+                "introduce":"精选优质咖啡粉极煮，让你的美满一天在咖啡的诱人香味中开始。"
             },
             {
                 "name":"锡兰红茶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/锡兰红茶.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/锡兰红茶.png",
+                "englishName":"Ceylon Black Tea",
+                "introduce":"香浓热红茶，给你全天醒神暖意！"
             },            
             {
                 "name":"热朱古力",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/热朱古力.png",
-                "price":11
+                "price":11,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/热朱古力.png",
+                "englishName":"Hot Chocolate",
+                "introduce":"醇厚香滑的口感即刻成为你爱不释手的饮品。"
             },
             {
                 "name":"纯牛奶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/纯牛奶.png",
-                "price":9
+                "price":9,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/纯牛奶盒装.png",
+                "englishName":"Mike",
+                "introduce":"牛奶营养丰富，带给你健康的选择！"
             },
             {
                 "name":"冰露包装饮用水",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/冰露包装饮用水.png",
-                "price":7
+                "price":7,
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰露包装饮用水.png",
+                "englishName":"Water",
+                "introduce":"可与其他麦当来美味搭配，健康有益。"
             }
         ]
     }

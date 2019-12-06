@@ -6,12 +6,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    data:[],
+    data:'',
     test:'1'
   },
   mutations: {
     getvalue(state,res){
-      state.data.push(res);
+      state.data=res;
       console.log(state.data);
     }
   },

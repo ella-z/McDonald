@@ -1,7 +1,7 @@
 <template>
     <div class="horizontalScroll">
         <div class="title">
-                <span>选择套餐内小食</span>
+                <span>{{ScrollName}}</span>
                 <span class="all">全部<i class="iconfont">&#xe731;</i></span>
         </div>
         <cube-scroll
@@ -12,7 +12,8 @@
             <ul class="list-wrapper">
                 <van-radio-group v-model="radio">
                     <li v-for="(item,index) in items" :key="index" class="list-item" >
-                        <div class="pri" :style="{backgroundImage:'url('+item.img+')',backgroundRepeat:'no-repeat'}"></div>
+                        <div class="pri" :style="{backgroundImage:'url('+item.pri+')',backgroundSize: '100%' }"></div>
+                        <span>{{items.name}}</span>
                         <van-radio :name='index' checked-color="#FFC836" class="radio"></van-radio>
                     </li>
                 </van-radio-group>
@@ -23,12 +24,15 @@
 
 <script>
 export default {
-    props:['items'],
+    props:['items','ScrollName'],
     data(){
         return{
                 radio:0,
                 
         }
+    },
+    mounted(){
+
     }
 }
 </script>
@@ -68,7 +72,6 @@ export default {
             padding: 0 10px;
             line-height: 60px;
             white-space: nowrap;
-           
         }
         .list-item{
             display: inline-block;
@@ -80,7 +83,10 @@ export default {
                     width: 28vw;
                     height: 30vw;
                     background-size: 100%;
+                    background-repeat: no-repeat;  
+                    background-position: center;
             }
+   
             .radio{
                 width: 6vw;
                 margin:0 auto;
