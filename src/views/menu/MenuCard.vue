@@ -7,13 +7,13 @@
             <span class="englishName">{{product.englishName}}</span>
             <span class="intro">{{product.introduce}}</span>
         </div>
-        <div class="snack">
-            <horizontalScroll :items='snackItems' :ScrollName="snack"></horizontalScroll>
+        <div class="snack" v-show="isFirstItems">
+            <horizontalScroll :items='firstItems' :ScrollName="first" ></horizontalScroll>
         </div>
-        <div class="drink">
-           <horizontalScroll :items='drinkItems' :ScrollName="drink"></horizontalScroll>
+        <div class="drink" v-show="isSecondItems">
+           <horizontalScroll :items='secondItems' :ScrollName="second" ></horizontalScroll>
         </div>
-        <div class="stapleFood">
+        <div class="stapleFood" v-show="isStapleFood">
             <span>主食</span>
             <div class="food" :style="{backgroundImage: 'url('+product.stapleFoodPicture+')',backgroundSize:'100%'}"></div>
             <div class="foodName">{{product.stapleFoodName}}</div>
@@ -32,18 +32,18 @@ export default {
     data(){
         return{
             ScrollName:'',
-            snack:'小食',
-            drink:'饮料',
             title:'',
+            first:'',
+            second:'',
             indexID:this.$route.query.indexID,
             submenuIndex:this.$route.query.submenuIndex,
             product:'',
-            snackItems:[
-      
+            isStapleFood:true,
+            isFirstItems:true,
+            isSecondItems:true,
+            firstItems:[
             ],
-            drinkItems:[
-               
-
+            secondItems:[
             ]
         }
     },
@@ -51,9 +51,25 @@ export default {
     mounted(){
         this.product=this.$store.state.data[this.indexID].submenu[this.submenuIndex];
         this.title=this.product.name;
-        this.snackItems=this.$store.state.data[this.indexID].snackItems;
-        this.drinkItems=this.$store.state.data[this.indexID].drinkItems;
-        console.log(this.$store.state.data[this.indexID].snackItems);
+        if(this.indexID<2)
+        {
+            this.firstItems=this.$store.state.data[this.indexID].snackItems;
+            this.secondItems=this.$store.state.data[this.indexID].drinkItems;
+            this.first='选择套餐内小食';
+            this.second='选择套餐内饮品';
+        }
+        else if(this.indexID===2){
+            this.firstItems=this.$store.state.data[this.indexID].redProduct;
+            this.secondItems=this.$store.state.data[this.indexID].whiteProduct;
+            this.isStapleFood=false;
+            this.first='选择红区产品';
+            this.second='选择白区产品';
+        }else{
+            this.isFirstItems=false;
+            this.isSecondItems=false;
+            this.isStapleFood=false;
+        }
+        
     },
     methods:{
         back(){
@@ -66,6 +82,7 @@ export default {
 <style lang="scss">
 .MenuCard{
     background-color: #f8f8f8;
+    margin-bottom: 30vw;
     .poster{
         height: 58vw;
         margin-top: 12vw;
@@ -91,12 +108,11 @@ export default {
     }
     .stapleFood{
         height: 60vw;
-        margin-bottom: 30vw;
         padding: 5vw 6vw;
         border-top: 1px solid #adacac;  
         background-color: #fff;
+        margin-bottom: 30vw;
         .food{
-            background-color: pink;
             margin:8vw auto;
             width: 30vw;
             height: 30vw;
@@ -108,7 +124,6 @@ export default {
             margin:auto;
         }
     }
-
 }
 
 </style>

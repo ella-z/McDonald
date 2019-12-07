@@ -12,7 +12,7 @@
             <ul class="list-wrapper">
                 <van-radio-group v-model="radio">
                     <li v-for="(item,index) in items" :key="index" class="list-item" >
-                        <div class="pri" :style="{backgroundImage:'url('+item.pri+')',backgroundSize: '100%' }"></div>
+                        <div class="pri" :style="{backgroundImage:'url('+item.picture+')',backgroundSize: '100%' }"></div>
                         <span>{{items.name}}</span>
                         <van-radio :name='index' checked-color="#FFC836" class="radio"></van-radio>
                     </li>

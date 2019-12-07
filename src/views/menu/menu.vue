@@ -21,7 +21,11 @@
                                 ref="lItem"
                                 @click="_inchange(index)"
                                 :class="{is_active:index==actli}">
-                                <div class="icon" :style="{background:'url('+item.url+') no-repeat',backgroundSize:'100%'}" v-show="open==index+1" :class="{drink:item.label==='饮品'}"></div>
+                                <div 
+                                class="icon" 
+                                :style="{background:'url('+item.url+') no-repeat',backgroundSize:'100%'}" 
+                                v-show="open==index+1" 
+                                :class="{drink:item.label==='饮品'}"></div>
                                 <span  v-html="item.label"> {{item.label}}</span>
                             </li>
                         </ul>
@@ -32,18 +36,24 @@
                             <ul class="rcontent" >
                                 <li v-for="(food,submenuIndex) in item.submenu" 
                                 :key="submenuIndex" :class="{big:index<2}" 
-                                :style="{background: 'url(' + food.url + ') no-repeat center ',backgroundSize:'100%'}"
-                                @click="(index<2)?toMenuCard(index,submenuIndex):''"
+                                :style="{background: 'url(' + food.url + ') no-repeat  ',backgroundSize:'100%'}"
+                                @click="toMenuCard(index,submenuIndex)"
                                 >    
-                                     <span class="icombo" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></span>
-                                     <span class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></span>
-                                     <span class="single" v-show="index>2"><i class="iconfont">&#xe626;</i></span>
+                                <div class="rotate"></div>
+                                     <div class="icombo optional" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></div>
+                                     <div class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></div>
+                                     <div class="single" v-show="index>2" >
+                                         <i class="iconfont" v-show="item.submenu[submenuIndex].count" @click.stop="reduceCar(index,submenuIndex)">&#xe620;</i>
+                                         <span class="itemsCount" v-show="item.submenu[submenuIndex].count">{{item.submenu[submenuIndex].count}}</span>
+                                         <i class="iconfont" @click.stop="addCar(index,submenuIndex)">&#xe626;</i>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <shopCar :foodList="foodList"></shopCar>
         </div>
     </div>
 </template>
@@ -51,9 +61,11 @@
 import Bscroll from 'better-scroll'
 import slideBanner from '../../components/slideBanner'
 import headerNav from '../../components/headerNav'
+import Vue from "vue"
+import shopCar from '../../components/shopCar'
 
 export default {
-    components:{slideBanner,headerNav},
+    components:{slideBanner,headerNav,shopCar},
     data(){
         return{
             distribution:this.$route.query.distribution,
@@ -65,7 +77,8 @@ export default {
             scrollY:0,
             current:"1",
             TabList:this.$store.state.data,
-            items: []
+            items: [],
+            num:0,
         }
     },
    created () {
@@ -77,7 +90,20 @@ export default {
     computed:{
          goods () {
             return this.$store.state.msg.goods
+        },
+        foodList(){
+            let foodList=[];  
+            for(let i=0;i<this.TabList.length;i++){
+                for(let j=0;j<this.TabList[i].submenu.length;j++){
+                    if(this.TabList[i].submenu[j].count)
+                    {
+                        foodList.push(this.TabList[i].submenu[j]);
+                    }
+                }
+            }
+            return  foodList;
         }
+
     },
     
     mounted () {
@@ -121,10 +147,17 @@ export default {
     })
     
     },
-    updated(){
-       //试试使用vuex解决
-    },
     methods:{
+        reduceCar(index,submenuIndex){
+            this.TabList[index].submenu[submenuIndex].count--;
+        },
+        addCar(index,submenuIndex){
+            if(!this.TabList[index].submenu[submenuIndex].count){
+                Vue.set(this.TabList[index].submenu[submenuIndex],"count",1);
+            }else{
+                this.TabList[index].submenu[submenuIndex].count++;
+            }
+        },
         back(){
             this.$router.go(-1);
         },
@@ -135,7 +168,7 @@ export default {
       _initSrcoll(){
              this.Rscroll = new Bscroll(this.$refs.righ, {
                 // 获取 scroll 事件，用来监听。
-                click:true,
+                click:false,
                 probeType: 3
             });
             this.Rscroll.on('scroll', (res) => {
@@ -164,6 +197,25 @@ export default {
    }
 </script>
 <style lang="scss" scoped>
+/*.rotate{
+    position:relative;
+    animation:mymove 5s infinite 0 1;
+    -webkit-animation:mymove 5s infinite;
+    animation-iteration-count:1;
+    background-color: pink;
+}
+@keyframes mymove
+{
+	from {left:0px; transform:rotate(0deg);}
+	to {left:10vw; transform:rotate(360deg); background-color: skyblue;}
+}
+
+@-webkit-keyframes mymove //Safari and Chrome
+{
+	from {left:0px; transform:rotate(0deg);}
+	to {left:10vw; transform:rotate(360deg);}
+}*/
+
 .container{
     background-color: #F8F8F8;
 }
@@ -220,13 +272,13 @@ export default {
                     background-color: #F8F8F8 ;
                     height: 33vw;
                     .icon{
-                        width: 8vw;
-                        height: 8vw;
+                        width: 9vw;
+                        height: 12vw;
                         
                     }
                     .drink{
                         width: 5vw;
-                        height: 10vw;
+                        height: 13vw;
                     }
                 }
                 
@@ -239,33 +291,40 @@ export default {
                     border-radius: 1vw;
                     margin:0 0 5% 6%;
                     box-shadow:1px 1px 5px 0px #9D9D9D;
-                    height: 45vw;
-                    width: 73vw;
-                    span{
+                    height: 10vw;
+                    width: 68vw;
+                    padding: 35vw 0 0 5vw;
+                    .optional{
                         display: flex;
                         z-index:5;
+                        width: 18vw;
                         flex-direction: row;
-                        align-items: center;
-                    }
-                    i{
-                        color:#000;
-                        font-size: 6vw;
+                        align-items: center; 
+                        i{
+                            color:#000;
+                            font-size: 6vw;
+                        }
                     }
                     .icombo{
-                        padding: 41vw 0 0 5vw;
-                    }
-                    .optional{
-                         padding: 35vw 0 0 5vw;
+                        margin-top: 6vw;
                     }
                     .single{
-                         padding: 35vw 0 0 5vw;
+                        display: flex;
+                        flex-direction: row;
                          i{
                              font-size: 5vw;
+                             color: #000;
                          }
+                          .itemsCount{
+                            text-align: center;
+                            color: rgb(173, 2, 2);
+                            min-width: 5vw;
+                            font-size: 5vw;
+                        }
                     }
                 }
                 .big{
-                    height: 55vw;
+                    height: 20vw;
                 }
             }
         }

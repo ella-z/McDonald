@@ -12,7 +12,6 @@ export default new Vuex.Store({
   mutations: {
     getvalue(state,res){
       state.data=res;
-      console.log(state.data);
     }
   },
   actions: {

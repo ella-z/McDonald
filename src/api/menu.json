@@ -250,7 +250,7 @@
             {
                 "name":"麦辣鸡腿汉堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png",
-                "peice":26.5,
+                "price":26.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡腿汉堡套餐.png",
                 "stapleFoodName":"麦辣鸡腿汉堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦辣鸡腿堡.png",
@@ -260,7 +260,7 @@
             {
                 "name":"板烧鸡腿堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/板烧鸡腿堡套餐.png",
-                "peice":22,
+                "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/板烧鸡腿堡套餐.png",
                 "stapleFoodName":"板烧鸡腿堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/板烧鸡腿堡.png",
@@ -270,7 +270,7 @@
             {
                 "name":"巨无霸套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/巨无霸套餐.png",
-                "peice":31,
+                "price":31,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/巨无霸套餐.png",
                 "stapleFoodName":"巨无霸",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/巨无霸.png",
@@ -280,7 +280,7 @@
             {
                 "name":"不素之霸双层牛堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png",
-                "peice":22,
+                "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/不素之霸双层牛堡套餐.png",
                 "stapleFoodName":"不素之霸双层牛堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/不素之霸双层牛堡.png",
@@ -290,7 +290,7 @@
             {
                 "name":"双层深海鳕鱼堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png",
-                "peice":22,
+                "price":22,
                 "poster":"http://localhobaijiexinengst:80/mcdonald/assets/img/poster/超值三件套/双层深海鳕鱼堡套餐.png",
                 "stapleFoodName":"双层深海鳕鱼堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层深海鳕鱼堡.png",
@@ -300,7 +300,7 @@
             {
                 "name":"川辣双鸡堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/川辣双鸡堡套餐.png",
-                "peice":22,
+                "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/川辣双鸡堡套餐.png",
                 "stapleFoodName":"川辣双鸡堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/川辣双鸡堡.png",
@@ -310,7 +310,7 @@
             {
                 "name":"双层吉士汉堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层吉士汉堡套餐.png",
-                "peice":26.5,
+                "price":26.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/双层吉士汉堡套餐.png",
                 "stapleFoodName":"双层吉士汉堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/双层吉士汉堡.png",
@@ -320,7 +320,7 @@
             {
                 "name":"麦香鸡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鸡套餐.png",
-                "peice":21.5,
+                "price":21.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鸡套餐.png",
                 "stapleFoodName":"麦香鸡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦香鸡汉堡.png",
@@ -330,7 +330,7 @@
             {
                 "name":"麦香鱼套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鱼套餐.png",
-                "peice":21,
+                "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鱼套餐.png",
                 "stapleFoodName":"麦香鱼",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/麦香鱼汉堡.png",
@@ -340,7 +340,7 @@
             {
                 "name":"麦乐鸡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦乐鸡套餐.png",
-                "peice":19.5,
+                "price":19.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦乐鸡套餐.png",
                 "stapleFoodName":"麦乐鸡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/snake/麦乐鸡块.png",
@@ -350,7 +350,7 @@
             {
                 "name":"培根蔬萃双层牛堡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png",
-                "peice":31,
+                "price":31,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/培根蔬萃双层牛堡套餐.png",
                 "stapleFoodName":"培根蔬萃双层牛堡",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/培根蔬萃双层牛堡.png",
@@ -360,7 +360,7 @@
             {
                 "name":"吉士汉堡包套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/吉士汉堡包套餐.png",
-                "peice":19,
+                "price":19,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/吉士汉堡包套餐.png",
                 "stapleFoodName":"吉士汉堡包",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/hamburger/吉士汉堡.png",
@@ -370,7 +370,7 @@
             {
                 "name":"麦辣鸡翅",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡翅.png",
-                "peice":30.5,
+                "price":30.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡翅套餐.png",
                 "stapleFoodName":"麦辣鸡翅",
                 "stapleFoodPicture":"http://localhost:80/mcdonald/assets/img/snake/麦辣鸡翅.png",
@@ -461,17 +461,17 @@
             },
             {
                 "name":"家有金桶(汉堡版)",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶(汉堡版).png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶汉堡版.png",
                 "price":80,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(汉堡版).png",
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶汉堡版.png",
                 "englishName":"FAMILY BUCKET(BURGER)",
                 "introduce":"经典百搭的汉堡搭配多款美味小食，更有甜品香芋派，一桶包含所有你想要的美味。家有金桶，新装上阵，一起分享吧。包含：麦辣鸡腿堡(1块)+板烧鸡腿堡(1份)+麦辣鸡翅(2块)+香骨鸡腿(1个)+椒盐金脆鸡翅(2份)+那么大鸡排(1份)+香芋派(1个)+中可乐(3杯)"
             },
             {
                 "name":"家有金桶(脆鸡版)",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶(脆鸡版).png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶脆鸡版.png",
                 "price":80,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶(脆鸡版).png",
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶脆鸡版.png",
                 "englishName":"FAMILY BUCKET(CHICKEN)",
                 "introduce":"口感丰富的那么大鸡排，配上肉多汁够鲜美的香骨鸡腿，更有经典麦辣鸡翅。家有金桶，新装上阵，一起分享吧。包含：那么大鸡排(1份)+香骨鸡腿(3个)+麦辣鸡翅(6块)+中可乐(3杯)"
             },
@@ -523,7 +523,7 @@
         "submenu":[
             {
                 "name":"脆皮巧克力味花生麦旋风",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/脆皮巧克力味花生.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/脆皮巧克力味花生麦旋风.png",
                 "price":13.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/脆皮巧克力味花生麦旋风.png",
                 "englishName":"Chocolate McFlurry w.Crushed Peanut",
@@ -531,9 +531,9 @@
             },
             {
                 "name":"限量雪人奇缘毛绒玩具挂饰",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/限量雪人奇缘毛绒玩具挂饰.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/限量雪人奇缘毛绒玩偶挂饰.png",
                 "price":21,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/限量雪人奇缘毛绒玩具挂饰.png",
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/限量雪人奇缘毛绒玩偶挂饰.png",
                 "englishName":"Abominable SLP",
                 "introduce":""
             },
@@ -595,9 +595,9 @@
             },
             {
                 "name":"黄金脆薯格",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/黄金脆薯格.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金黄脆薯格.png",
                 "price":13,
-                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/黄金脆薯格.png",
+                "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金黄脆薯格.png",
                 "englishName":"Crisscut Fries",
                 "introduce":"黄金切割，网状结构，放大酥脆表面，薯脆十足。"
             },
@@ -881,7 +881,7 @@
             },
             {
                 "name":"(暖)原味珍珠奶茶",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶热.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶暖.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/原味珍珠奶茶暖.png",
                 "englishName":"Bubble Mike Tea",
@@ -969,7 +969,7 @@
             },
             {
                 "name":"阳光橙麦旋酷",
-                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/阳光橙麦旋酷.png",
+                "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/阳光橙麦炫酷.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/阳光橙麦旋酷.png",
                 "englishName":"MCCOOL(ORANGE)",
