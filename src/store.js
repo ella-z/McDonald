@@ -7,11 +7,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     data:'',
-    test:'1'
+    ischecked:1
   },
   mutations: {
     getvalue(state,res){
       state.data=res;
+    },
+    changChecked(state,index){
+      state.ischecked=index;
     }
   },
   actions: {

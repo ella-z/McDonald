@@ -40,8 +40,24 @@
                                 @click="toMenuCard(index,submenuIndex)"
                                 >    
                                 <div class="rotate"></div>
-                                     <div class="icombo optional" v-show="index<2">套餐<i class="iconfont" >&#xe731;</i></div>
-                                     <div class="optional" v-show="index===2"><i class="iconfont" >&#xe731;</i></div>
+                                    <div v-show="index<2" class="icombo">
+                                        <div class=" optional" v-show="!item.submenu[submenuIndex].count">
+                                             套餐<i class="iconfont" >&#xe731;</i>
+                                        </div>
+                                        <div v-show="item.submenu[submenuIndex].count">
+                                            <i class="iconfont" @click.stop="reduceCar(index,submenuIndex)">&#xe620;</i>
+                                            <span class="itemsCount" >{{item.submenu[submenuIndex].count}}</span>
+                                            <i class="iconfont" @click.stop="addCar(index,submenuIndex)">&#xe626;</i>
+                                        </div>
+                                    </div>
+                                     <div class="optional" v-show="index===2">
+                                         <i class="iconfont" v-show="!item.submenu[submenuIndex].count">&#xe731;</i>
+                                        <div v-show="item.submenu[submenuIndex].count" class="operator">
+                                            <i class="iconfont" @click.stop="reduceCar(index,submenuIndex)">&#xe620;</i>
+                                            <span class="itemsCount" >{{item.submenu[submenuIndex].count}}</span>
+                                            <i class="iconfont" @click.stop="addCar(index,submenuIndex)">&#xe626;</i>
+                                        </div>
+                                    </div>
                                      <div class="single" v-show="index>2" >
                                          <i class="iconfont" v-show="item.submenu[submenuIndex].count" @click.stop="reduceCar(index,submenuIndex)">&#xe620;</i>
                                          <span class="itemsCount" v-show="item.submenu[submenuIndex].count">{{item.submenu[submenuIndex].count}}</span>
@@ -107,6 +123,8 @@ export default {
     },
     
     mounted () {
+    console.log(this.TabList[0].submenu[0]);
+    console.log(this.$store.state.data[0].submenu[0]);
     var that =this;
         this.axios.post('http://localhost:80/mcdonald/poster.php').then(function(response){
         that.items=response.data;
@@ -304,9 +322,18 @@ export default {
                             color:#000;
                             font-size: 6vw;
                         }
+                        .operator{
+                            i{
+                                font-size: 5vw;
+                            }
+                        }
                     }
                     .icombo{
                         margin-top: 6vw;
+                        i{
+                            color: #000;
+                            font-size: 5vw;
+                        }
                     }
                     .single{
                         display: flex;
@@ -315,12 +342,7 @@ export default {
                              font-size: 5vw;
                              color: #000;
                          }
-                          .itemsCount{
-                            text-align: center;
-                            color: rgb(173, 2, 2);
-                            min-width: 5vw;
-                            font-size: 5vw;
-                        }
+                          
                     }
                 }
                 .big{
@@ -330,7 +352,12 @@ export default {
         }
     }
 }
-
+.itemsCount{
+                            text-align: center;
+                            color: rgb(173, 2, 2);
+                            min-width: 5vw;
+                            font-size: 5vw;
+                        }
 .x{
     width: 100%;
     height: 48vw;

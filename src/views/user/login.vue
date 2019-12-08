@@ -26,7 +26,7 @@
 export default {
     props:['open'],
     data(){
-        return{
+        return{ 
           isAdministrator:false,
           account:'',
           password:'',
@@ -68,10 +68,15 @@ export default {
                             if(response.data==true){
                                  that.$emit('toClose',false);
                                  that.isfault=false;
+                                 let sess = window.sessionStorage;
+                                 sess.setItem('account',that.account);
+                                 sess.setItem('password',that.password);
                                  if(that.isAdministrator==true)
                                  {
+                                     sess.setItem('identity','administrator');
                                      that.$router.push('/index/user/administrator');
                                  }else{
+                                     sess.setItem('identity','client');
                                       that.$router.push('/index/user/client');
                                  }
                             }else{

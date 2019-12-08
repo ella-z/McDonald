@@ -23,11 +23,12 @@
 export default {
     data(){
         return{
-            ischecked:'1'
+            ischecked:this.$store.state.ischecked
         }
     },
     methods:{
         check(index){
+            this.$store.commit('changChecked',index);
             this.ischecked=index;
         }
     }

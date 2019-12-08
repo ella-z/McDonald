@@ -29,7 +29,7 @@ import { log } from 'util';
 
 export default {
     components:{headerNav,horizontalScroll,price},
-    data(){
+    data(){ 
         return{
             ScrollName:'',
             title:'',

@@ -53,7 +53,10 @@ const router =  [
                 {
                   path:'/index/user/member',
                   name:'member',
-                  component:member
+                  component:member,
+                  meta:{
+                    login_require:true
+                  }
                 },
                 {
                   path:'/index/user/administrator',
@@ -82,7 +85,6 @@ const router =  [
                     },
                   ]
                 },
-                
                 {
                   path:'/index/user/client',
                   name:'client',

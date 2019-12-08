@@ -62,7 +62,7 @@ export default {
              that.list=response.data;
         },function(err){
             console.log('请求失败');
-        })
+        });
     },
     methods:{
         show(){

@@ -14,12 +14,14 @@
                 合计 ￥
                 <span class="totalMoney">{{totalValue}}</span>
             </div>
-        <div class="add">加入购物车</div>
+        <div class="add" @click="addCar">加入购物车</div>
         </div>
     </div>    
 </template>
 
 <script>
+import Vue from "vue"
+
 export default {
     props:['product'],
     data(){
@@ -38,6 +40,14 @@ export default {
         },
         onminus(){
             this.value--;
+        },
+        addCar(){
+            if(!this.product.count){
+                Vue.set(this.product,"count",this.value);
+            }else{
+                this.product.count+=this.value;
+            }
+            this.$router.go(-1);
         }
     }
 }

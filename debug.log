@@ -6,3 +6,4 @@
 [1130/220131.665:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
 [1201/112142.492:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
 [1201/151018.159:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
+[1208/232615.982:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
