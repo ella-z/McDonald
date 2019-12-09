@@ -31,9 +31,6 @@ export default {
           open:false,
         }
     },
-    created(){
-        console.log(window.sessionStorage);
-    },
     methods:{
         toLogin(){
             this.open=true;

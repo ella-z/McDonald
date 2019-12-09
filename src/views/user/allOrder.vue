@@ -1,15 +1,18 @@
 <template>
     <div class="allOrder">
-       <orderCard></orderCard>
+        <headerNav></headerNav>
+        <orderCard></orderCard>
     </div>    
 </template>
 
 <script>
 import orderCard from '../../components/orderCard'
+import headerNav from '../../components/headerNav'
 
 export default {
     components:{
-        orderCard
+        orderCard,
+        headerNav
     },
     data(){
         return{

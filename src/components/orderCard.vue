@@ -20,7 +20,7 @@ export default {
     },
        methods:{
         toMenuDetail(){
-            this.$router.push('/index/user/administrator/allOrder/orderDetail')
+            this.$router.push('/index/user/administratorIndex/allOrder/orderDetail')
         }
     }
 }

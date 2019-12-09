@@ -8,14 +8,14 @@
                 </a>
             </cube-slide-item>
         </cube-slide>
-        <div class="wrapper" > 
+        <div class="wrapper">  
             <div class="MenuTabs">
                     <div class="Tab" ref="left">
                         <ul class="lcontent">
-                            <li class="search">
+                            <!--<li class="search">
                                 <i class="iconfont">&#xe62e;</i>
                                 搜索
-                            </li>
+                            </li>-->
                             <li :key='index' 
                                 v-for="(item,index) in TabList"
                                 ref="lItem"
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <shopCar :foodList="foodList"></shopCar>
+            <shopCar :foodList="foodList" @changeList="changeList" :distribution="distribution"></shopCar>
         </div>
     </div>
 </template>
@@ -91,10 +91,11 @@ export default {
             flag: true,
             open:1,
             scrollY:0,
-            current:"1",
+            current:"1", 
             TabList:this.$store.state.data,
             items: [],
             num:0,
+            session:JSON.parse(window.sessionStorage.getItem('foodList'))
         }
     },
    created () {
@@ -103,12 +104,17 @@ export default {
             this._initSrcoll()
         }, 20);
     },
+    watch:{
+        TabList(val){
+            console.log(val);
+        }
+    },
     computed:{
          goods () {
             return this.$store.state.msg.goods
         },
-        foodList(){
-            let foodList=[];  
+        foodList(){    //筛选被添加进入购物车的选项
+            let foodList=[];
             for(let i=0;i<this.TabList.length;i++){
                 for(let j=0;j<this.TabList[i].submenu.length;j++){
                     if(this.TabList[i].submenu[j].count)
@@ -117,14 +123,11 @@ export default {
                     }
                 }
             }
+            this.$store.commit('setValue',this.TabList);
             return  foodList;
         }
-
     },
-    
     mounted () {
-    console.log(this.TabList[0].submenu[0]);
-    console.log(this.$store.state.data[0].submenu[0]);
     var that =this;
         this.axios.post('http://localhost:80/mcdonald/poster.php').then(function(response){
         that.items=response.data;
@@ -163,9 +166,19 @@ export default {
         }
       })
     })
-    
+   
     },
     methods:{
+        changeList(){
+            for(let i=0;i<this.TabList.length;i++){
+                for(let j=0;j<this.TabList[i].submenu.length;j++){  //清空购物车
+                    if(this.TabList[i].submenu[j].count)
+                    {
+                        Vue.delete(this.TabList[i].submenu[j],"count");
+                    }
+                }
+            }
+        },
         reduceCar(index,submenuIndex){
             this.TabList[index].submenu[submenuIndex].count--;
         },
@@ -220,7 +233,7 @@ export default {
     animation:mymove 5s infinite 0 1;
     -webkit-animation:mymove 5s infinite;
     animation-iteration-count:1;
-    background-color: pink;
+    background-color: pink;                   //动画效果
 }
 @keyframes mymove
 {

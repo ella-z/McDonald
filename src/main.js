@@ -7,6 +7,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import Vant from 'vant';
 import 'vant/lib/index.css';
+import { TabPanels } from "cube-ui";
 
 Vue.use(Vant);
 Vue.use(VueAxios, axios)
@@ -18,3 +19,18 @@ new Vue({
   render: h => h(App)
 }).$mount("#app");
 
+router.beforeEach((to,from,next)=>{
+  if(to.name==='member'||to.name==='user'){
+    if(window.sessionStorage.account){
+      if(window.sessionStorage.identity==='administrator'){
+        next('/index/user/administratorIndex');
+      }else if(window.sessionStorage.identity==='client'){
+        next('/index/user/client');
+      }
+    }else{
+      next();
+    }
+  }else{
+    next();
+  }
+})

@@ -1,5 +1,6 @@
 <template>
     <div class="statistics">
+        <headerNav></headerNav>
         <van-dropdown-menu>
             <van-dropdown-item v-model="value" :options="option" @change="changSeries" />
             <van-dropdown-item title="筛选" ref="item">
@@ -30,10 +31,12 @@
 
 <script>
 import chart from '../../components/chart'
+import headerNav from '../../components/headerNav'
 
 export default {
     components:{
-        chart
+        chart,
+        headerNav
     },
   data(){
       return{

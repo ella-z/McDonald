@@ -27,7 +27,7 @@
         </div>
         <div class="productDetail">
             <div class="state">商品详情</div>
-            <img src='../assets/img/detail/麦满分组合.png' />
+            <img src='http://localhost:80/mcdonald/assets/img/detail/麦满分组合.png' />
         </div>
         <div class="notice">
             <div class="state">购买须知</div>

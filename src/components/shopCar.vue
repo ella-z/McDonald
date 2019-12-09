@@ -3,7 +3,7 @@
         <div class="shopCarList" v-show="showList">
             <div class="shopCarList-nav">
                 <div>已选产品</div>
-                <div class="empty"><i class="iconfont empty-icon">&#xe635;</i>清空</div>
+                <div class="empty" @click="toempty"><i class="iconfont empty-icon">&#xe635;</i>清空</div>
             </div>
             <ul class="productList">
                 <li 
@@ -32,7 +32,7 @@
             <div class="totalPrice">￥ {{totalPrice}}</div>
             </div>
             <div class="shopCarRight">
-                <div class="addbuttom">
+                <div class="addbuttom" @click="toSettlement">
                         选好了
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    props:['foodList'],
+    props:['foodList','distribution'],
     data(){
         return{
             isCount:false,
@@ -82,6 +82,13 @@ export default {
         },
         showCarList(){
             this.showList=!this.showList;
+        },
+        toSettlement(){
+            this.$router.push({path:'/settlement',query:{foodList:this.foodList,distribution:this.distribution}})
+        },
+        toempty(){
+            sessionStorage.removeItem('list');
+            this.$emit('changeList');
         }
     }
 }
@@ -152,7 +159,7 @@ export default {
     .mask{
         background: rgba(0,0,0,0.5);
         width: 100vw;
-        height: 85vh;
+        height: 100vh;
         position: fixed;
         bottom: 15vw;
     }

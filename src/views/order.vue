@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="orange" :class="{night:isnight===true,data:isdata===true}">
-            <span>{{time}}</span>
+            <span>{{time}} {{userName}}</span>
         </div>
         <div class="content">
             <div class="way"> 
@@ -17,7 +17,7 @@
                         <span>麦乐送外卖</span>
                         <br />
                         <span class="small">30分钟必达</span>
-                        <img src="../assets/img/外卖.png" class="takeOut"/>
+                        <img src="http://localhost:80/mcdonald/assets/img/外卖.png" class="takeOut"/>
                     </div>
                 </div>
                  <div class="link" @click="toshop">
@@ -25,7 +25,7 @@
                         <span>到点取餐</span>
                         <br />
                         <span class="small">快速取餐免排队</span>
-                        <img src="../assets/img/堂食.png" class="eatIn"/>
+                        <img src="http://localhost:80/mcdonald/assets/img/堂食.png" class="eatIn"/>
                     </div>
                  </div>
             </div>
@@ -45,16 +45,29 @@ export default {
     data()
     {
         return{
-            gettime:'',
-            isnight:false,
+            gettime:'', //获取当前时间
+            isnight:false,  //判断是白天还是晚上
             isdata:false,
             time:'',
-            list:''
+            list:'',
+            isGet:this.$store.state.isGet,
+            userName:''
         }
     },
     created(){
         this.currentTime();
-         this.$store.dispatch('getdata');
+        if(window.sessionStorage.list){     //刷新之后购物车不变
+            this.$store.commit('getvalue',JSON.parse(window.sessionStorage.list));
+        }else{
+            if(!this.isGet)
+                {
+                    this.$store.dispatch('getdata');
+                    this.$store.commit('changeGet');
+                }
+        }
+        if(window.sessionStorage.account){
+            this.userName=window.sessionStorage.account;
+        }
     },
     mounted(){ 
         var that = this;
@@ -125,15 +138,18 @@ export default {
     background-color: #fff;
     span{
         display: block;
-        margin:32vw 0 0 44vw;
+        min-width: 25vw;
+        text-align: center;
+        height: 10vw;
+        margin-top:30vw;
         font-size: 4vw;
     }
 }
 .data{
-        background-image: url("../assets/img/data.png");
+        background-image: url("http://localhost:80/mcdonald/assets/img/data.png");
 }
 .night{
-        background-image: url("../assets/img/night.png");
+        background-image: url("http://localhost:80/mcdonald/assets/img/night.png");
         color:#fff;
     }
 </style>

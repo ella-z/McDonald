@@ -1,19 +1,18 @@
 <template>
     <div class="orderDetail">
+        <headerNav></headerNav>
         <div class="foodCode">
             <span>请关注您的取餐码</span>
             <span class="number">123456</span>
         </div>
         <div class="mealTime">取餐时间：</div>
         <div class="orderList">
-            <span class="foodName">123</span>
+            <span class="foodName">123 ￥12</span>
             <span class="amount">x1</span>
-            <span class="price">12</span>
         </div>
         <div class="orderList">
-            <span class="foodName">123</span>
+            <span class="foodName">123 ￥12</span>
             <span class="amount">x1</span>
-            <span class="price">12</span>
         </div>
         <div class="total">
             <span>合计</span>
@@ -23,7 +22,12 @@
 </template>
 
 <script>
+import headerNav from './headerNav'
+
 export default {
+    components:{
+        headerNav
+    },
     data(){
         return{
 

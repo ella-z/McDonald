@@ -74,7 +74,7 @@ export default {
                                  if(that.isAdministrator==true)
                                  {
                                      sess.setItem('identity','administrator');
-                                     that.$router.push('/index/user/administrator');
+                                     that.$router.push('/index/user/administratorIndex');
                                  }else{
                                      sess.setItem('identity','client');
                                       that.$router.push('/index/user/client');

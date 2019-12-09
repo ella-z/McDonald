@@ -12,12 +12,13 @@ import packages from '../components/packages'
 import want from '../components/want'
 import MenuCard from '../views/menu/MenuCard'
 import user from '../views/user/user'
-import administrator from '../views/user/administrator'
 import client from '../views/user/client'
 import allOrder from '../views/user/allOrder'
 import statistics from '../views/user/statistics'
 import administratorIndex from '../views/user/administratorIndex'
 import orderDetail from '../components/orderDetail'
+import settlement from '../views/menu/settlement'
+import payment from '../views/menu/payment'
 
 Vue.use(Router);
 
@@ -59,32 +60,25 @@ const router =  [
                   }
                 },
                 {
-                  path:'/index/user/administrator',
-                  name:'administrator',
-                  component:administrator,
-                  children:[
-                    {
-                      path:'/index/user/administrator/administratorIndex',
-                      name:'administratorIndex',
-                      component:administratorIndex
-                    },
-                    {
-                      path:'/index/user/administrator/allOrder',
+                  path:'/index/user/administratorIndex',
+                  name:'administratorIndex',
+                  component:administratorIndex,
+                },
+                {
+                      path:'/index/user/administratorIndex/allOrder',
                       name:'allOrder',
                       component:allOrder
                     },
                     {
-                      path:'/index/user/administrator/allOrder/orderDetail',
+                      path:'/index/user/administratorIndex/allOrder/orderDetail',
                       name:'orderDetail',
                       component:orderDetail
                     },
                     {
-                      path:'/index/user/administrator/statistics',
+                      path:'/index/user/administratorIndex/statistics',
                       name:'statistics',
                       component:statistics
                     },
-                  ]
-                },
                 {
                   path:'/index/user/client',
                   name:'client',
@@ -98,6 +92,16 @@ const router =  [
         path:'/menu',
         name:'menu',
         component:menu
+      },
+      {
+        path:'/payment',
+        name:'payment',
+        component:payment
+      },
+      {
+        path:'/settlement',
+        name:'settlement',
+        component:settlement
       },
       {
         path:'/detail',
