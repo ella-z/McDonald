@@ -5,7 +5,7 @@
              <div class="iwrong">
                  <i class="iconfont">&#xe685;</i>
                  <span>请先登录</span>
-                 <div class="comfirmation" @click="comfirm">去登录</div>
+                 <div class="comfirmation" @click="login">去登录</div>
              </div>
         </van-overlay>
         <div class="mealTime">
@@ -24,7 +24,7 @@
             </div>
             <span v-show="istakeOut">预计到达时间</span>
             <div class="takeOut" v-show="istakeOut">
-                <span>2019-10-27 00:00</span>
+                <span>{{arriveTime}}</span>
             </div>
         </div>
         <div class="mealWay" v-show="iseatIn">
@@ -83,12 +83,15 @@ export default {
             wayRadio:"way1",
             foodList:this.$route.query.foodList,
             distribution:this.$route.query.distribution,
+            formatedTime:this.$route.query.formatedTime,
             isWrong:false,
             show:false,
             valueTime:'',
             valueWay:'',
             iseatIn:true,
-            istakeOut:false
+            istakeOut:false,
+            takeOutTime:'',
+            isReserve:this.$store.state.isReserve
         }
     },
     watch:{
@@ -101,6 +104,45 @@ export default {
                 totalPrice+=this.foodList[i].count*this.foodList[i].price;
             }
             return totalPrice;
+        },
+        arriveTime(){
+                let date=new Date();
+                let y = date.getFullYear().toString();
+                let m = (date.getMonth()+1).toString();
+                let d = date.getDate().toString();
+                let hh = date.getHours();
+                let mf = date.getMinutes()<10 ? '0'+date.getMinutes() : date.getMinutes();
+                mf=parseInt(mf);
+                if(this.iseatIn){
+                    switch(this.takeOutTime){
+                        case '现在取餐':  
+                            break;
+                        case '10分钟之后取餐':
+                            mf+=10;          
+                            break;
+                        case '20分钟之后取餐':
+                            mf+=20;              
+                            break;
+                        case '30分钟之后取餐':
+                            mf+=30;              
+                            break;
+                    }
+                }else{
+                    mf+=30;
+                }
+                if(mf>=60){
+                    hh++;
+                    mf-=60;
+                }
+                hh=hh.toString();
+                mf=mf.toString();
+                let arriveTime='';
+                if(this.isReserve===false){
+                    arriveTime=y+'/'+m+'/'+d+' '+hh+':'+mf;
+                }else{
+                    arriveTime=this.formatedTime;
+                }
+                return arriveTime;
         }
     },
     created(){
@@ -117,20 +159,25 @@ export default {
     methods:{
         topay(){
             if(window.sessionStorage.account){
-                this.$router.push({path:'/payment',query:{valueTime:this.valueTime,valueWay:this.valueWay,distribution:this.distribution}});            
-                console.log(this.foodList);
-                console.log(window.sessionStorage.account);
+                this.$router.push({path:'/payment',query:{
+                    valueTime:this.valueTime,
+                    valueWay:this.valueWay,
+                    distribution:this.distribution,
+                    arriveTime:this.arriveTime,
+                    foodList:this.foodList}});
+                    let that = this;
             }
             else{
                 this.show=true;
             }
         },
-        comfirm(){
+        login(){
         this.show=false;
         this.$router.push({path:'/index/user/member'});
         this.$store.state.ischecked=3;
         },
         getTimeRadioVal(value){
+            this.takeOutTime=value;
             this.valueTime=value;
         },
         getWayRadioVal(value){

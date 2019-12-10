@@ -9,7 +9,10 @@ export default new Vuex.Store({
     data:'',
     ischecked:1,
     isGet:false,
-    test:1
+    account:0,
+    test:1,
+    isReserve:false, //是否有预定时间
+    num:0 //orderId
   },
   mutations: {
     getvalue(state,res){
@@ -19,6 +22,17 @@ export default new Vuex.Store({
       state.data=res;
       let sess = window.sessionStorage;
       sess.setItem('list',JSON.stringify(res));
+    },
+    setNum(state,res){
+      state.num=res;
+      let sess = window.sessionStorage;
+      sess.setItem('num',JSON.stringify(res));
+    },
+    setReserve(state,res){
+      state.isReserve=res;
+    },
+    setAccount(state,res){
+      state.account=res;
     },
     changeGet(state){
       state.isGet=!state.isGet;
@@ -33,6 +47,19 @@ export default new Vuex.Store({
               //state.data=response.data;
               context.commit('getvalue',response.data);
         })
+      },
+    getNum(context){
+      if(window.sessionStorage.num){
+        context.commit('setNum',window.sessionStorage.num);
+      }else{
+        context.commit('setNum',0);
+      }
+    },
+      getAccount(context){
+        if(window.sessionStorage.account){
+          context.commit('setNum',window.sessionStorage.account);
+        }
+        
       }
     } 
    

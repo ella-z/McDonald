@@ -40,7 +40,6 @@ export default {
         },
         isaccount(){
             var that=this;
-            let url;
             this.axios.post('http://localhost:80/mcdonald/account.php',{'isAdministrator':that.isAdministrator.toString()},{
                   headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -76,8 +75,9 @@ export default {
                                      sess.setItem('identity','administrator');
                                      that.$router.push('/index/user/administratorIndex');
                                  }else{
-                                     sess.setItem('identity','client');
-                                      that.$router.push('/index/user/client');
+                                    sess.setItem('identity','client');
+                                    that.$store.commit('setAccount',that.account);
+                                    that.$router.push({path:'/index/user/client'});
                                  }
                             }else{
                                 that.isfault=true;

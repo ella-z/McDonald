@@ -1,7 +1,13 @@
 <template>
     <div class="allOrder">
         <headerNav></headerNav>
-        <orderCard></orderCard>
+        <orderCard
+        :key="index"
+        v-for="(order,index) in orders"
+        :orderId="order.idorder"
+        :getMealTime="order.getMealTime" 
+        :foodList="foodList[index]"
+        ></orderCard>
     </div>    
 </template>
 
@@ -16,8 +22,29 @@ export default {
     },
     data(){
         return{
-            
+            orders:[],
+            foodList:[],
+            isclient:this.$route.query.isclient,
+            account:this.$route.query.account
         }
+    },
+     created(){
+        let that=this;
+        console.log(that.isclient);
+        this.axios.post('http://localhost:80/mcdonald/getOrder.php',{
+            "isclient":that.isclient,
+            "account":that.account
+        },{
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }}).then(
+            function(response){
+                that.orders=response.data;
+                for(let i=0;i<response.data.length;i++){
+                    that.foodList.push(JSON.parse(response.data[i].foodList))
+                }
+            }
+        )
     },
  
 }
@@ -26,9 +53,8 @@ export default {
 <style lang="scss" scoped>
 .allOrder{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f8f8f8;
-    padding-top: 15vw;
-    
+    padding: 15vw 0;
 }
 </style>

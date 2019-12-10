@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    props:['foodList','distribution'],
+    props:['foodList','distribution','formatedTime'],
     data(){
         return{
             isCount:false,
@@ -84,7 +84,7 @@ export default {
             this.showList=!this.showList;
         },
         toSettlement(){
-            this.$router.push({path:'/settlement',query:{foodList:this.foodList,distribution:this.distribution}})
+            this.$router.push({path:'/settlement',query:{foodList:this.foodList,distribution:this.distribution,formatedTime:this.formatedTime}})
         },
         toempty(){
             sessionStorage.removeItem('list');

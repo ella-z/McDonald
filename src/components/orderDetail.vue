@@ -2,21 +2,20 @@
     <div class="orderDetail">
         <headerNav></headerNav>
         <div class="foodCode">
-            <span>请关注您的取餐码</span>
-            <span class="number">123456</span>
+            <span>订单号</span>
+            <span class="number">{{orderId}}</span>
         </div>
-        <div class="mealTime">取餐时间：</div>
-        <div class="orderList">
-            <span class="foodName">123 ￥12</span>
-            <span class="amount">x1</span>
-        </div>
-        <div class="orderList">
-            <span class="foodName">123 ￥12</span>
-            <span class="amount">x1</span>
-        </div>
+        <div class="mealTime">取餐时间：{{getMealTime}}</div>
+        <ul class="orderList" 
+        v-for="(food,index) in foodList"
+        :key="index"
+        >
+            <li class="foodName">{{food.name}} ￥{{food.price}}</li>
+            <li class="amount"><i class="iconfont icon">&#xe619;</i>{{food.count}}</li>
+        </ul>
         <div class="total">
             <span>合计</span>
-            <span>$123</span>
+            <span>￥{{totalPrice}}</span>
         </div>
     </div>
 </template>
@@ -30,14 +29,26 @@ export default {
     },
     data(){
         return{
-
+            foodList:this.$route.query.foodList,
+            getMealTime:this.$route.query.getMealTime,
+            orderId:this.$route.query.orderId,
         }
+    },
+    computed:{
+        totalPrice(){
+            let totalPrice=0;
+            for(let i = 0;i<this.foodList.length;i++){
+                totalPrice+=this.foodList[i].price*this.foodList[i].count;
+            }
+            return totalPrice;
+        },
     }
 }
 </script>
 
 <style lang="scss">
 .orderDetail{   
+    min-height: 100vh;
     padding-top: 15vw;
     background-color: #f8f8f8;
     .foodCode{
@@ -49,7 +60,6 @@ export default {
         justify-content: center;
         align-items: center;
         span{
-            font-size: 3vw;
             margin-bottom: 2vw;
         }
         .number{
@@ -74,6 +84,10 @@ export default {
         }
         .amount{
             flex: 1;
+            .icon{
+                color: #000;
+                font-size: 3vw;
+            }
         }
         .price{
             flex: 1;

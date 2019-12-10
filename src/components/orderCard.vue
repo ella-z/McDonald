@@ -1,26 +1,41 @@
 <template>
     <div class="orderCard" @click="toMenuDetail">
             <div class="order">
-              <span>请关注您的取餐码</span>
-              <span class="number">123456</span>
+              <span>订单号</span>
+              <span class="number">{{orderId}}</span>
             </div>
             <div class="detail" >
-                 <span>鸡腿堡</span> 
-                <span>jiage</span>
+                 <span>{{firstFood}} 共{{foodCount}}件</span> 
+                <span>￥{{totalPrice}}</span>
             </div>
     </div>
 </template>
 
 <script>
 export default {
+    props:['orderId',"getMealTime","foodList"],
     data(){
         return{
-
+            foodCount:this.foodList.length,
+            firstFood:this.foodList[0].name
         }
     },
-       methods:{
+    computed:{
+        totalPrice(){
+            let totalPrice=0;
+            for(let i = 0;i<this.foodList.length;i++){
+                totalPrice+=this.foodList[i].price*this.foodList[i].count;
+            }
+            return totalPrice;
+        },
+    },
+    methods:{
         toMenuDetail(){
-            this.$router.push('/index/user/administratorIndex/allOrder/orderDetail')
+            this.$router.push({path:'/index/user/administratorIndex/allOrder/orderDetail',query:{
+                foodList:this.foodList,
+                getMealTime:this.getMealTime,
+                orderId:this.orderId
+            }});
         }
     }
 }
@@ -32,11 +47,11 @@ export default {
         height: 35vw;
         background-color: #fff;
         padding-top: 3vw;
+        margin-bottom: 5vw;
         .order{
             margin:0 auto;
             width: 90vw; 
-            border:1px solid #adacac;
-            border-style: solid none;
+            border-bottom:1px solid #adacac;
             height: 25vw;
             display: flex;
             flex-direction: column;

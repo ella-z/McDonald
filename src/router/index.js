@@ -65,7 +65,7 @@ const router =  [
                   component:administratorIndex,
                 },
                 {
-                      path:'/index/user/administratorIndex/allOrder',
+                      path:'/index/user/allOrder',
                       name:'allOrder',
                       component:allOrder
                     },

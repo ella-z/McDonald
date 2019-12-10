@@ -69,7 +69,11 @@
                     </div>
                 </div>
             </div>
-            <shopCar :foodList="foodList" @changeList="changeList" :distribution="distribution"></shopCar>
+            <shopCar 
+            :foodList="foodList"  
+            :distribution="distribution" 
+            :formatedTime="formatedTime" 
+            @changeList="changeList"></shopCar>
         </div>
     </div>
 </template>
@@ -85,6 +89,7 @@ export default {
     data(){
         return{
             distribution:this.$route.query.distribution,
+            formatedTime:this.$route.query.formatedTime,
             actli: 0,
             arr: [0],
             activeName:'1',
@@ -103,11 +108,6 @@ export default {
         setTimeout(() => {
             this._initSrcoll()
         }, 20);
-    },
-    watch:{
-        TabList(val){
-            console.log(val);
-        }
     },
     computed:{
          goods () {

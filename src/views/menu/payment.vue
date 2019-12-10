@@ -5,10 +5,10 @@
             <span>已成功下单</span>
         </div>
         <div class="hint">
-            <span>订单号：1232</span>
-            <span v-show="isEatIn">取餐时间：{{valueTime}}</span>
+            <span>订单号：{{orderId}}</span>
+            <span v-show="isEatIn">取餐时间：{{arriveTime}}</span>
             <span v-show="isEatIn">就餐方式：{{valueWay}}</span>
-            <span v-show="isTakeOut">预计到达时间：2019-10-15 00:00</span>
+            <span v-show="isTakeOut">预计到达时间：{{arriveTime}}</span>
         </div>
         <div class="backButtom" @click="backIndex">返回首页</div>
     </div>
@@ -21,8 +21,11 @@ export default {
             valueWay:this.$route.query.valueWay,
             valueTime:this.$route.query.valueTime,
             distribution:this.$route.query.distribution,
+            arriveTime:this.$route.query.arriveTime,
+            foodList:this.$route.query.foodList,
             isTakeOut:false,
-            isEatIn:true
+            isEatIn:true,
+            num:this.$store.state.num //orderId
         }
     },
     created(){
@@ -35,14 +38,44 @@ export default {
       }
     },
     computed:{
+        orderId(){
+                let date=new Date();
+                let y = date.getFullYear().toString();
+                let m = (date.getMonth()+1).toString();
+                let d = date.getDate().toString();
+                var len = 3;    //显示的长度
+                this.num = parseInt(this.num, 10) + 1;
+                this.$store.commit('setNum',this.num)
+                this.num = this.num.toString();
+                while(this.num.length < len) {
+                    this.num = '0' + this.num;
+                }
+                return y+m+d+this.num;
+                }
 
     },
     methods:{
         backIndex(){
+            let that=this;
+            this.axios.post('http://localhost:80/mcdonald/order.php',{
+                    'orderId':that.orderId,
+                    'account':window.sessionStorage.account,
+                    'foodList':that.foodList,
+                    'getMealTime':that.arriveTime
+                },{
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            }).then(function(response){
+
+            },function(err){
+                console.log(err);
+            }) 
             sessionStorage.removeItem('list');
             this.$store.dispatch('getdata');
             this.$router.push('/');
-        }
+        },
+        
     }
 }
 </script>

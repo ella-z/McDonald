@@ -62,6 +62,7 @@ export default {
             if(!this.isGet)
                 {
                     this.$store.dispatch('getdata');
+                    this.$store.dispatch('getNum');
                     this.$store.commit('changeGet');
                 }
         }
@@ -87,17 +88,24 @@ export default {
                 showNow: true,
                 minuteStep: 10,
                 delay: 60,
-                day: {
+                day: {                                 //时间选择器
                         len: 8,
                         filter: ['今天', '明天'],
                         format: 'M月d日'
-                    }
+                    },
+                onSelect: (selectedTime, selectedText, formatedTime) => {
+                    this.$store.commit('setReserve',true);
+                    this.$router.push({path:'/menu',query:{distribution:"麦乐送",formatedTime:formatedTime}});
+                }
             }).show()
+              
         },
         totake(){
+            this.$store.commit('setReserve',false);
             this.$router.push({path:'/menu',query:{distribution:"麦乐送"}});
         },
         toshop(){
+            this.$store.commit('setReserve',false);
             this.$router.push({path:'/menu',query:{distribution:"到店取餐"}});
         },
         getTime(){

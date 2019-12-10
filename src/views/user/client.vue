@@ -2,11 +2,11 @@
     <div class="client">
         <div class="administratorIndex-nav"></div>
         <div class="card">
-            <span class="userName">用户名</span>
+            <span class="userName">{{UserDetail.userName}}</span>
             <span>可用积分</span>
         </div>
         <div class="list">
-            <div class="listItem orders">
+            <div class="listItem orders" @click="toAllOrder">
                 <span>所有订单</span>
                 <i class="iconfont icon">&#xe731;</i>
             </div>
@@ -31,13 +31,27 @@
 
 <script>
 import headerNav from '../../components/headerNav'
+import { doesNotThrow } from 'assert';
 
 export default {
     components:{headerNav},
     data(){
         return{
-
+            account:this.$store.state.account,
+            UserDetail:''
         }
+    },
+    created(){
+            var that=this;
+            this.axios.post('http://localhost:80/mcdonald/getUser.php',{'account':that.account},{
+                  headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+            }
+            ).then(function(response){
+                that.UserDetail=response.data[0];
+            })
+            
     },
     methods:{
         remove(){
@@ -45,6 +59,12 @@ export default {
             sessionStorage.removeItem('password');
             sessionStorage.removeItem('identity');
             this.$router.push('/index/user/member');
+        },
+        toAllOrder(){
+            this.$router.push({path:'/index/user/allOrder',query:{
+                isclient:true,
+                account:this.account
+            }})
         }
     }
 }

@@ -16,9 +16,17 @@
 
 <script>
 export default {
+        data(){
+            return{
+                foodList:[],
+                orders:[]
+            }
+        },
         methods:{
         toOrder(){
-            this.$router.push('/index/user/administratorIndex/allOrder');
+            this.$router.push({path:'/index/user/allOrder',query:{
+                isclient:false
+            }});
         },
         toStatistics(){
             this.$router.push('/index/user/administratorIndex/statistics');
