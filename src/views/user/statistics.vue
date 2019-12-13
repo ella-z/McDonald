@@ -44,7 +44,7 @@ export default {
             submenu:[],
             result:[],
             options:this.$store.state.data,
-            chartSeries:[]
+            chartSeries:[],
       }
   },
   watch:{
@@ -89,14 +89,18 @@ export default {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 }
             }).then(function(response){
-                 for(let i=0;i<response.data.length;i++){
-                    
+                let salesList=response.data;
+                 for(let i=0;i<salesList.length;i++){
+                    for(let j=0;j<submenuList.length;j++){
+                        if(salesList[i].submenuProductName===submenuList[j].name){
+                            submenuList[j].data[salesList[i].month-1]+=parseInt(salesList[i].submenuProductSales);
+                        }
+                    }
                  }
+                 that.chartSeries=submenuList;
             },function(err){
                 console.log('请求getSales失败');
             })
-        console.log(submenuList[0].data[0]);
-        this.chartSeries=submenuList;
     },
     toggleAll() {
       this.$refs.checkboxGroup.toggleAll();

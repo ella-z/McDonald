@@ -69,6 +69,10 @@ export default {
                 HighCharts.chart('lineContainer', this.lineOptions);
             }
         },
+        chartSeries(val){
+             this.lineOptions.series=val;
+             HighCharts.chart('lineContainer', this.lineOptions);
+        }
     },
     mounted(){
         HighCharts.chart('pieContainer', this.pieOptions);
