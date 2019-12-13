@@ -55,6 +55,7 @@ export default {
         }
     },
     created(){
+        //window.localStorage.removeItem('num');
         this.currentTime();
         if(window.sessionStorage.list){     //刷新之后购物车不变
             this.$store.commit('getvalue',JSON.parse(window.sessionStorage.list));
@@ -62,7 +63,6 @@ export default {
             if(!this.isGet)
                 {
                     this.$store.dispatch('getdata');
-                    this.$store.dispatch('getNum');
                     this.$store.commit('changeGet');
                 }
         }
@@ -75,7 +75,7 @@ export default {
         this.axios.get('http://localhost:80/mcdonald/poster.php').then(function(response){
              that.list=response.data;
         },function(err){
-            console.log('请求失败');
+            console.log('poster.php请求失败');
         });
     },
     methods:{

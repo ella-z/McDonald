@@ -36,6 +36,9 @@ export default {
           this.isEatIn=false;
           this.isTakeOut=true;
       }
+      if(window.localStorage.num){
+          this.num=window.localStorage.num;
+      }
     },
     computed:{
         orderId(){
@@ -51,8 +54,12 @@ export default {
                     this.num = '0' + this.num;
                 }
                 return y+m+d+this.num;
-                }
-
+                },
+        getMonth(){
+                let data=new Date();
+                let m =(data.getMonth()+1).toString();
+                return m-2;
+        } 
     },
     methods:{
         backIndex(){
@@ -61,13 +68,14 @@ export default {
                     'orderId':that.orderId,
                     'account':window.sessionStorage.account,
                     'foodList':that.foodList,
-                    'getMealTime':that.arriveTime
+                    'getMealTime':that.arriveTime,
+                    'month':that.getMonth
                 },{
                   headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 }
             }).then(function(response){
-
+            console.log(that.foodList);
             },function(err){
                 console.log(err);
             }) 

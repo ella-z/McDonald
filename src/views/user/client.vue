@@ -38,10 +38,13 @@ export default {
     data(){
         return{
             account:this.$store.state.account,
-            UserDetail:''
+            UserDetail:this.$store.state.accountDetail
         }
     },
     created(){
+        if(window.sessionStorage.accountDetail){
+            this.UserDetail=JSON.parse(window.sessionStorage.accountDetail);
+        }else{
             var that=this;
             this.axios.post('http://localhost:80/mcdonald/getUser.php',{'account':that.account},{
                   headers: {
@@ -50,22 +53,26 @@ export default {
             }
             ).then(function(response){
                 that.UserDetail=response.data[0];
+                that.$store.commit('setAccountDetail',response.data[0]);
             })
             
+        }    
     },
     methods:{
         remove(){
             sessionStorage.removeItem('account');
             sessionStorage.removeItem('password');
             sessionStorage.removeItem('identity');
+            sessionStorage.removeItem('accountDetail');
             this.$router.push('/index/user/member');
         },
         toAllOrder(){
+            let that=this;
             this.$router.push({path:'/index/user/allOrder',query:{
-                isclient:true,
-                account:this.account
+                isclient:true
             }})
         }
+        
     }
 }
 </script>

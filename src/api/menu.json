@@ -3,6 +3,8 @@
         "name":"安格斯黑金系列",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/安格斯.png",
         "label":"安格斯<br />黑金<br />系列",
+        "value":"安格斯黑金系列",
+        "text":"安格斯黑金系列",
         "snackItems":[
             { 
                "name":"薯条",
@@ -94,6 +96,7 @@
         "submenu":[
             {
                 "name":"安格斯厚牛菠萝堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛菠萝堡套餐.png",
                 "price":40,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛菠萝堡套餐.png",
@@ -104,6 +107,7 @@
             },
             {
                 "name":"双层安格斯厚牛菠萝堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛菠萝堡套餐.png",
                 "price":50,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛菠萝堡套餐.png",
@@ -114,6 +118,7 @@
             },
             {
                 "name":"安格斯厚牛培根堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛培根堡套餐.png",
                 "price":38,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛培根堡套餐.png",
@@ -124,6 +129,7 @@
             },
             {
                 "name":"安格斯厚牛芝士堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/安格斯厚牛芝士堡套餐.png",
                 "price":35,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/安格斯厚牛芝士堡套餐.png",
@@ -134,6 +140,7 @@
             },
             {
                 "name":"双层安格斯厚牛培根堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛培根堡套餐.png",
                 "price":48,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛培根堡套餐.png",
@@ -144,6 +151,7 @@
             },
             {
                 "name":"双层安格斯厚牛芝士堡套餐",
+                "seriesName":"安格斯黑金系列",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/安格斯/双层安格斯厚牛芝士堡套餐.png",
                 "price":45,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/安格斯/双层安格斯厚牛芝士堡套餐.png",
@@ -158,6 +166,8 @@
         "name":"超值三件套",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/超值三件套.png",
         "label":"超值<br />三件套",
+        "value":"超值三件套",
+        "text":"超值三件套",
         "snackItems":[
             { 
                "name":"薯条",
@@ -249,6 +259,7 @@
         "submenu":[
             {
                 "name":"麦辣鸡腿汉堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡腿汉堡套餐.png",
                 "price":26.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡腿汉堡套餐.png",
@@ -259,6 +270,7 @@
             },
             {
                 "name":"板烧鸡腿堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/板烧鸡腿堡套餐.png",
                 "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/板烧鸡腿堡套餐.png",
@@ -269,6 +281,7 @@
             },
             {
                 "name":"巨无霸套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/巨无霸套餐.png",
                 "price":31,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/巨无霸套餐.png",
@@ -279,6 +292,7 @@
             },
             {
                 "name":"不素之霸双层牛堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/不素之霸双层牛堡套餐.png",
                 "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/不素之霸双层牛堡套餐.png",
@@ -289,6 +303,7 @@
             },
             {
                 "name":"双层深海鳕鱼堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层深海鳕鱼堡套餐.png",
                 "price":22,
                 "poster":"http://localhobaijiexinengst:80/mcdonald/assets/img/poster/超值三件套/双层深海鳕鱼堡套餐.png",
@@ -299,6 +314,7 @@
             },
             {
                 "name":"川辣双鸡堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/川辣双鸡堡套餐.png",
                 "price":22,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/川辣双鸡堡套餐.png",
@@ -309,6 +325,7 @@
             },
             {
                 "name":"双层吉士汉堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/双层吉士汉堡套餐.png",
                 "price":26.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/双层吉士汉堡套餐.png",
@@ -319,6 +336,7 @@
             },
             {
                 "name":"麦香鸡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鸡套餐.png",
                 "price":21.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鸡套餐.png",
@@ -329,6 +347,7 @@
             },
             {
                 "name":"麦香鱼套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦香鱼套餐.png",
                 "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦香鱼套餐.png",
@@ -339,6 +358,7 @@
             },
             {
                 "name":"麦乐鸡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦乐鸡套餐.png",
                 "price":19.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦乐鸡套餐.png",
@@ -349,6 +369,7 @@
             },
             {
                 "name":"培根蔬萃双层牛堡套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/培根蔬萃双层牛堡套餐.png",
                 "price":31,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/培根蔬萃双层牛堡套餐.png",
@@ -359,6 +380,7 @@
             },
             {
                 "name":"吉士汉堡包套餐",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/吉士汉堡包套餐.png",
                 "price":19,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/吉士汉堡包套餐.png",
@@ -369,6 +391,7 @@
             },
             {
                 "name":"麦辣鸡翅",
+                "seriesName":"超值三件套",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/超值三件套/麦辣鸡翅.png",
                 "price":30.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/超值三件套/麦辣鸡翅套餐.png",
@@ -383,9 +406,12 @@
         "name":"随心配1+1=￥12",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/随心配.png",
         "label":"随心配<br />1+1=12",
+        "value":"随心配1+1=￥12",
+        "text":"随心配1+1=￥12",
         "submenu":[
             {
                 "name":"随心配1+1=￥12",
+                "seriesName":"随心配1+1=￥12",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/随心配/随心配.png",
                 "price":12,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/随心配/随心配.png",
@@ -442,9 +468,12 @@
         "name":"金拱门桶",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/全家桶.png",
         "label":"金拱门<br />桶",
+        "value":"金拱门桶",
+        "text":"金拱门桶",
         "submenu":[
             {
                 "name":"金拱门桶A",
+                "seriesName":"金拱门桶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/金拱门桶A.png",
                 "price":51,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶A.png",
@@ -453,6 +482,7 @@
             },
             {
                 "name":"金拱门桶B",
+                "seriesName":"金拱门桶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/金拱门桶B.png",
                 "price":51,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/金拱门桶B.png",
@@ -461,6 +491,7 @@
             },
             {
                 "name":"家有金桶(汉堡版)",
+                "seriesName":"金拱门桶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶汉堡版.png",
                 "price":80,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶汉堡版.png",
@@ -469,6 +500,7 @@
             },
             {
                 "name":"家有金桶(脆鸡版)",
+                "seriesName":"金拱门桶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/家有金桶脆鸡版.png",
                 "price":80,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/家有金桶脆鸡版.png",
@@ -477,6 +509,7 @@
             },
             {
                 "name":"小食缤纷盒",
+                "seriesName":"金拱门桶",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/金拱门桶/小食缤纷盒.png",
                 "price":29.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/金拱门桶/小食缤纷盒.png",
@@ -489,9 +522,12 @@
         "name":"500大卡套餐",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/500大卡套餐.png",
         "label":"500<br />大卡<br />套餐",
+        "value":"500大卡套餐",
+        "text":"500大卡套餐",
         "submenu":[
             {
                 "name":"想吃鲜的套餐",
+                "seriesName":"500大卡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/想吃鲜的套餐.png",
                 "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/想吃鲜的套餐.png",
@@ -500,6 +536,7 @@
             },
             {
                 "name":"来点小食套餐",
+                "seriesName":"500大卡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/来点小食套餐.png",
                 "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/来点小食套餐.png",               
@@ -508,6 +545,7 @@
             },
             {
                 "name":"只爱甜套餐",
+                "seriesName":"500大卡套餐",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/500大卡套餐/只爱甜的套餐.png",
                 "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/500大卡套餐/只爱甜的套餐.png",             
@@ -520,9 +558,12 @@
         "name":"小食甜品玩具",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/小吃.png",
         "label":"小食<br />甜点<br />玩具",
+        "value":"小食甜品玩具",
+        "text":"小食甜品玩具",
         "submenu":[
             {
                 "name":"脆皮巧克力味花生麦旋风",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/脆皮巧克力味花生麦旋风.png",
                 "price":13.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/脆皮巧克力味花生麦旋风.png",
@@ -531,6 +572,7 @@
             },
             {
                 "name":"限量雪人奇缘毛绒玩具挂饰",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/限量雪人奇缘毛绒玩偶挂饰.png",
                 "price":21,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/限量雪人奇缘毛绒玩偶挂饰.png",
@@ -539,6 +581,7 @@
             },
             {
                 "name":"十公主童顽故宫游戏棋子",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/十公主童顽故宫游戏棋子.png",
                 "price":16,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/十公主童顽故宫游戏棋子.png",
@@ -547,6 +590,7 @@
             },
             {
                 "name":"套装十公主童顽故宫游戏棋",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/套装十公主童顽故宫游戏棋.png",
                 "price":99,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/套装十公主童顽故宫游戏棋.png",
@@ -555,6 +599,7 @@
             },
             {
                 "name":"椒盐金脆鸡翅-2块",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/椒盐金脆鸡翅.png",
                 "price":11.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/椒盐金脆鸡翅.png",
@@ -563,6 +608,7 @@
             },
             {
                 "name":"麦辣鸡翅",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/麦辣鸡翅.png",
                 "price":10.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/麦辣鸡翅.png",
@@ -571,6 +617,7 @@
             },
             {
                 "name":"那么大鸡排",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/那么大鸡排.png",
                 "price":12,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/那么大鸡排.png",
@@ -579,6 +626,7 @@
             },
             {
                 "name":"麦乐鸡5块",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/麦乐鸡.png",
                 "price":10,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/麦乐鸡.png",
@@ -587,6 +635,7 @@
             },
             {
                 "name":"香骨鸡腿",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/香骨鸡腿.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/香骨鸡腿.png",
@@ -595,6 +644,7 @@
             },
             {
                 "name":"黄金脆薯格",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金黄脆薯格.png",
                 "price":13,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金黄脆薯格.png",
@@ -603,6 +653,7 @@
             },
             {
                 "name":"薯条",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/薯条.png",
                 "price":8,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/薯条.png",
@@ -611,6 +662,7 @@
             },
             {
                 "name":"金拱门桶A",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金拱门桶A.png",
                 "price":13,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金拱门桶A.png",
@@ -619,6 +671,7 @@
             },
             {
                 "name":"金拱门桶B",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/金拱门桶B.png",
                 "price":51,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/金拱门桶B.png",
@@ -627,6 +680,7 @@
             },
             {
                 "name":"苹果片一袋",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/苹果片.png",
                 "price":6,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/苹果片一袋.png",
@@ -635,6 +689,7 @@
             },
             {
                 "name":"玉米杯",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/玉米杯.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/玉米杯.png",
@@ -643,6 +698,7 @@
             },
             {
                 "name":"美味鲜蔬杯",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/美味鲜蔬杯.png",
                 "price":7,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/美味鲜蔬杯.png",
@@ -651,6 +707,7 @@
             },
             {
                 "name":"香芋派",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/香芋派.png",
                 "price":7,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/香芋派.png",
@@ -659,6 +716,7 @@
             },
             {
                 "name":"菠萝派",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/菠萝派.png",
                 "price":7,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/菠萝派.png",
@@ -667,6 +725,7 @@
             },
             {
                 "name":"圆筒冰淇淋",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/圆筒冰淇淋.png",
                 "price":4,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/圆筒冰淇淋.png",
@@ -675,6 +734,7 @@
             },
             {
                 "name":"朱古力新地",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/朱古力新地.png",
                 "price":9.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/朱古力新地.png",
@@ -683,6 +743,7 @@
             },
             {
                 "name":"草莓新地",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/草莓新地.png",
                 "price":9.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/草莓新地.png",
@@ -691,6 +752,7 @@
             },
             {
                 "name":"奥利奥麦旋风",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/奥利奥麦旋风.png",
                 "price":12.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/奥利奥麦旋风.png",
@@ -699,6 +761,7 @@
             },
             {
                 "name":"草莓麦旋风",
+                "seriesName":"小食甜品玩具",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/小食甜品玩具/草莓麦旋风.png",
                 "price":12.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/小食甜品玩具/草莓麦旋风.png",
@@ -711,9 +774,12 @@
         "name":"主食",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/主食.png",
         "label":"主食",
+        "value":"主食",
+        "text":"主食",
         "submenu":[
             {
                 "name":"麦辣鸡腿堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦辣鸡腿堡.png",
                 "price":17,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦辣鸡腿堡.png",
@@ -722,6 +788,7 @@
             },
             {
                 "name":"板烧鸡腿堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/板烧鸡腿堡.png",
                 "price":19,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/板烧鸡腿堡.png",
@@ -730,6 +797,7 @@
             },
             {
                 "name":"巨无霸",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/巨无霸.png",
                 "price":21.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/巨无霸.png",
@@ -738,6 +806,7 @@
             },
             {
                 "name":"安格斯厚牛菠萝堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛菠萝堡.png",
                 "price":32,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛菠萝堡.png",
@@ -746,6 +815,7 @@
             },
             {
                 "name":"双层安格斯厚牛菠萝堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛菠萝堡.png",
                 "price":42,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛菠萝堡.png",
@@ -754,6 +824,7 @@
             },
             {
                 "name":"安格斯厚牛培根堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛培根堡.png",
                 "price":30,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛培根堡.png",
@@ -762,6 +833,7 @@
             },
             {
                 "name":"安格斯厚牛芝士堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/安格斯厚牛芝士堡.png",
                 "price":27,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/安格斯厚牛芝士堡.png",
@@ -770,6 +842,7 @@
             },
             {
                 "name":"双层安格斯厚牛培根堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛培根堡.png",
                 "price":40,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛培根堡.png",
@@ -778,6 +851,7 @@
             },
             {
                 "name":"双层安格斯厚牛芝士堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层安格斯厚牛芝士堡.png",
                 "price":37,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层安格斯厚牛芝士堡.png",
@@ -786,6 +860,7 @@
             },
             {
                 "name":"不素之霸双层牛堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/不素之霸双层牛堡.png",
                 "price":20,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/不素之霸双层牛堡.png",
@@ -794,6 +869,7 @@
             },
             {
                 "name":"双层深海鳕鱼堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层深海鳕鱼堡.png",
                 "price":20,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层深海鳕鱼堡.png",
@@ -802,6 +878,7 @@
             },
             {
                 "name":"川辣双鸡堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/川辣双鸡堡.png",
                 "price":20,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/川辣双鸡堡.png",
@@ -810,6 +887,7 @@
             },
             {
                 "name":"双层吉士汉堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/双层吉士汉堡.png",
                 "price":17,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/双层吉士汉堡.png",
@@ -818,6 +896,7 @@
             },
             {
                 "name":"麦香鸡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦香鸡.png",
                 "price":12,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦香鸡.png",
@@ -826,6 +905,7 @@
             },
             {
                 "name":"麦香鱼",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/麦香鱼.png",
                 "price":17,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/麦香鱼.png",
@@ -834,6 +914,7 @@
             },
             {
                 "name":"培根蔬萃双层牛堡",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/培根蔬萃双层牛堡.png",
                 "price":21.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/培根蔬萃双层牛堡.png",
@@ -842,6 +923,7 @@
             },
             {
                 "name":"吉士汉堡包",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/吉士汉堡包.png",
                 "price":9.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/吉士汉堡包.png",
@@ -850,6 +932,7 @@
             },
             {
                 "name":"汉堡包",
+                "seriesName":"主食",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/主食/汉堡包.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/主食/汉堡包.png",
@@ -862,9 +945,12 @@
         "name":"饮品",
         "url":"http://localhost:80/mcdonald/assets/img/MenuTabsIcon/饮品.png",
         "label":"饮品",
+        "value":"饮品",
+        "text":"饮品",
         "submenu":[
             {
                 "name":"(暖)黑糖珍珠奶茶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶热.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/黑糖珍珠奶茶暖.png",
@@ -873,6 +959,7 @@
             },
             {
                 "name":"(冷)黑糖珍珠奶茶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/黑糖珍珠奶茶冷.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/黑糖珍珠奶茶冷.png",
@@ -881,6 +968,7 @@
             },
             {
                 "name":"(暖)原味珍珠奶茶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶暖.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/原味珍珠奶茶暖.png",
@@ -889,6 +977,7 @@
             },
             {
                 "name":"(冷)原味珍珠奶茶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/原味珍珠奶茶冷.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/原味珍珠奶茶冷.png",
@@ -897,6 +986,7 @@
             },
             {
                 "name":"ZICO椰子水饮",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/椰子水饮.png",
                 "price":11.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/ZICO椰子水饮.png",
@@ -905,6 +995,7 @@
             },
             {
                 "name":"冰醇咖啡",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/冰醇咖啡.png",
                 "price":11.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰醇咖啡.png",
@@ -913,6 +1004,7 @@
             },
             {
                 "name":"那么大鲜柠特饮-可乐味",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮可乐味.png",
                 "price":13.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮可乐味.png",
@@ -921,6 +1013,7 @@
             },
             {
                 "name":"那么大鲜柠特饮-柠檬红茶味",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮柠檬红茶味.png",
                 "price":13.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮柠檬红茶味.png",
@@ -929,6 +1022,7 @@
             },
             {
                 "name":"那么大鲜柠特饮-雪碧味",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/那么大鲜柠特饮雪碧味.png",
                 "price":13.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/那么大鲜柠特饮雪碧味.png",
@@ -937,6 +1031,7 @@
             },
             {
                 "name":"可口可乐",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/可口可乐.png",
                 "price":7.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/可口可乐.png",
@@ -945,6 +1040,7 @@
             },
             {
                 "name":"零度可口可乐",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/零度可口可乐.png",
                 "price":7.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/零度可口可乐.png",
@@ -953,6 +1049,7 @@
             },
             {
                 "name":"雪碧",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/雪碧.png",
                 "price":7.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/雪碧.png",
@@ -961,6 +1058,7 @@
             },
             {
                 "name":"柠檬红茶味饮料",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/柠檬红茶味饮料.png",
                 "price":9.5,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰红茶味饮料.png",
@@ -969,6 +1067,7 @@
             },
             {
                 "name":"阳光橙麦旋酷",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/阳光橙麦炫酷.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/阳光橙麦旋酷.png",
@@ -977,6 +1076,7 @@
             },
             {
                 "name":"鲜煮咖啡",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/鲜煮咖啡.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/鲜煮咖啡.png",
@@ -985,6 +1085,7 @@
             },
             {
                 "name":"锡兰红茶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/锡兰红茶.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/锡兰红茶.png",
@@ -993,6 +1094,7 @@
             },            
             {
                 "name":"热朱古力",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/热朱古力.png",
                 "price":11,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/热朱古力.png",
@@ -1001,6 +1103,7 @@
             },
             {
                 "name":"纯牛奶",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/纯牛奶.png",
                 "price":9,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/纯牛奶盒装.png",
@@ -1009,6 +1112,7 @@
             },
             {
                 "name":"冰露包装饮用水",
+                "seriesName":"饮品",
                 "url":"http://localhost:80/mcdonald/assets/img/menuCard/饮品/冰露包装饮用水.png",
                 "price":7,
                 "poster":"http://localhost:80/mcdonald/assets/img/poster/饮品/冰露包装饮用水.png",

@@ -109,8 +109,8 @@ export default {
                 let date=new Date();
                 let y = date.getFullYear().toString();
                 let m = (date.getMonth()+1).toString();
-                let d = date.getDate().toString();
-                let hh = date.getHours();
+                let d = date.getDate();
+                let hh = date.getHours()<10 ? '0'+date.getHours() : date.getHours();
                 let mf = date.getMinutes()<10 ? '0'+date.getMinutes() : date.getMinutes();
                 mf=parseInt(mf);
                 if(this.iseatIn){
@@ -133,9 +133,16 @@ export default {
                 if(mf>=60){
                     hh++;
                     mf-=60;
+                    if(mf<10){
+                        mf='0'+mf.toString();
+                    }else if(hh>=24){
+                        hh='00';
+                        d++;
+                    }
                 }
                 hh=hh.toString();
                 mf=mf.toString();
+                d=d.toString();
                 let arriveTime='';
                 if(this.isReserve===false){
                     arriveTime=y+'/'+m+'/'+d+' '+hh+':'+mf;

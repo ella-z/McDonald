@@ -9,7 +9,7 @@
 import HighCharts from 'highcharts'
 
 export default {
-    props:['seriess'],
+    props:['seriess','chartSeries'],
     data(){
         return{
             isPie:true,
@@ -29,34 +29,12 @@ export default {
                         text: '销售量(千)'                // y 轴标题
                     }
                 },
-                series: [
-                    {                              // 数据列
-                        name: '安格斯厚牛菠萝堡套餐',                        // 数据列名
-                        data: [1,0,1,0,2,2,0,3,1,1,1,1]                     // 数据
-                    }, 
-                    {
-                        name: '双层安格斯厚牛菠萝堡套餐',
-                        data: [0,0,1,0,2,5,1,0,1,0,1,1]
-                    },
-                    {
-                        name: '安格斯厚牛培根堡套餐',
-                        data: [0,2,1,3,2,8,1,0,1,0,1,1]
-                    },
-                    {
-                        name: '安格斯厚牛芝士堡套餐',
-                        data: [0,2,1,3,2,8,1,0,1,0,1,1]
-                    },
-                    {
-                        name: '双层安格斯厚牛培根堡套餐',
-                        data: [0,2,1,6,2,8,1,0,1,0,1,4]
-                    },
-                    {
-                        name: '双层安格斯厚牛芝士堡套餐',
-                        data: [10,2,1,3,2,8,1,5,1,0,1,1]
-                    },
-                ]
+                series: this.chartSeries
             },
             pieOptions:{
+                title: {
+                    text: '全部'                // 标题
+                },
                  series: [{
                     type: 'pie',
                     name: '销售份额',
@@ -85,11 +63,12 @@ export default {
                 HighCharts.chart('pieContainer', this.pieOptions);
             }else{
                 this.lineOptions.title.text=val;
+                this.lineOptions.series=this.chartSeries;
                 this.isPie=false;
                 this.isLine=true;
                 HighCharts.chart('lineContainer', this.lineOptions);
             }
-        }
+        },
     },
     mounted(){
         HighCharts.chart('pieContainer', this.pieOptions);

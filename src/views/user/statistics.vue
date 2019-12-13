@@ -2,7 +2,7 @@
     <div class="statistics">
         <headerNav></headerNav>
         <van-dropdown-menu>
-            <van-dropdown-item v-model="value" :options="option" @change="changSeries" />
+            <van-dropdown-item v-model="value" :options="options" @change="changSeries" />
             <van-dropdown-item title="筛选" ref="item">
                <van-checkbox-group v-model="result" ref="checkboxGroup">
                 <van-cell-group>
@@ -13,7 +13,7 @@
                     :title="item.name"
                     @click="toggle(index)"
                     >
-                    <van-checkbox
+                    <van-checkbox 
                         :name="item"
                         ref="checkboxes"
                         slot="right-icon"
@@ -21,11 +21,10 @@
                     </van-cell>
                 </van-cell-group>
                 </van-checkbox-group>
-                <van-button type="primary" @click="checkAll" class="vanButton">全选</van-button>
                 <van-button type="info" @click="toggleAll" class="vanButton">反选</van-button>
             </van-dropdown-item>
         </van-dropdown-menu>
-        <chart :seriess="this.series"></chart>
+        <chart :seriess="this.series" :chartSeries="this.chartSeries" ></chart>
     </div>
 </template>
 
@@ -42,155 +41,62 @@ export default {
       return{
             value: '全部',
             series:'全部',
-            option: [
-                { 
-                    text: '全部', 
-                    value: '全部',
-                    submenu:[]
-                },
-                { 
-                    text: '安格斯黑金系列', 
-                    value: '安格斯黑金系列', 
-                    submenu:[
-                        {
-                            name:"安格斯厚牛菠萝堡套餐"
-                        },
-                        {
-                            name:"双层安格斯厚牛菠萝堡套餐"
-                        },
-                        {
-                            name:"安格斯厚牛培根堡套餐"
-                        },
-                        {
-                            name:"安格斯厚牛芝士堡套餐"
-                        },
-                        {
-                            name:"双层安格斯厚牛培根堡套餐"
-                        },
-                        {
-                            name:"双层安格斯厚牛芝士堡套餐"
-                        }
-                    ]
-                },
-                { 
-                    text: '超值三件套', 
-                    value: '超值三件套',
-                    submenu:[
-                        {
-                            name:"麦辣鸡腿汉堡套餐"
-                        },
-                        {
-                            name:"板烧鸡腿堡套餐"
-                        },
-                        {
-                            name:"巨无霸套餐"
-                        },
-                        {
-                            name:"不素之霸双层牛堡套餐"
-                        },
-                        {
-                            name:"双层深海鳕鱼堡套餐"
-                        },
-                        {
-                            name:"川辣双鸡堡套餐"
-                        },
-                        {
-                            name:"双层吉士汉堡套餐"
-                        },
-                        {
-                            name:"麦香鸡套餐"
-                        },
-                        {
-                            name:"麦香鱼套餐"
-                        },
-                        {
-                            name:"麦乐鸡套餐"
-                        },
-                        {
-                            name:"培根蔬萃双层牛堡套餐"
-                        },
-                        {
-                            name:"吉士汉堡包套餐"
-                        },
-                        {
-                            name:"麦辣鸡翅"
-                        }
-                    ] 
-                },
-                { 
-                    text: '随心配', 
-                    value: '随心配', 
-                    submenu:[
-                        {
-                            name:"随心配1+1=￥12"
-                        }
-                    ]
-                },
-                { 
-                    text: '金拱门桶', 
-                    value: '金拱门桶', 
-                    submenu:[
-                        {
-                            name:"金拱门桶A"
-                        },
-                        {
-                            name:"金拱门桶B"
-                        },
-                        {
-                            name:"家有金桶(汉堡版)"
-                        },
-                        {
-                            name:"家有金桶(脆鸡版)"
-                        },
-                        {
-                            name:"小食缤纷盒"
-                        }
-                    ]
-                },
-                { 
-                    text: '500大卡套餐', 
-                    value: '500大卡套餐', 
-                    submenu:[
-                        {
-                            name:"想吃鲜的套餐"
-                        },
-                        {
-                            name:"来点小食套餐"
-                        },
-                        {
-                            name:"只爱甜套餐"
-                        }
-                    ]
-                },
-                { text: '开心乐园餐', value: '开心乐园餐' },
-                { text: '小食甜点玩具', value: '小食甜点玩具' },
-                { text: '主食', value: '主食' },
-                { text: '饮品', value: '饮品' },
-            ],
             submenu:[],
-            result:[]
+            result:[],
+            options:this.$store.state.data,
+            chartSeries:[]
       }
   },
   watch:{
       result(val){
-           //console.log(this.result)
+        //console.log(val);
+        // console.log(val.length);
+
       }
+  },  
+  created(){
+        this.options.push(                
+                { 
+                    text: '全部', 
+                    value: '全部',
+                    submenu:[]
+                });
   },
   methods:{
-      onConfirm() {
+    onConfirm() {
       this.$refs.item.toggle();
     },
     changSeries(){
         this.series=this.value;
-        for(let i=0;i<this.option.length;i++){
-            if(this.option[i].text===this.series)
+        let submenuList=[];
+        let that =this;
+        for(let i=0;i<this.options.length;i++){
+            if(this.options[i].text===this.series)
             {
-               this.submenu=this.option[i].submenu;
+               this.submenu=this.options[i].submenu;
             }
         }
-    },
-    checkAll() {
-      this.$refs.checkboxGroup.toggleAll(true);
+        for(let i=0;i<this.submenu.length;i++){
+            submenuList.push({
+                name:this.submenu[i].name,
+                data:[0,0,0,0,0,0,0,0,0,0,0,0]
+            })
+        }
+        this.axios.post('http://localhost:80/mcdonald/getSales.php',{
+                    'seriesName':that.series
+                },{
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            }).then(function(response){
+                 for(let i=0;i<response.data.length;i++){
+                    
+                 }
+            },function(err){
+                console.log('请求getSales失败');
+            })
+        console.log(submenuList[0].data[0]);
+        this.chartSeries=submenuList;
     },
     toggleAll() {
       this.$refs.checkboxGroup.toggleAll();
@@ -216,7 +122,7 @@ export default {
             border: none;
             outline: none;
             border-radius: 5vw;
-            margin:3vw 9.5vw;
+            margin:3vw 35vw;
         }
     }
 </style>
