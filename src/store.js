@@ -13,7 +13,8 @@ export default new Vuex.Store({
     test:1,
     isReserve:false, //是否有预定时间
     num:0, //orderId
-    accountDetail:''
+    accountDetail:'',
+    isPushAll:false,
   },
   mutations: {
     getvalue(state,res){

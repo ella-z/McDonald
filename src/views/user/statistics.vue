@@ -45,22 +45,36 @@ export default {
             result:[],
             options:this.$store.state.data,
             chartSeries:[],
+            chartAllSeries:[]
       }
   },
   watch:{
       result(val){
-        //console.log(val);
-        // console.log(val.length);
-
+          let resultList=[];
+          for(let i=0;i<this.result.length;i++){
+               for(let j=0;j<this.chartAllSeries.length;j++){
+                   if(this.chartAllSeries[j].name===this.result[i].name){
+                        resultList.push(this.chartAllSeries[j]);
+                   }
+               }
+          }        
+          this.chartSeries=resultList;
+          if(this.result.length===0){
+              this.chartSeries=this.chartAllSeries;
+          }
+  
       }
   },  
   created(){
-        this.options.push(                
+      if(this.$store.state.isPushAll===false){
+          this.$store.state.isPushAll=true;
+                  this.options.push(                
                 { 
                     text: '全部', 
                     value: '全部',
                     submenu:[]
                 });
+      }
   },
   methods:{
     onConfirm() {
@@ -98,6 +112,7 @@ export default {
                     }
                  }
                  that.chartSeries=submenuList;
+                 that.chartAllSeries=submenuList;
             },function(err){
                 console.log('请求getSales失败');
             })
