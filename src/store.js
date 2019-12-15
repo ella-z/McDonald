@@ -15,6 +15,8 @@ export default new Vuex.Store({
     num:0, //orderId
     accountDetail:'',
     isPushAll:false,
+    HScrollChecked1:'',
+    HScrollChecked2:'',
   },
   mutations: {
     getvalue(state,res){
@@ -47,6 +49,12 @@ export default new Vuex.Store({
     },
     changChecked(state,index){
       state.ischecked=index;
+    },
+    setHScrollChecked1(state,res){
+      state.HScrollChecked1=res;
+    },
+    setHScrollChecked2(state,res){
+      state.HScrollChecked2=res;
     },
   },
   actions: {

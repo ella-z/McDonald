@@ -2,7 +2,7 @@
     <div class="horizontalScroll">
         <div class="title">
                 <span>{{ScrollName}}</span>
-                <span class="all">全部<i class="iconfont">&#xe731;</i></span>
+                <span class="all"><!--全部<i class="iconfont">&#xe731;</i>--></span>
         </div>
         <cube-scroll
             ref="scroll"
@@ -13,8 +13,8 @@
                 <van-radio-group v-model="radio">
                     <li v-for="(item,index) in items" :key="index" class="list-item" >
                         <div class="pri" :style="{backgroundImage:'url('+item.picture+')',backgroundSize: '100%' }"></div>
-                        <span>{{items.name}}</span>
-                        <van-radio :name='index' checked-color="#FFC836" class="radio"></van-radio>
+                        <span class="radioName">{{item.name}}</span>
+                        <van-radio :name='index' checked-color="#FFC836" class="radio" @click="changRadio(item.name)"></van-radio>
                     </li>
                 </van-radio-group>
             </ul>
@@ -28,11 +28,22 @@ export default {
     data(){
         return{
                 radio:0,
-                
+                checkedName:'',
         }
     },
-    mounted(){
-
+    watch:{
+        items(val){
+            this.checkedName=this.items[0].name;
+        },
+        checkedName(val){
+            this.$emit('updateChecked',val);
+        }
+    },
+    methods:{
+        changRadio(name){
+            this.checkedName=name;
+            
+        }
     }
 }
 </script>
@@ -41,7 +52,7 @@ export default {
 .horizontalScroll{
     background-color: #fff;
     width: 100%;
-        height: 60vw;
+        height: 65vw;
         background-color: #fff;
         .title{
             padding:3vw 5vw 8vw;
@@ -61,34 +72,40 @@ export default {
             }
         }
     .horizontal-scroll-list-wrap{
-        height: 40vw;
+        height: 50vw;
         width: 100vw;
-        border-radius: 5px;
+        border-radius: 2vw;
         .cube-scroll-content{
              display: inline-block; 
              
         }
         .list-wrapper{
             padding: 0 10px;
-            line-height: 60px;
+            line-height: 10vw;
             white-space: nowrap;
         }
         .list-item{
             display: inline-block;
             background-color: #fff;
             height: 40vw;
-            width: 40vw;
+            width: 50vw;
             .pri{ 
-                    margin:auto;
+                    margin:0 auto;
                     width: 28vw;
                     height: 30vw;
                     background-size: 100%;
                     background-repeat: no-repeat;  
                     background-position: center;
             }
-   
+            .radioName{
+                font-size: 3.5vw; 
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
             .radio{
                 width: 6vw;
+                height: 5vw;
                 margin:0 auto;
             }
         }

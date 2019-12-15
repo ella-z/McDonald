@@ -26,13 +26,21 @@ export default {
     props:['product'],
     data(){
         return{
-            value:1
+            value:1,
         }
     },
     computed:{
         totalValue(){
             return this.value*this.product.price;
-        }
+        },
+        Checked1(){
+            return this.$store.state.HScrollChecked1;
+        },
+        Checked2(){
+            return this.$store.state.HScrollChecked2;
+        },
+        
+      
     },
     methods:{
         onplus(){
@@ -41,7 +49,9 @@ export default {
         onminus(){
             this.value--;
         },
-        addCar(){
+        addCar(){             
+            Vue.set(this.product,"HScrollChecked1",this.Checked1);
+            Vue.set(this.product,"HScrollChecked2",this.Checked2);
             if(!this.product.count){
                 Vue.set(this.product,"count",this.value);
             }else{

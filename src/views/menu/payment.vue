@@ -75,7 +75,6 @@ export default {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 }
             }).then(function(response){
-            console.log(that.foodList);
             },function(err){
                 console.log(err);
             }) 

@@ -39,7 +39,6 @@
                                 :style="{background: 'url(' + food.url + ') no-repeat  ',backgroundSize:'100%'}"
                                 @click="toMenuCard(index,submenuIndex)"
                                 >    
-                                <div class="rotate"></div>
                                     <div v-show="index<2" class="icombo">
                                         <div class=" optional" v-show="!item.submenu[submenuIndex].count">
                                              套餐<i class="iconfont" >&#xe731;</i>

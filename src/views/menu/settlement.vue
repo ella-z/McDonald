@@ -49,6 +49,7 @@
                 >
                 <div class="listLeft">
                         <span>{{item.name}}</span>
+                        <span class="comboConsist" v-if="item.stapleFoodName">{{item.stapleFoodName}}+{{item.HScrollChecked1}}+{{item.HScrollChecked2}}</span>
                         <span class="productPrice">￥ {{item.price}}</span>
                     </div>
                     <div class="listRight">
@@ -254,6 +255,11 @@ export default {
                 flex:8;
                 display: flex;
                 flex-direction: column;
+                .comboConsist{
+                    margin-top: 2vw;
+                    font-size: 3vw;
+                    color: #adacac;
+                }
                 .productPrice{
                     margin-top: 4vw;
                 }

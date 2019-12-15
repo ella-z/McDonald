@@ -70,7 +70,6 @@ export default {
             }
         },
         chartSeries(val){
-            console.log(val);
              this.lineOptions.series=val;
              HighCharts.chart('lineContainer', this.lineOptions);
         }

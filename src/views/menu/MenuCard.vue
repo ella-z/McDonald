@@ -8,11 +8,11 @@
             <span class="intro">{{product.introduce}}</span>
         </div>
         <div class="snack" v-show="isFirstItems">
-            <horizontalScroll :items='firstItems' :ScrollName="first" ></horizontalScroll>
+            <horizontalScroll :items='firstItems' :ScrollName="first" @updateChecked="updateChecked1"></horizontalScroll>
         </div>
         <div class="drink" v-show="isSecondItems">
-           <horizontalScroll :items='secondItems' :ScrollName="second" ></horizontalScroll>
-        </div>
+           <horizontalScroll :items='secondItems' :ScrollName="second" @updateChecked="updateChecked2"></horizontalScroll>
+        </div> 
         <div class="stapleFood" v-show="isStapleFood">
             <span>主食</span>
             <div class="food" :style="{backgroundImage: 'url('+product.stapleFoodPicture+')',backgroundSize:'100%'}"></div>
@@ -44,10 +44,9 @@ export default {
             firstItems:[
             ],
             secondItems:[
-            ]
+            ],
         }
     },
-   
     mounted(){
         this.product=this.$store.state.data[this.indexID].submenu[this.submenuIndex];
         this.title=this.product.name;
@@ -75,7 +74,12 @@ export default {
         back(){
             this.$router.go(-1);
         },
-        
+        updateChecked1(res){
+            this.$store.commit('setHScrollChecked1',res);
+        },
+        updateChecked2(res){
+            this.$store.commit('setHScrollChecked2',res);
+        }
     }
 }
 </script>
