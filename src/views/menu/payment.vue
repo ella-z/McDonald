@@ -19,11 +19,11 @@ export default {
     data(){
         return{
             valueWay:this.$route.query.valueWay,
-            valueTime:this.$route.query.valueTime,
+            valueTime:this.$route.query.valueTime,              //获取订单的相关信息
             distribution:this.$route.query.distribution,
             arriveTime:this.$route.query.arriveTime,
-            foodList:this.$route.query.foodList,
-            isTakeOut:false,
+            foodList:this.$route.query.foodList,    //获取购物车信息
+            isTakeOut:false,           //判断就餐的方式，生成不同的页面
             isEatIn:true,
             num:this.$store.state.num //orderId
         }
@@ -37,11 +37,11 @@ export default {
           this.isTakeOut=true;
       }
       if(window.localStorage.num){
-          this.num=window.localStorage.num;
+          this.num=window.localStorage.num; //获取订单的列号
       }
     },
     computed:{
-        orderId(){
+        orderId(){  //生成订单号
                 let date=new Date();
                 let y = date.getFullYear().toString();
                 let m = (date.getMonth()+1).toString();
@@ -55,14 +55,14 @@ export default {
                 }
                 return y+m+d+this.num;
                 },
-        getMonth(){
+        getMonth(){ //获取月份信息
                 let data=new Date();
                 let m =(data.getMonth()+1).toString();
-                return m-2;
+                return m;
         } 
     },
     methods:{
-        backIndex(){
+        backIndex(){       //将订单信息存入数据库，并且清空购物车
             let that=this;
             this.axios.post('http://localhost:80/mcdonald/order.php',{
                     'orderId':that.orderId,

@@ -10,12 +10,12 @@
                 <span>所有订单</span>
                 <i class="iconfont icon">&#xe731;</i>
             </div>
-            <div class="address listItem">
+            <!--<div class="address listItem">
                 <span>送餐地址</span>
                 <i class="iconfont icon">&#xe731;</i>
-            </div>
+            </div>-->
         </div>
-        <div class="list">
+       <!-- <div class="list">
             <div class="orders listItem">
                 <span>投诉与建议</span>
                 <i class="iconfont icon">&#xe731;</i>
@@ -24,7 +24,7 @@
                 <span>条款与规则</span>
                 <i class="iconfont icon">&#xe731;</i>
             </div>
-        </div>
+        </div>-->
         <div class="removal" @click="remove">注销账号</div>
     </div>
 </template>
@@ -54,19 +54,19 @@ export default {
             ).then(function(response){
                 that.UserDetail=response.data[0];
                 that.$store.commit('setAccountDetail',response.data[0]);
-            })
-            
-        }    
+            }) 
+        }
     },
     methods:{
         remove(){
             sessionStorage.removeItem('account');
-            sessionStorage.removeItem('password');
+            sessionStorage.removeItem('password');  //注销账号
             sessionStorage.removeItem('identity');
+            sessionStorage.removeItem('userName');
             sessionStorage.removeItem('accountDetail');
             this.$router.push('/index/user/member');
         },
-        toAllOrder(){
+        toAllOrder(){   //显示所有订单消息
             let that=this;
             this.$router.push({path:'/index/user/allOrder',query:{
                 isclient:true
@@ -113,7 +113,7 @@ export default {
     .list{
         margin-top: 5vw;
         width: 80vw;
-        height: 20vw;
+        height: 10vw;
         background-color: #fff;
         border-radius: 2vw;
         .listItem{

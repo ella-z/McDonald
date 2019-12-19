@@ -76,37 +76,34 @@
 import  headerNav from '../../components/headerNav'
 export default {
     components:{
-        headerNav
+        headerNav   //声明组件
     },
     data(){
         return{
-            timeRadio:"time1",
+            timeRadio:"time1",     //设置radio默认值
             wayRadio:"way1",
-            foodList:this.$route.query.foodList,
-            distribution:this.$route.query.distribution,
-            formatedTime:this.$route.query.formatedTime,
-            isWrong:false,
+            foodList:this.$route.query.foodList,    //获取购物车中的列表
+            distribution:this.$route.query.distribution,    //就获取就餐方式
+            formatedTime:this.$route.query.formatedTime,    //获取就餐时间
+            isWrong:false,  
             show:false,
-            valueTime:'',
+            valueTime:'',   
             valueWay:'',
             iseatIn:true,
             istakeOut:false,
-            takeOutTime:'',
-            isReserve:this.$store.state.isReserve
+            takeOutTime:'',     //配送时间
+            isReserve:this.$store.state.isReserve //是否为预订单
         }
     },
-    watch:{
-
-    },
     computed:{
-        totalPrice(){
+        totalPrice(){   //总价
             let totalPrice=0;
             for(let i=0;i<this.foodList.length;i++){
                 totalPrice+=this.foodList[i].count*this.foodList[i].price;
             }
             return totalPrice;
         },
-        arriveTime(){
+        arriveTime(){ //到达时间1
                 let date=new Date();
                 let y = date.getFullYear().toString();
                 let m = (date.getMonth()+1).toString();
@@ -156,7 +153,7 @@ export default {
     created(){
         this.getTimeRadioVal('现在取餐');
         this.getWayRadioVal('堂食');
-        if(this.distribution==='到店取餐'){
+        if(this.distribution==='到店取餐'){ //根据就餐方式，生成不同页面。
             this.iseatIn=true;
             this.istakeOut=false;
         }else{
@@ -165,7 +162,7 @@ export default {
         }
     },
     methods:{
-        topay(){
+        topay(){ //跳转到支付页面
             if(window.sessionStorage.account){
                 this.$router.push({path:'/payment',query:{
                     valueTime:this.valueTime,
@@ -179,19 +176,19 @@ export default {
                 this.show=true;
             }
         },
-        login(){
+        login(){    //跳转到登录页面
         this.show=false;
         this.$router.push({path:'/index/user/member'});
         this.$store.state.ischecked=3;
         },
-        getTimeRadioVal(value){
+        getTimeRadioVal(value){ 
             this.takeOutTime=value;
-            this.valueTime=value;
-        },
-        getWayRadioVal(value){
+            this.valueTime=value;           //获取当前选中的radio
+        },  
+        getWayRadioVal(value){  
             this.valueWay=value;
         }
-    },
+    }
     
 }
 </script>

@@ -49,7 +49,7 @@ export default {
 <style lang="scss">
 .orderDetail{   
     min-height: 100vh;
-    padding-top: 15vw;
+    padding:15vw 0;
     background-color: #f8f8f8;
     .foodCode{
         width: 100vw;

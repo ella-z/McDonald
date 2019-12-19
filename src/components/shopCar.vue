@@ -50,11 +50,8 @@ export default {
             showList:false
         }
     },
-    created(){
-
-    },
     computed:{
-        itemsCount(){
+        itemsCount(){ //获取餐品的数量
             let num=0;
             for(let i=0;i<this.foodList.length;i++){
                 num+=this.foodList[i].count;
@@ -69,7 +66,7 @@ export default {
             }
             return num;
         },
-        totalPrice(){
+        totalPrice(){   //获取总价
             let price=0;
             for(let i=0;i<this.foodList.length;i++){
                 price+=this.foodList[i].count*this.foodList[i].price;
@@ -78,19 +75,19 @@ export default {
         }
     },
     methods:{
-        addCar(index){
+        addCar(index){  //加入购物车
             this.foodList[index].count++;
         },
-        reduceCar(index){
+        reduceCar(index){   //减少餐品的数量
             this.foodList[index].count--;
         },
-        showCarList(){
+        showCarList(){  //展示购物车列表1
             this.showList=!this.showList;
         },
-        toSettlement(){
+        toSettlement(){ //去订单页面
             this.$router.push({path:'/settlement',query:{foodList:this.foodList,distribution:this.distribution,formatedTime:this.formatedTime}})
         },
-        toempty(){
+        toempty(){  
             sessionStorage.removeItem('list');
             this.$emit('changeList');
         }

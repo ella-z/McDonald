@@ -84,22 +84,24 @@ import Vue from "vue"
 import shopCar from '../../components/shopCar'
 
 export default {
-    components:{slideBanner,headerNav,shopCar},
+    components:{
+        slideBanner,headerNav,shopCar   //引入的组件
+    }, 
     data(){
         return{
-            distribution:this.$route.query.distribution,
-            formatedTime:this.$route.query.formatedTime,
+            distribution:this.$route.query.distribution, //就餐的方式
+            formatedTime:this.$route.query.formatedTime, //选择配送的时间
             actli: 0,
             arr: [0],
-            activeName:'1',
+            activeName:'1', 
             flag: true,
             open:1,
             scrollY:0,
-            current:"1", 
-            TabList:this.$store.state.data,
+            current:"1",  //轮播图初始位置
+            TabList:this.$store.state.data, //获取菜单的数据
             items: [],
             num:0,
-            session:JSON.parse(window.sessionStorage.getItem('foodList'))
+            session:JSON.parse(window.sessionStorage.getItem('foodList')) //暂时存储购物车列表
         }
     },
    created () {
@@ -142,12 +144,12 @@ export default {
                 probeType: 3
             });
             if(this.$refs.good!==undefined){
-                   this.$refs.good.forEach((el, index) => {
+                   this.$refs.good.forEach((el, index) => {            //当菜单数据存在时，循环每一个元素，并将其子元素放入数组中
                     this.arr.push(el.offsetHeight + this.arr[index])
                 })    
             }
      
-      this.Rscroll.on('scroll', (res) => {
+      this.Rscroll.on('scroll', (res) => {  //根据tab页跳转到相应的餐品卡位置
        if (this.flag) {
           this.scrollY = Math.abs(res.y)
           for (let i = 0; i < this.arr.length; i++) {
@@ -178,24 +180,24 @@ export default {
                 }
             }
         },
-        reduceCar(index,submenuIndex){
-            this.TabList[index].submenu[submenuIndex].count--;
+        reduceCar(index,submenuIndex){  //减少餐品数量
+            this.TabList[index].submenu[submenuIndex].count--;   
         },
-        addCar(index,submenuIndex){
+        addCar(index,submenuIndex){     //增加餐品数量
             if(!this.TabList[index].submenu[submenuIndex].count){
                 Vue.set(this.TabList[index].submenu[submenuIndex],"count",1);
             }else{
                 this.TabList[index].submenu[submenuIndex].count++;
             }
         },
-        back(){
+        back(){ //放回上一页
             this.$router.go(-1);
         },
         change(index){
             this.cur=index;
            this.open=index;
         },
-      _initSrcoll(){
+      _initSrcoll(){    //获取当前的位置
              this.Rscroll = new Bscroll(this.$refs.righ, {
                 // 获取 scroll 事件，用来监听。
                 click:false,
@@ -205,7 +207,7 @@ export default {
             this.scrollY = Math.abs(res.y)
       })
       },
-      _inchange (index) {
+      _inchange (index) { //改变tab页
           this.flag = false
           this.actli = index
           this.open=index+1
@@ -220,7 +222,7 @@ export default {
         clickHandler(item, index) {
             //console.log(item, index)
         },
-        toMenuCard(index,submenuIndex){
+        toMenuCard(index,submenuIndex){ //进入餐品详细页
             this.$router.push({path:'/MenuCard',query:{indexID:index,submenuIndex:submenuIndex}});
         }
     },

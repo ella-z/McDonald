@@ -1,6 +1,6 @@
 <template>
     <div class="miniCard" id="miniCard" @click="toDetail">
-        <div class="button">加入购物车</div>
+        <!--<div class="button">加入购物车</div>-->
         <div>
             <span>{{miniCard.name}}</span>
             <img :src='miniCard.src'/>

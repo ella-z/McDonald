@@ -22,7 +22,7 @@
                 </div>
                  <div class="link" @click="toshop">
                     <div class="wayList">
-                        <span>到点取餐</span>
+                        <span>到店取餐</span>
                         <br />
                         <span class="small">快速取餐免排队</span>
                         <img src="http://localhost:80/mcdonald/assets/img/堂食.png" class="eatIn"/>
@@ -40,7 +40,7 @@ import { sync } from 'glob';
 
 export default {
     components:{
-        List,
+        List,    //声明组件List
     },
     data()
     {
@@ -48,10 +48,10 @@ export default {
             gettime:'', //获取当前时间
             isnight:false,  //判断是白天还是晚上
             isdata:false,
-            time:'',
+            time:'',      //根据时间，显示信息
             list:'',
             isGet:this.$store.state.isGet,
-            userName:''
+            userName:'' //登录用户的用户名
         }
     },
     created(){
@@ -67,11 +67,15 @@ export default {
                 }
         }
         if(window.sessionStorage.account){
-            this.userName=window.sessionStorage.account;
+            if(window.sessionStorage.identity==='administrator'){
+                this.userName='管理员'
+            }else{
+                 this.userName=window.sessionStorage.account; 
+            }
         }
     },
     mounted(){ 
-        var that = this;
+        var that = this;     //向数据库请求poster信息
         this.axios.get('http://localhost:80/mcdonald/poster.php').then(function(response){
              that.list=response.data;
         },function(err){
@@ -101,9 +105,9 @@ export default {
               
         },
         totake(){
-            this.$store.commit('setReserve',false);
+            this.$store.commit('setReserve',false);    
             this.$router.push({path:'/menu',query:{distribution:"麦乐送"}});
-        },
+        },                                                                           //根据就餐方式的不同，传递不同的数据并跳转
         toshop(){
             this.$store.commit('setReserve',false);
             this.$router.push({path:'/menu',query:{distribution:"到店取餐"}});
@@ -112,7 +116,7 @@ export default {
             var _this=this;
             let hh = new Date().getHours();
             let mf = new Date().getMinutes()<10 ? '0'+new Date().getMinutes() : new Date().getMinutes();
-            let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();
+            let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();   //获取当前时间
             _this.gettime = hh+':'+mf+':'+ss;
             if(hh>18||hh<6)
             {
@@ -130,7 +134,7 @@ export default {
             }
         },
         currentTime(){
-            setInterval(this.getTime,300);
+            setInterval(this.getTime,300);     
         }
     }
 }

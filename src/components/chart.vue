@@ -38,17 +38,7 @@ export default {
                  series: [{
                     type: 'pie',
                     name: '销售份额',
-                    data: [
-                        ['安格斯黑金系列', 45.0],
-                        ['超值三件套', 26.8], { 
-                        name: '随心配1+1=12',
-                        y: 12.8,
-                       // sliced: true,   突出显示某个扇区，表示强调
-                        },
-                        ['金拱门桶', 8.5],
-                        ['500大卡套餐', 6.2],
-                        ['其他', 0.7],
-                    ]
+                    data:this.chartSeries
                 }]
              },
 
@@ -69,14 +59,24 @@ export default {
                 HighCharts.chart('lineContainer', this.lineOptions);
             }
         },
-        chartSeries(val){
-             this.lineOptions.series=val;
-             HighCharts.chart('lineContainer', this.lineOptions);
+        chartSeries(val){ 
+            if(this.isLine===true){
+               this.lineOptions.series=val;
+                HighCharts.chart('lineContainer', this.lineOptions);
+            }
+        },
+        pieOptions(val){
+            this.pieOptions=val;
+            HighCharts.chart('pieContainer', this.pieOptions);
         }
     },
+    created(){
+        this.pieOptions.series.data=this.chartSeries;
+    },
     mounted(){
+        this.pieOptions.series.data=this.chartSeries;
         HighCharts.chart('pieContainer', this.pieOptions);
-  },
+    }
 }
 </script>
 

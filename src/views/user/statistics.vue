@@ -45,7 +45,9 @@ export default {
             result:[],
             options:this.$store.state.data,
             chartSeries:[],
-            chartAllSeries:[]
+            chartAllSeries:[],
+            chartPieSeries:[],
+            pieSeries:''
       }
   },
   watch:{
@@ -62,19 +64,47 @@ export default {
           if(this.result.length===0){
               this.chartSeries=this.chartAllSeries;
           }
-  
       }
   },  
   created(){
-      if(this.$store.state.isPushAll===false){
-          this.$store.state.isPushAll=true;
-                  this.options.push(                
+          for(let i=0;i<this.options.length;i++){
+              if(this.options[i].text==='全部'){
+                  this.$store.state.isPushAll=false;
+              }else{
+                  this.$store.state.isPushAll=true;
+              }
+          }
+          if(this.$store.state.isPushAll===true){
+            this.options.push(                
                 { 
                     text: '全部', 
                     value: '全部',
                     submenu:[]
                 });
-      }
+          }
+        for(let i=0;i<this.options.length-1;i++){
+            this.chartPieSeries.push({
+                name:this.options[i].name,
+                y:0
+            })
+        }
+        this.chartSeries=this.chartPieSeries;
+        let that=this;
+        this.axios.post('http://localhost:80/mcdonald/getSales.php',{
+                    "isPie":true
+                },{
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            }).then(function(response){
+                that.pieSeries=response.data;
+                that.getPieData();
+            },function(err){
+                console.log('请求getSales失败');
+            })
+  },
+  mounted(){
+      this.getPieData();    
   },
   methods:{
     onConfirm() {
@@ -97,7 +127,8 @@ export default {
             })
         }
         this.axios.post('http://localhost:80/mcdonald/getSales.php',{
-                    'seriesName':that.series
+                    'seriesName':that.series,
+                    "isPie":false
                 },{
                   headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -116,6 +147,19 @@ export default {
             },function(err){
                 console.log('请求getSales失败');
             })
+            if(this.series==='全部'){
+                 this.getPieData();
+            }
+    },
+    getPieData(){   
+        for(let i=0;i<this.pieSeries.length;i++){
+            for(let j=0;j<this.chartPieSeries.length;j++){
+                if(this.chartPieSeries[j].name===this.pieSeries[i].productName){
+                   this.chartPieSeries[j].y+=parseInt(this.pieSeries[i].submenuProductSales);
+                }
+            }
+        }
+        this.chartSeries=this.chartPieSeries;
     },
     toggleAll() {
       this.$refs.checkboxGroup.toggleAll();

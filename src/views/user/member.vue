@@ -5,7 +5,7 @@
         <div class="card">
             <div class="cardLeft">
                 <img src="http://localhost:80/mcdonald/assets/img/m.png" />
-                <span @click="toLogin">立即注册/登录></span>
+                <span @click="toLogin">立即登录></span>
                 <span class="intro">
                     成为麦当劳会员，<br />
                     更多优惠，更快取餐
@@ -14,7 +14,7 @@
             <div class="cardRight"></div>
         </div>
         <div class="content">
-            <span>注册/登录后可获得大批优惠券！</span>
+            <span>登录后可获得大批优惠券！</span>
         </div>
     </div>   
     <login :open='open' @toClose='close'></login> 

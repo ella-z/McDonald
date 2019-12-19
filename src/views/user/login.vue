@@ -17,7 +17,7 @@
                 <span  v-show="isfault">密码错误</span>
             </div>
             <input type="submit" value="登录" class="button" @click="login">
-            <input type="button" value="注册" class="button">
+            <!--<input type="button" value="注册" class="button">-->
     </div>
     </div>
 </template>
@@ -27,18 +27,18 @@ export default {
     props:['open'],
     data(){
         return{ 
-          isAdministrator:false,
+          isAdministrator:false, //是否为管理员
           account:'',
           password:'',
-          isexist:false,
-          isfault:false
+          isexist:false,    //是否存在
+          isfault:false     //是否是错误的
         }
     },
     methods:{
         toClose(){
             this.$emit('toClose',false);
         },
-        isaccount(){
+        isaccount(){    //判断账号输入是否正确
             var that=this;
             this.axios.post('http://localhost:80/mcdonald/account.php',{'isAdministrator':that.isAdministrator.toString()},{
                   headers: {
@@ -56,7 +56,7 @@ export default {
                 }
             })
         },
-        login(){
+        login(){    //判断输入的密码是否正确。若正确，获取相关的用户消息，若不正确，弹出报错窗口。
             var that=this;
             this.axios.post('http://localhost:80/mcdonald/password.php',{
                 "account":that.account,"password":that.password,'isAdministrator':that.isAdministrator.toString()},{
