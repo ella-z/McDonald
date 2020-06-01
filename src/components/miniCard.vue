@@ -57,4 +57,17 @@ export default {
                 box-shadow:0.7vw 0.7vw 1vw 0 #dfdede;
             }
         }
+        .Father{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5vw;
+            .Child3{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2vw;
+            }
 </style>
