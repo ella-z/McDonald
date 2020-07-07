@@ -16,27 +16,36 @@
 
 - 菜单页面
 <br />
-<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%8F%9C%E5%8D%95%E9%A1%B5.png" width="400px" height="600px">
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%8F%9C%E5%8D%95%E9%A1%B5.png" width="350px" height="600px">
 
 - 订单生成页面，若没登陆，会提示去登录页面
-![麦当劳结算页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%BB%93%E7%AE%97%E9%A1%B5%E9%9D%A2.png)
-![麦当劳提示登录页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%99%BB%E5%BD%95%E6%8F%90%E9%86%92%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%BB%93%E7%AE%97%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%99%BB%E5%BD%95%E6%8F%90%E9%86%92%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 结算成功后，展示结算页面
-![麦当劳结算成功页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%BB%93%E7%AE%97%E6%88%90%E5%8A%9F%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%BB%93%E7%AE%97%E6%88%90%E5%8A%9F%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 登录页面
-![麦当劳登录页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 用户页面
-![麦当劳用户页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%94%A8%E6%88%B7%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%94%A8%E6%88%B7%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 管理员界面，可以选择功能跳转到不同的功能页面。
-![麦当劳管理员页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%AE%A1%E7%90%86%E5%91%98%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%AE%A1%E7%90%86%E5%91%98%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 所有订单页面以及销量结算周期页面，记录了所有用户的订单
-![麦当劳订单页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2.png)
-![销量结算周期页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%94%80%E5%94%AE%E5%91%A8%E6%9C%9F%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%94%80%E5%94%AE%E5%91%A8%E6%9C%9F%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
 
 - 优惠套餐页面，展示优惠套餐
-![优惠套餐页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E4%BC%98%E6%83%A0%E9%A1%B5%E9%9D%A2.png)
+<br />
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E4%BC%98%E6%83%A0%E9%A1%B5%E9%9D%A2.png" width="350px" height="600px">
