@@ -12,11 +12,11 @@
 ### 项目执行的效果
 - 程序运行的首页，这个页面展示了商品的海报，用户也可以在此选择配送的方式。
 <br />
-<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%A6%96%E9%A1%B5.png" width="300px" height="700px">
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%A6%96%E9%A1%B5.png" width="400px" height="600px">
 
 - 菜单页面
 <br />
-<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%8F%9C%E5%8D%95%E9%A1%B5.png" width="100px" height="400px">
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%8F%9C%E5%8D%95%E9%A1%B5.png" width="400px" height="600px">
 
 - 订单生成页面，若没登陆，会提示去登录页面
 ![麦当劳结算页面](http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E7%BB%93%E7%AE%97%E9%A1%B5%E9%9D%A2.png)
