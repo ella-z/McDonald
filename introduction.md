@@ -12,7 +12,7 @@
 ### 项目执行的效果
 - 程序运行的首页，这个页面展示了商品的海报，用户也可以在此选择配送的方式。
 <br />
-<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%A6%96%E9%A1%B5.png" width="100px" height="400px">
+<img src="http://zhangzqcloud.cn/project-images/%E9%BA%A6%E5%BD%93%E5%8A%B3%E9%A6%96%E9%A1%B5.png" width="300px" height="700px">
 
 - 菜单页面
 <br />
