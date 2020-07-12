@@ -70,4 +70,5 @@ export default {
                 align-items: center;
                 margin-bottom: 2vw;
             }
+        }
 </style>

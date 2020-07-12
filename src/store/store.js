@@ -60,7 +60,7 @@ export default new Vuex.Store({
   actions: {
     getdata(context){
             axios.post('http://localhost:80/mcdonald/menu.php').then(function(response){
-              //state.data=response.data;
+              context.state.data=response.data; 
               context.commit('getvalue',response.data);
         })
       },
